@@ -7,13 +7,10 @@ date: 27 jan 2021
 tags: exocore remilia computers web
 ---
 
-# The Exocore Package
-
 ![](/attachments/exocore.png)
 
 ## Executive Summary
-
-The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by [Remilia Corporation](https://remilia.org) as an extension of [Foam](https://github.com/foambubble/foam) to complete the system of a knowledgebase network.
+The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by [Remilia Corporation](https://remilia.org) as an extension of [Foam](https://github.com/foambubble/foam) to complete the system of an autopublishing knowledgebase network, as a proof-of-concept for [Remilia's New Internet](https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA).
 
 ## Introduction
 
@@ -21,9 +18,9 @@ Do you take notes, or conduct personal research? Do you output or collect text o
 
 The exocore comprises a set of a few programs and plugins, rolling them into a package which can be customized infinitely and modularly; without any technical knowledge it can still be made your own, and with even a touch of technical knowledge (particularly CSS or HTML facility) it can be made into anything at all.
 
-Its online component is a scaffolding for a website, and its offline component (fully functional without the online) is a filing system for notes, written output, or other data. Out of the box, it's a local directory of folders and interacting files forming an empty template for a [zettelkasten](https://zettelkasten.de/introduction/)/personal wiki, a platform for longform articles, a library of documents, a gallery of images, and an automatically created daily note. Mix and match these features as you wish; they are fully modular and independent. A user would be free to use or not use any of these features, so if they want to create a self-hosted platform like Substack with no extra features, this is facilitated.
+Its online component is a scaffolding for a website, and its offline component (fully functional without the online) is a filing system for notes, written output, or other data. Out of the box, it's a local directory of folders and interacting files forming an empty template for a [zettelkasten](https://zettelkasten.de/introduction/)/personal wiki, a platform for longform articles, a library of documents, a gallery of images, and an automatically created daily diary. Mix and match these features as you wish; they are fully modular and independent. A user would be free to use or not use any of these features, so if they want to create a self-hosted platform like Substack with no extra features, this is facilitated.
 
-In the future, these exocores can comprise a webring linked by automatically updated network pages, as well as a [hyper-realtime IRC](https://xcela.org/#realtime-communicaiton) for which the Exocore will operate as a personal homepage. They can also feature things like an automatically updated 'latest posts' feed from all other (or selected) Exocores, or just 'related posts' (by [metadata](https://jekyllrb.com/docs/front-matter/) tags) from your own site. 
+In the future, these exocores can comprise a webring linked by automatically updated network pages, as well as a IRC network for which the Exocore will operate as user's personal homepages. They can also feature things like an automatically updated 'latest posts' feed from all other (or selected) Exocores, or just 'related posts' (by [metadata](https://jekyllrb.com/docs/front-matter/) tags) from your own site.
 
 
 ## How to Begin
