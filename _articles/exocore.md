@@ -7,7 +7,7 @@ date: 27 jan 2021
 tags: exocore remilia computers web
 ---
 
-![](/attachments/exocore.png)
+![](/images/exocore.png)
 
 ## Executive Summary
 The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by [Remilia Corporation](https://remilia.org) as an extension of [Foam](https://github.com/foambubble/foam) to complete the system of an autopublishing knowledgebase network, as a proof-of-concept for [Remilia's New Internet](https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA).
@@ -36,7 +36,7 @@ Notes are segregated into 4 categories:
 - **Journal Entries**, for your thoughts, and are not automatically titled.
 - **Articles**, for longer write-ups on a particular topic.
 
-These note categories together create a pipeline for systematising knowledge over time from the general to the particular, and for capturing a bank of scattered reference material and developing it into a polished final product. For example, you might choose to cite a research dump in the subsequent post that it turned into as a bibliography/further reading section, such as appears at the bottom of [[predictive-processing|this wiki note]]. This workflow is designed to encourage active, daily use of the exocore for all thoughts.
+These note categories together create a pipeline for systematizing knowledge over time from the general to the particular, and for capturing a bank of scattered reference material and developing it into a polished final product. For example, you might choose to cite a research dump in the subsequent post that it turned into as a bibliography/further reading section, such as appears at the bottom of [[predictive-processing|this wiki note]]. This workflow is designed to encourage active, daily use of the exocore for all thoughts.
 
 ## Editing Environment
 
@@ -62,7 +62,7 @@ A user downloadd the package in the form of a Github repository template, which 
 
 A user can get by just fine only interacting with simple plaintext [markdown](https://www.markdownguide.org) files, and can write posts and create hyperlinks between them, add pictures or PDFs and more, without going beyond in-text markdown syntax (read more about the Exocore's syntax [[syntax|here]]). They are also able to control how their generated website handles their documents in a human-readable [[start-here#Using Metadata|metadata section]] at the top of each post: tags, title, subtitle, categories, layouts, date, and any others that the user cares to add.
 
-![](/attachments/girl-online.png){:.right}
+![](/images/girl-online.png){:.right}
 
 Locally, the directory of notes (which will also be a git repository if you wish to publish as a website online) is managed and maintained through a [VS Code](https://code.visualstudio.com) workspace. 
 

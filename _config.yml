@@ -3,9 +3,7 @@ title: Exocore
 source: .
 url: https://exocore.remilia.org
 baseurl: ''
-destination: ./_site
-exclude: ['other/_includes/notes_graph.json']
-
+destination: ./.exocore/_site
 
 highlighter: rouge
 
@@ -19,14 +17,12 @@ kramdown:
 readme_index:
   enabled: true
 
-repository: hot-domme/james-liao
-
 sass:
-    sass_dir: ./other/_sass
+    sass_dir: ./.exocore/_sass
 
-layouts_dir: ./other/_layouts
-includes_dir: ./other/_includes
-plugins_dir: ./other/_plugins
+layouts_dir: ./.exocore/_layouts
+includes_dir: ./.exocore/_includes
+plugins_dir: ./.exocore/_plugins
 
 permalink: pretty
 
@@ -37,24 +33,8 @@ defaults:
     values:
       layout: "default"
       date: "Jan 1 2000"
-      
-  - scope:
-      path: "" 
-      type: "daily"
-    values:
-      layout: "daily"
-      date: "Jan 1 2000"
-
-feed:
-  categories:
-    - article
-    - note
-    - journal
 
 collections:
-
-  daily:
-    output: true
 
   notes:
     output: true
@@ -98,6 +78,5 @@ plugins:
 #- jekyll-feed
 - jekyll/tagging
 - jekyll-wikilinks
-- jekyll-graph
 - ruby-graphviz
 

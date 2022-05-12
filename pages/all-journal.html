@@ -30,7 +30,7 @@ type:
     <a class="index-anchor" href="{{ journal.url }}">
       <div class="index-item">
        <span class="index-item-title">{{ journal.title }}</span>
-       <span class="index-item-date">{{ journal.date | date: "%m/%d/%Y" }}</span>
+       <span class="index-item-date">{{ journal.date | date: "%d %b %Y" }}</span>
 
        <p class="index-item-excerpt">{{- journal.excerpt | strip_html | remove: "Table of Contents:"| truncate: 170 | remove: journal.title -}} </p>
        

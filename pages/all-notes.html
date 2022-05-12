@@ -30,7 +30,7 @@ type:
     <a class="index-anchor" href="{{ note.url }}">
       <div class="index-item">
        <span class="index-item-title">{{ note.title }}</span>
-       <span class="index-item-date" style="float: none;">{{ note.date | date: "%m/%d/%Y" }}</span>
+       <span class="index-item-date" style="float: none;">{{ note.date | date: "%d %b %Y" }}</span>
        {% if note.topic %}
        <p class="index-item-topic">Topic: {{ note.topic }}</p>	
 {% endif %}

@@ -1,0 +1,41 @@
+I"<h2 id="what-is-the-exocore">What is the Exocore?</h2>
+<p>The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, forms in increasingly faithful digital representation of your brain. Read a more detailed explanation of the Exocore’s present and future functionality <a class="wiki-link" href="/articles/exocore/">here.</a></p>
+
+<h2 id="features">Features</h2>
+<p><strong>Smart syntax rendering:</strong> To read more about how you can use hyperlinks, embedded code, footnotes and more, see <a class="wiki-link" href="/articles/syntax/">this article</a> about Exocore syntax.</p>
+
+<h2 id="how-to-begin">How to Begin</h2>
+<p>Follow the instructions <a class="wiki-link" href="/articles/installation-instructions/">here</a> to learn how to install your Exocore locally, set up publishing with Netlify, and view your site offline before publishing.</p>
+
+<h2 id="using-your-exocore">Using your Exocore</h2>
+
+<h3 id="creating-new-posts">Creating new posts</h3>
+
+<p>Use keyboard command <code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code> to summon the command panel. From here you can access a variety of functions by beginning to type their names. Start typing ‘create new note from template’ to find the options for creating new posts.</p>
+
+<ul>
+  <li><strong>Daily Notes</strong> are designed as a quick access scratch pad, and are perfect for low-specificity research dumps and fleeting notes that will inform your notes in future. These are automatically titled by date. One is created each day automatically, and opened when you open VSCode.</li>
+  <li><strong>Wiki Notes</strong> are designed for single atomic data points, and are automatically titled with a hexadecimal color code. This code is turned into a correspondingly colored badge in the index of the published site.</li>
+  <li><strong>Journal Entries</strong> are for your thoughts, and are not automatically titled.</li>
+  <li><strong>Articles</strong> are for longer write-ups on a particular topic.</li>
+</ul>
+
+<p>You may have noticed that these notes together create a pipeline for systematising knowledge over time from the general to the particular, and for capturing a bank of scattered reference material and developing it into a polished final product. You might choose to cite a research dump in the subsequent post that it turned into as a bibliography/further reading section, such as appears at the bottom of <a class="wiki-link" href="/journal/predictive-processing/">this wiki note</a></p>
+
+<h3 id="using-metadata">Using Metadata</h3>
+
+<p>If you followed the above instructions to create a new post, you will notice that it spawned with a YAML metadata section at the top. This metadata does not appear in the text of the post, but affects how the post will be treated when your Exocore is rendered into a website. The metadata of the post you are currently reading looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: article
+category: article
+subtitle:
+topic: meta
+date: 2022-04-13
+tags: meta computers exocore
+---
+</code></pre></div></div>
+
+<p>If you’re using a browser to read this, you won’t see this information at the top of the post, but the Exocore has incorporated it already into the way it treats the post. It has dated the post, sorted it into the ‘Articles’ section of the site, and given it tags which appear in the left sidebar. You can add to the topic and tags sections, backdate your post, or add a subtitle if you wish.</p>
+
+:ET

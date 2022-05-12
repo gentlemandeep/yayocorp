@@ -30,7 +30,7 @@ type:
     <a class="index-anchor" href="{{ article.url }}">
       <div class="index-item">
        <span class="index-item-title">{{ article.title }}</span>
-       <span class="index-item-date">{{ article.date | date: "%m/%d/%Y" }}</span>
+       <span class="index-item-date">{{ article.date | date: "%d %b %Y" }}</span>
 
        {% if article.topic %}
        <p class="index-item-topic">Topic: {{ article.topic }}</p>	
