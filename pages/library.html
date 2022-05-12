@@ -1,0 +1,65 @@
+---
+layout: page
+title: Library
+---
+
+<main>
+<section class="container-lg">
+
+  <div class="leftcolumn">
+
+    
+    {% include profile-card.html %}
+  </div>
+
+  <div class="midcolumn">
+  <div class="index-card">
+<div>
+    <h1>Document Library <a href="/pages/gallery" >(See Image Gallery)</a></h1>
+  </div>
+    {% for library_item in site.static_files %} 
+    {% if library_item.path contains '/library' %}
+    <a class="index-anchor" href="{{ library_item.path }}">
+      <div class="library-item">
+      <div class="library-item-title">{{ library_item.basename }}</div>
+      <br>
+      <div class="library-item-filetype">{{ library_item.extname | upcase | remove: "." }}</div>
+
+        </div>
+        </a>
+    {% endif %}
+    {% endfor %}
+
+</div>
+</div>  
+</div>
+</div>
+
+</section>
+</main>       
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>
+
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

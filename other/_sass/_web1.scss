@@ -1,0 +1,998 @@
+/* ### Theme: Edith ### */
+
+/* === Base Settings === */
+
+/* --- Body Colors --- */
+
+$background: #f2f2f2;
+$color-inner-divs: $background;
+$color-items: $background;
+
+
+/* --- Text Colors --- */
+$color-text: black;
+$color-subtext: black;
+$color-code: pink;
+$internal-links: blue;
+$external-links: blue;
+$invalid-links: $internal-links;
+$color-primary: blue;
+$color-secondary: blue;
+$color-box-shadow: none;
+
+
+/* --- Borders --- */
+$article-border: 2px dashed black;
+$sidebar-border: 2px dashed black;
+$prev-next-border: none;
+$color-item-border: none;
+$border-radius: 0px;
+
+/* --- Embeds, Sidenote and Footnote Colors --- */
+$embed-border: 2px dashed black;
+$color-embed-background: white;
+$color-embed-title: black;
+$color-embed-text: black;
+
+$footnote-border: 2px dashed black;
+$color-footnote-background: white;
+$color-footnote-text: black;
+
+$sidenote-border: thin solid $color-primary;
+$color-sidenote-background: white;
+$color-sidenote-text: $color-text;
+
+
+
+/* --- Font Family --- */
+$font-family-sans-serif: Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI,  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+$font-family-serif: serif;
+
+$font-family-monospace: "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono",Monaco,Consolas,Courier,monospace;
+
+
+body {
+  font-family: $font-family-monospace;
+  padding: 4vh 6vw;
+  overflow-x: hidden;
+  color: $color-text;
+  font-size: 0.8rem;
+  background-color:$background;
+}
+
+
+/* TITLES
+================================================== */
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.4;
+  padding-bottom: 0;
+  font-size:1.15em;
+  margin:1em;
+  margin-left:0em;
+}
+
+.title-text { text-transform:uppercase; text-decoration:underline; text-align:center; font-weight:bold; margin:0em; line-height:1em;}
+
+.post-content{
+    
+h1 {text-transform:uppercase; text-align:center;font-weight:bold; text-decoration: underline; font-size: 1.3em;}
+
+h2 {text-transform:uppercase; text-align:left;font-weight:bold; font-size: 1.25em}
+
+h3 {text-transform:none;font-weight:normal; text-decoration:underline;text-align:left; margin-left:1em;}
+
+h4 {text-transform:none;font-weight:normal; font-size:1em; text-align:left}
+}
+
+
+ul {
+  list-style-type: circle;
+}
+
+hr {
+    margin:0em;
+    border: none;
+    border-bottom: $article-border;
+    width: 100%;
+    margin: auto;
+}
+
+
+
+/* CODE HIGHLIGHTING
+================================================== */
+
+code {
+  color: white;
+  background-color:black;
+  font-family: $font-family-monospace;
+  font-size: 1em;
+}
+
+PRE {
+  margin-left: 1em;
+}
+
+
+/* LINKS
+================================================== */
+
+a {
+  color: $external-links;
+  text-decoration:none;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: alias;
+  }
+  &.internal-link {
+    color: $internal-links;
+    font-weight:bold;
+    cursor: pointer;
+  }
+}
+.invalid-link, .invalid-link-brackets {
+  color: $invalid-links;
+  cursor: help;
+}
+
+.sidenote a {
+    font-weight: normal !important;
+
+}
+nav a {
+    color: blue !important;
+    text-decoration: underline;
+  
+}
+.anchor a {
+  color: $color-text;
+  cursor: pointer;
+}
+.anchor a:hover{
+  color: $internal-links;
+  cursor: pointer;
+}
+
+.toc-container a {
+  cursor: pointer;
+}
+
+
+
+/* HEADER ANCHORS
+================================================== */
+
+.anchor {visibility: hidden; color:gray; opacity:0.7; text-decoration:none; font-size: 0.8em; font-familiy:monospace}
+.anchor:hover {text-decoration:none; color:black !important; cursor:pointer;}
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor {
+    visibility: visible;
+} 
+
+
+/* PAGE FORMATTING
+================================================== */
+
+.title {
+  border: $color-item-border; padding: 1em;
+  margin-bottom:1em;
+}
+
+/* BACKLINKS
+================================================== */
+
+.backlink-box {
+// This is the box around the backlinks.
+// add your own styling here if you want
+}
+
+.backlinks-excerpt{
+  font-size: 0.9em; color: $color-subtext;
+}
+.backlinks-none{
+  font-size: 0.9em; text-align:center;
+}
+
+#graph-wrapper svg {
+    border: 2px dashed black;
+}
+
+/* TABLE OF CONTENTS
+================================================== */
+
+.toc-container{
+  border: $color-item-border; 
+  padding: 1em;
+  padding-bottom: 0em;
+  margin: 1em;
+  margin: 0 auto;
+  display: block;
+  max-width: 50%;
+    @media (max-width: 700px) {
+  max-width:100%;
+  }
+}
+.toc-container h1 {
+  margin:0em;
+}
+
+.toc-container ol li  {
+  list-style-type: numeral;
+}
+
+.toc-container ol li li {
+  list-style-type: lower-latin;
+}
+
+
+
+/* FOOTER
+================================================== */
+
+.footer-nav {
+  margin:1em;
+  font-size: 0.8em;
+  color: $color-text;
+  text-align:center;
+}
+
+license {
+  text-align: center;
+  font-family: $font-family-monospace;
+  font: 1.1em;
+}
+
+.license {
+  padding:1em; margin-top:1em; max-width: 28em; margin: 0 auto; text-align:center;
+}
+
+
+//--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--\\
+//--=--=--=--=--=--=--=--=*EXTRAS*=--=--=--=--=--=--=--=--\\
+//--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--\\
+
+
+
+/* STRUCTURE
+================================================== */
+
+.sidebar-card, .index-card, .archive-card {
+    margin-bottom: 0px;
+    float: left;
+    clear: both;
+    background-color: $background;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.index-card, .archive-card {
+}
+
+.container-lg {
+    max-width: 80em;
+    margin: auto;
+}
+
+.leftcolumn {
+    float: left;
+    width: 15%;
+    margin: 0em;
+    border-left: $sidebar-border;
+    border-top: $sidebar-border;
+    border-bottom: $sidebar-border;
+
+     @media (max-width: 900px)
+     {width: 100%;
+         margin: auto
+         }}
+
+.midcolumn {
+    float: left;
+    width: 60%;
+    margin: 0em;
+    border: $sidebar-border;
+
+    
+@media (max-width: 900px)
+     {width: 100%;
+    margin: auto
+}}
+
+.midcolumn-small {
+    width: 40%;
+    margin: auto;
+}
+
+main {
+margin: auto;
+}
+
+.post-info {
+}
+
+article {
+    background-color: $background;    
+    box-shadow: 1px 1px 0px $color-box-shadow;
+    
+}
+
+
+.related {
+    text-align: left;
+}
+
+.related h1 {
+    padding: 0.5em;
+    margin: auto;
+    text-align: center
+}
+
+.related h2 {
+    margin: auto;
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: black;
+}
+
+.related ul {
+    margin: 0.1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    list-style-position: outside;
+}
+
+.related ul li {
+    margin: 0.1em;
+    padding-bottom: 0.5em;
+}
+
+
+/* PROFILE
+================================================== */
+
+.sidebar-card a, .related a {
+    margin-bottom: 0.5em;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 55px;
+    margin-bottom: 0.5em;
+    
+    @media (max-width: 900px)
+     {float: 100%;
+         margin: auto
+         }}
+
+.profile {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.user-name {
+    color: $internal-links;
+    text-decoration: underline;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar-link-box, .index-grid {
+    display: grid;
+    grid-template-columns: auto;
+    border: $color-item-border; 
+    box-shadow: 1px 1px 0px $color-box-shadow;
+    background-color: $color-inner-divs;
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    padding: 0.5em;
+    font-size: 0.9em;
+    
+    @media (max-width: 900px)
+     {margin: auto;
+      display: block;
+}}
+
+.silent-link {
+    color: $color-text;
+}
+
+/* HOME 
+=============*/
+
+.home-card {
+    width: 400px;
+    margin: auto;
+    padding: -2px; 
+    background-color: $background;
+    border: $article-border;
+}
+
+.container-sml {
+    width: 400px;
+    margin: auto;
+}
+
+.home-icon {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding: 5px;
+
+}
+
+.flip {
+      transform: scaleX(-1);
+}
+
+
+/* POST CONTENT
+(use this to style the formatting of your posts)
+================================================== */
+.post-content {
+    line-height: 1.5em;
+      margin-left:2em; 
+  margin-right:1em; 
+  padding-top:0.5em;
+}
+
+.post-content img {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2em;
+  max-height: 75vh;
+  border-radius: $border-radius;
+}
+
+
+.post-content blockquote {
+  padding: 1em;
+  margin: 0;
+  font-size: 1em;
+  font-family: $font-family-serif;
+    font-style: italic;
+}
+
+.notes-entry-container {
+  border: $color-item-border;
+  padding:1em; padding-top:0em; 
+}
+
+// image captions
+img+em {
+    display: block;
+    color: $internal-links;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    margin-top: -1.5em;
+}
+
+/* BACKLINKS
+================================================== */
+
+.backlinks-container {
+    max-width:28em; margin: 0 auto;
+    background-color: $color-inner-divs;
+    padding: 1em;
+    margin: 1em auto;
+    
+}
+
+.backlinks-container h1{
+    margin-bottom: 1em
+}
+
+.backlink-box {
+    padding:1em;
+    margin-bottom: 0.5em;
+    line-height:1em;
+    background-color: $color-items;
+    border: 1px solid $color-primary;
+    border-radius: $border-radius;
+    line-height:1em;
+}
+
+
+/* EMBEDDED NOTES
+================================================== */
+
+.embed-wrapper {
+    border: $embed-border;
+    padding: 1em;
+    background-color: $color-embed-background;
+    margin-top: 2em ;
+    margin-bottom: 2em ;
+}
+
+.embed-title {
+    display: none;
+}
+
+.embed-content {
+    color: $color-embed-text;
+}
+.embed-content p {
+    color: $color-embed-text;
+}
+
+
+
+/* SIDENOTES
+================================================== */
+
+.sidenote {
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 0.8em;
+    line-height: 1.1em;
+    box-sizing: border-box;
+    background-color: $color-sidenote-background;
+    border: $sidenote-border;
+    color: $color-sidenote-text;
+
+}
+
+.sidenote-hover {
+    color: $color-subtext;
+    z-index: 1;
+    box-sizing: border-box;
+    color: $internal-links;
+}
+
+.sidenote:hover {
+    z-index: 1;
+    color: $internal-links;
+}
+
+.footnote web-link {
+    position: relative
+}
+.bigger:after{
+    content:"";
+    padding: 50px;  
+    position: absolute;
+    left: -25px;
+    top: -25px;
+} 
+
+
+
+/* FOOTNOTES
+================================================== */
+
+.footnotes {
+    border: $footnote-border;
+    padding: 1em 0;
+    background-color: $color-footnote-background;
+    color: $color-footnote-text;
+}
+
+
+/* INDEX
+================================================== */
+
+.index-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: left;
+    grid-gap: flex;
+    padding: 1em;
+    
+     @media (max-width: 1000px)
+     {grid-template-columns: auto;}
+}
+
+.index-anchor {
+        text-decoration: none !important;
+
+}
+.index-item, .archive-item, .library-item {
+    width: 95%;
+    margin: auto;
+    background-color: $color-items;
+    text-align: left;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: none;
+    box-sizing: border-box;
+        border-top: $article-border;
+
+    
+    &:hover {
+        color: red;
+    }
+}
+
+.index-item {
+    height: 8em;
+    overflow: hidden;
+}
+
+.index-item-title, .library-item-title {
+font-weight: bold;
+    text-decoration: underline;
+    color: $color-text;
+    overflow: hidden;
+        &:hover {
+        color: red;
+    }
+}
+
+.index-item-date, .library-item-filetype {
+    font-weight: normal;
+    float: right;
+}
+
+.index-item-topic {
+font-weight: normal;
+    font-weight: bold;
+
+}
+
+.index-item-excerpt {
+font-weight: normal;
+    height: 5em;
+    width: 85%;
+    overflow: hidden;
+    float: left;
+
+}
+
+
+
+/* ARCHIVE
+================================================== */
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-gap: -1px;
+    background-color: $background;
+    padding: 1em;
+}
+
+.archive-card {
+    background-color: $color-inner-divs;
+    width: 100%;
+}
+
+
+
+/* LIBRARY
+================================================== */
+
+.library-item {
+    display: grid;
+    grid-auto-columns: 100% 10%;
+}
+
+.post-date {
+    padding-top: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: -0.5em;
+
+}
+
+.library-grid-container {
+    width: 90%;
+    margin: auto;
+}
+    
+.library-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+}
+
+.library-image {
+    background: black;
+}
+
+.library-image-container {
+    height: 7em;
+    margin: 4%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* TAG PAGE
+================================================== */
+
+.tile h1, .home-link-button h1 {
+  margin: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.tile:hover, home-link-button:hover {
+    background-color: $color-items;
+}
+
+.tile:target {
+    border: medium solid $color-primary;
+}
+
+.tile, .home-link-button {
+   background-color: $color-inner-divs;    
+    border-top: $article-border;
+    &:hover {
+    background-color: $color-items;}
+}
+
+.tag-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+/* PREVIOUS / NEXT BUTTONS
+================================================== */
+
+.prev-next {
+    margin-bottom: 0em;
+    background-color: $background;
+//    display: grid;
+//    grid-template-columns: 10% 40% 40% 10%;
+    width: 100%;
+    padding: 1em;
+    height: 3em;
+    border-bottom: $prev-next-border;
+}
+
+.prev-next a {
+    text-decoration: underline;
+    &:hover {
+        color: red;
+    }
+}
+.prev {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+.title-text {
+    font-size: 1.5em;
+}
+
+.subtitle-text {
+    width: 100%;
+    text-align: center !important;
+    margin: 0.5em auto;
+}
+
+
+
+/* COLOR BADGES (ZETTELKASTEN HEX)
+================================================== */
+
+.hex-badge {
+    width: 2em;
+    height: 2em;
+    float: right;
+    border: 2px solid black;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 1px white;
+    margin-top: -1em;
+}
+
+/* NETWORK GRAPH (BACKLINK VISUAL REPRESENTATION)
+================================================== */
+
+.network-graph-container {
+    clear: both;
+    margin-top: 1em;
+    display: block;
+    background: $background;
+    padding: 2em;
+    height: 45em;
+    
+    & h1 {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+
+  .links line {
+    stroke: black;
+    opacity: 0.5;
+  }
+
+  .nodes circle {
+    cursor: pointer;
+    fill: black;
+    transition: all 0.15s ease-out;
+  }
+
+  .text text {
+    cursor: pointer;
+    fill: $color-subtext;
+  }
+
+  .nodes [active],
+  .text [active] {
+      cursor: pointer;
+      fill: $color-primary;
+      font-weight: bold;
+      text-decoration: underline;
+      
+  }
+
+  .inactive {
+    opacity: 0.4;
+    transition: all 0.15s ease-out;
+  }
+
+
+  #graph-wrapper svg {
+      background: $color-inner-divs;
+      height: 40em;
+  }
+
+
+
+/* LISTS AND TABLES
+================================================== */ 
+
+ol li {
+    list-style-type: decimal;
+}
+
+ol li li {
+    list-style-type: lower-alpha;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+ul li li {
+    list-style-type: square;
+}
+
+table, tr, td {
+    border: thin solid;
+    border-collapse: collapse;
+    padding: 0.5em;
+    margin: auto;
+    background-color: $color-inner-divs;
+}
+
+
+/* BORDERS
+================================================== */
+
+// Border around your posts
+
+ article {
+    border-top: $article-border;
+    border-bottom: $article-border;
+    box-sizing: border-box;
+}
+
+ .index-card {
+    box-sizing: border-box;
+}
+
+// Border around the items in the sidebar
+ .border {
+    border: $sidebar-border;
+    box-sizing: border-box;
+}
+
+.sidebar-card {
+    box-sizing: border-box;
+    border-bottom: $article-border;
+}
+
+.tags {
+    border-bottom: none;
+}
+
+// Border around the next/previous buttons above and below your posts
+.prev-next, {
+    border: $prev-next-border; 
+    box-sizing: border-box;
+
+}
+
+/* GRAPHVIZ PARSER -- GRAPH VISUALISATION TOOL
+================================================== */
+
+.graphviz-wrapper {
+    padding: 0px;
+}
+
+.graphviz-wrapper svg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+
+/* GENERAL PURPOSE CLASSES
+================================================== */
+
+// use syntax: {:.classname} within markdown to apply a class— these general classes might come in handy.
+
+
+/* -=Text=- */
+
+.right-aside {
+    float: right;
+    border: $embed-border;
+    padding: 1.2em;
+    width: 40%;
+    margin-left: 2em;
+    font-size: 0.9em;
+    background: white;
+}
+
+.left-aside {
+    float: left;
+    border: $embed-border;
+    padding: 1.2em;
+    width: 40%;
+    margin-left: 2em;
+    font-size: 0.9em;
+    background: white;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* -=Images=- */
+
+.right {
+    float: right;
+    width: 50%;
+    padding: 1em;
+}
+
+.border {
+    border: thin solid white;
+}
+
+.shadow {
+    box-shadow: 0px 0px 15px white;
+}
+
+.glow {
+    box-shadow: 0px 0px 15px black;
+}
+

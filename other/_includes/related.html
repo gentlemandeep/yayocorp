@@ -1,0 +1,96 @@
+
+    <div class="sidebar-card related">
+      <h1> Related</h1> 
+      <div class="sidebar-link-box">
+<h2><a class="silent-link" href="/pages/all-articles">Articles</a></h2>
+{% assign maxRelated = 5 %}
+{% assign minCommonTags =  1 %}
+{% assign maxRelatedCounter = 0 %}   
+	<ul>
+{% for article in site.articles %}
+    
+    	{% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+    
+		{% for tag in article.tags %}
+        	{% if article.url != page.url %}
+            	{% if article.tags contains tag %}
+            	{% assign sameTagCount = sameTagCount | plus: 1 %}
+            	{% endif %}
+            {% endif %}
+		{% endfor %}
+    
+        {% if sameTagCount >= minCommonTags %}
+			<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a></li>
+            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+            
+            {% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+            {% endif %}
+		{% endif %}
+	{% endfor %}
+	</ul>
+</div>
+<div class="sidebar-link-box">
+<h2><a class="silent-link" href="/pages/all-journal">Journal</a></h2>
+
+{% assign maxRelated = 5 %}
+{% assign minCommonTags =  1 %}
+{% assign maxRelatedCounter = 0 %}   
+<ul>
+	{% for journal in site.journal %}
+    
+    	{% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+    
+		{% for tag in journal.tags %}
+        	{% if journal.url != page.url %}
+            	{% if journal.tags contains tag %}
+            	{% assign sameTagCount = sameTagCount | plus: 1 %}
+            	{% endif %}
+            {% endif %}
+		{% endfor %}
+    
+        {% if sameTagCount >= minCommonTags %}
+    		<li><a href="{{ site.baseurl }}{{ journal.url }}">{{ journal.title }}</a></li>
+            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+            
+            {% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+            {% endif %}
+		{% endif %}
+	{% endfor %}
+</ul>
+</div>
+
+<div class="sidebar-link-box">
+<h2><a class="silent-link" href="/pages/all-notes">Wiki Notes</a></h2>
+{% assign maxRelated = 5 %}
+{% assign minCommonTags =  1 %}
+{% assign maxRelatedCounter = 0 %}   
+<ul>
+	{% for note in site.notes %}
+    
+    	{% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+    
+		{% for tag in note.tags %}
+        	{% if note.url != page.url %}
+            	{% if note.tags contains tag %}
+            	{% assign sameTagCount = sameTagCount | plus: 1 %}
+            	{% endif %}
+            {% endif %}
+		{% endfor %}
+    
+        {% if sameTagCount >= minCommonTags %}
+    		<li><a href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></li>
+            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+            
+            {% if maxRelatedCounter >= maxRelated %}
+                {% break %}
+            {% endif %}
+		{% endif %}
+	{% endfor %}
+</ul>
+    </div>  
+    </div>  

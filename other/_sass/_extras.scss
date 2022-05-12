@@ -1,0 +1,712 @@
+
+/* STRUCTURE
+================================================== */
+
+.sidebar-card, .index-card, .archive-cardi {
+    margin-bottom: 1em;
+    float: left;
+    clear: both;
+    background-color: $background;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.container-lg {
+    max-width: 80em;
+    margin: auto;
+}
+
+.leftcolumn {
+    float: left;
+    width: 15%;
+    margin: 0.5em;
+     @media (max-width: 900px)
+     {width: 100%;
+         margin: auto
+         }}
+
+.midcolumn {
+    float: left;
+    width: 60%;
+    margin: 0.5em;
+    
+@media (max-width: 900px)
+     {width: 100%;
+    margin: auto
+}}
+
+.midcolumn-small {
+    width: 40%;
+    margin: auto;
+}
+
+main {
+margin: auto;
+}
+
+article {
+    background-color: $background;    
+    box-shadow: 1px 1px 0px $color-box-shadow;
+}
+
+
+.related {
+    text-align: left;
+}
+
+.related h1 {
+    padding: 0.5em;
+    margin: auto;
+    text-align: center
+}
+
+.related h2 {
+    margin: auto;
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: white;
+}
+
+.related ul {
+    margin: 0.1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    list-style-position: outside;
+}
+
+.related ul li {
+    margin: 0.1em;
+    padding-bottom: 0.5em;
+}
+
+
+/* PROFILE
+================================================== */
+
+.sidebar-card a, .related a {
+    margin-bottom: 0.5em;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 55px;
+    margin-bottom: 0.5em;
+    
+    @media (max-width: 900px)
+     {float: 100%;
+         margin: auto
+         }}
+
+.profile {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.user-name {
+    color: $internal-links;
+    text-decoration: underline;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar-link-box, .index-grid {
+    display: grid;
+    grid-template-columns: auto;
+    border: $color-item-border; 
+    box-shadow: 1px 1px 0px $color-box-shadow;
+    background-color: $color-inner-divs;
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    padding: 0.5em;
+    font-size: 0.9em;
+    
+    @media (max-width: 900px)
+     {margin: auto;
+      display: block;
+}}
+
+.silent-link {
+    color: $color-text;
+}
+
+/* HOME 
+=============*/
+
+.home-card {
+    width: 400px;
+    margin: auto;
+    padding: 25px; 
+    background-color: $background;
+    border: $article-border;
+}
+
+.container-sml {
+    width: 400px;
+    margin: auto;
+}
+
+.home-icon {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding: 5px;
+}
+
+.flip {
+      transform: scaleX(-1);
+}
+
+
+/* POST CONTENT
+(use this to style the formatting of your posts)
+================================================== */
+.post-content {
+    line-height: 1.5em;
+      margin-left:2em; 
+  margin-right:1em; 
+  padding-top:0.5em;
+}
+
+.post-content img {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2em;
+  max-height: 75vh;
+  border-radius: $border-radius;
+}
+
+
+.post-content blockquote {
+  padding: 1em;
+  margin: 0;
+  font-size: 1em;
+  font-family: $font-family-serif;
+    font-style: italic;
+}
+
+.notes-entry-container {
+  border: $color-item-border;
+  padding:1em; padding-top:0em; 
+}
+
+// image captions
+img+em {
+    display: block;
+    color: $internal-links;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    margin-top: -1.5em;
+}
+
+/* BACKLINKS
+================================================== */
+
+.backlinks-container {
+    max-width:28em; margin: 0 auto;
+    background-color: $color-inner-divs;
+    padding: 1em;
+    margin: 1em auto;
+    
+}
+
+.backlinks-container h1{
+    margin-bottom: 1em
+}
+
+.backlink-box {
+    padding:1em;
+    margin-bottom: 0.5em;
+    line-height:1em;
+    background-color: $color-items;
+    border: 1px solid $color-primary;
+    border-radius: $border-radius;
+    line-height:1em;
+}
+
+
+/* EMBEDDED NOTES
+================================================== */
+
+.embed-wrapper {
+    border: $embed-border;
+    padding: 1em;
+    background-color: $color-embed-background;
+    margin-top: 2em ;
+    margin-bottom: 2em ;
+}
+
+.embed-title {
+    font-size: 1.5em;
+    text-decoration: underline;
+    margin-bottom: 1em;
+    text-align: center;
+    color: $color-embed-title;
+}
+
+.embed-content {
+    color: $color-embed-text;
+}
+.embed-content p {
+    color: $color-embed-text;
+}
+
+
+
+/* SIDENOTES
+================================================== */
+
+.sidenote {
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 0.8em;
+    line-height: 1.1em;
+    box-sizing: border-box;
+    background-color: $color-sidenote-background;
+    border: $sidenote-border;
+    color: $color-sidenote-text;
+
+}
+
+.sidenote-hover {
+    color: $color-subtext;
+    z-index: 1;
+    box-sizing: border-box;
+    color: $internal-links;
+}
+
+.sidenote:hover {
+    z-index: 1;
+    color: $internal-links;
+}
+
+.footnote web-link {
+    position: relative
+}
+.bigger:after{
+    content:"";
+    padding: 50px;  
+    position: absolute;
+    left: -25px;
+    top: -25px;
+} 
+
+
+
+/* FOOTNOTES
+================================================== */
+
+.footnotes {
+    border: $footnote-border;
+    padding: 1em 0;
+    background-color: $color-footnote-background;
+    color: $color-footnote-text;
+}
+
+
+/* INDEX
+================================================== */
+
+.index-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: left;
+    grid-gap: flex;
+    padding: 1em;
+    
+     @media (max-width: 1000px)
+     {grid-template-columns: auto;}
+}
+
+.index-anchor {
+        text-decoration: none !important;
+
+}
+.index-item, .archive-item, .library-item {
+    width: 95%;
+    margin: auto;
+    background-color: $color-items;
+    text-align: left;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: thin solid $color-primary;
+    box-sizing: border-box;
+    
+    &:hover {
+        box-shadow: 0px 0px 0px 1px $color-primary;
+    }
+}
+
+.index-item {
+    height: 8em;
+    overflow: hidden;
+}
+
+.index-item-title, .library-item-title {
+font-weight: bold;
+    text-decoration: underline;
+    color: $color-text;
+    overflow: hidden;
+}
+
+.index-item-date, .library-item-filetype {
+    font-weight: normal;
+    float: right;
+}
+
+.index-item-topic {
+font-weight: normal;
+    font-weight: bold;
+
+}
+
+.index-item-excerpt {
+font-weight: normal;
+    height: 5em;
+    width: 85%;
+    overflow: hidden;
+    float: left;
+
+}
+
+
+
+/* ARCHIVE
+================================================== */
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-gap: 0.5em;
+    background-color: $background;
+    padding: 1em;
+    margin: auto;
+}
+
+.archive-card {
+    background-color: $color-inner-divs;
+    width: 100%;
+    margin: auto;
+}
+
+
+
+/* LIBRARY
+================================================== */
+
+.library-item {
+    display: grid;
+    grid-auto-columns: 100% 10%;
+}
+
+.post-date {
+    padding-top: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: -0.5em;
+
+}
+
+.library-grid-container {
+    width: 90%;
+    margin: auto;
+}
+    
+.library-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+}
+
+.library-image {
+    background: white;
+}
+
+.library-image-container {
+    height: 7em;
+    margin: 4%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* TAG PAGE
+================================================== */
+
+.tile h1, .home-link-button h1 {
+  margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.tile:hover, home-link-button:hover {
+    background-color: $color-items;
+}
+
+.tile:target {
+    border: medium solid $color-primary;
+}
+
+.tile, .home-link-button {
+   background-color: $color-inner-divs;    
+    border: thin solid $color-text;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &:hover {
+    background-color: $color-items;}
+}
+
+.tag-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+/* PREVIOUS / NEXT BUTTONS
+================================================== */
+
+.prev-next {
+    margin-bottom: 0.5em;
+    background-color: $background;
+//    display: grid;
+//    grid-template-columns: 10% 40% 40% 10%;
+    width: 100%;
+    padding: 1em;
+    height: 3.5em;
+    border-bottom: $prev-next-border;
+}
+
+.prev-next a {
+    font-weight: bold;
+    text-decoration: none;
+}
+.prev {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+.title-text {
+    font-size: 1.5em;
+}
+
+.subtitle-text {
+    width: 100%;
+    text-align: center !important;
+    margin: 0.5em auto;
+}
+
+
+
+/* COLOR BADGES (ZETTELKASTEN HEX)
+================================================== */
+
+.hex-badge {
+    width: 2em;
+    height: 2em;
+    float: right;
+    border: 2px solid white;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 1px black;
+    margin-top: -1em;
+}
+
+/* NETWORK GRAPH (BACKLINK VISUAL REPRESENTATION)
+================================================== */
+
+.network-graph-container {
+    clear: both;
+    margin-top: 1em;
+    display: block;
+    background: $background;
+    border: $article-border;
+    padding: 2em;
+    height: 45em;
+    
+    & h1 {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+
+  .links line {
+    stroke: $color-primary;
+    opacity: 0.5;
+  }
+
+  .nodes circle {
+    cursor: pointer;
+    fill: $color-primary;
+    transition: all 0.15s ease-out;
+  }
+
+  .text text {
+    cursor: pointer;
+    fill: $color-subtext;
+  }
+
+  .nodes [active],
+  .text [active] {
+      cursor: pointer;
+      fill: $color-primary;
+      font-weight: bold;
+      text-decoration: underline;
+      
+  }
+
+  .inactive {
+    opacity: 0.4;
+    transition: all 0.15s ease-out;
+  }
+
+
+  #graph-wrapper svg {
+      background: $color-inner-divs;
+      height: 40em;
+  }
+
+
+
+/* LISTS AND TABLES
+================================================== */ 
+
+ol li {
+    list-style-type: decimal;
+}
+
+ol li li {
+    list-style-type: lower-alpha;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+ul li li {
+    list-style-type: square;
+}
+
+table, tr, td {
+    border: thin solid;
+    border-collapse: collapse;
+    padding: 0.5em;
+    margin: auto;
+    background-color: $color-inner-divs;
+}
+
+
+/* BORDERS
+================================================== */
+
+// Border around your posts
+ article, .index-card {
+    border: $article-border;
+    box-sizing: border-box;
+}
+
+// Border around the items in the sidebar
+.sidebar-card, .border {
+    border: $sidebar-border;
+    box-sizing: border-box;
+}
+
+// Border around the next/previous buttons above and below your posts
+.prev-next, {
+    border: $prev-next-border; 
+    box-sizing: border-box;
+
+}
+
+/* GRAPHVIZ PARSER -- GRAPH VISUALISATION TOOL
+================================================== */
+
+.graphviz-wrapper {
+    padding: 0px;
+}
+
+.graphviz-wrapper svg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+
+/* GENERAL PURPOSE CLASSES
+================================================== */
+
+// use syntax: {:.classname} within markdown to apply a class— these general classes might come in handy.
+
+
+/* -=Text=- */
+
+.right-aside {
+    float: right;
+    border: $embed-border;
+    padding: 1.2em;
+    width: 40%;
+    margin-left: 2em;
+    font-size: 0.9em;
+}
+
+.left-aside {
+    float: left;
+    border: $embed-border;
+    padding: 1.2em;
+    width: 40%;
+    margin-left: 2em;
+    font-size: 0.9em;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* -=Images=- */
+
+.right {
+    float: right;
+    width: 50%;
+    padding: 1em;
+}
+
+.border {
+    border: thin solid black;
+}
+
+.shadow {
+    box-shadow: 0px 0px 15px black;
+}
+
+.glow {
+    box-shadow: 0px 0px 15px white;
+}
+
+
+

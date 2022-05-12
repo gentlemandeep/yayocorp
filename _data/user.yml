@@ -1,0 +1,18 @@
+
+
+# You can edit this file to change your user details
+
+# The name displayed on your profile card
+user_name: User Name
+
+# The URL that your name will point to ('/' means home)
+profile_link: /
+
+# The user image displayed on your profile card
+profile_pic: assets/images/pfp3.png
+
+# The border color of the above image (color names and hex codes
+#preceded by '#' are accepted, as well as 'none') 
+border_color: none
+  
+# Add your own variables if you wish, and then summon them with liquid tags

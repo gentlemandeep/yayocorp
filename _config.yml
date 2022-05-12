@@ -1,0 +1,103 @@
+title: Exocore
+
+source: .
+url: https://compassionate-neumann-f910fd.netlify.app/
+baseurl: ''
+destination: ./_site
+exclude: ['other/_includes/notes_graph.json']
+
+
+highlighter: rouge
+
+gist:
+  noscript: false
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+readme_index:
+  enabled: true
+
+repository: hot-domme/james-liao
+
+sass:
+    sass_dir: ./other/_sass
+
+layouts_dir: ./other/_layouts
+includes_dir: ./other/_includes
+plugins_dir: ./other/_plugins
+
+permalink: pretty
+
+      
+defaults:
+  - scope:
+      path: "" 
+    values:
+      layout: "default"
+      date: "Jan 1 2000"
+      
+  - scope:
+      path: "" 
+      type: "daily"
+    values:
+      layout: "daily"
+      date: "Jan 1 2000"
+
+feed:
+  categories:
+    - article
+    - note
+    - journal
+
+collections:
+
+  daily:
+    output: true
+
+  notes:
+    output: true
+    
+  journal:
+    output: true
+    
+  articles:
+    output: true
+    
+relative_links:
+  enabled:     false
+  collections: false
+  
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+  collections: true
+    
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+graphviz:
+  options: "-Tsvg" # 'dot' command option
+  command: "dot"   # execute this string. specify full path to 'dot' if you need
+
+
+plugins:
+- jekyll-optional-front-matter
+- jekyll-readme-index
+- jekyll-default-layout
+- jekyll-titles-from-headings
+- jekyll-relative-links
+- jekyll-github-metadata
+- jekyll-seo-tag
+- html-proofer
+- rubocop
+- w3c_validators
+- jekyll-last-modified-at
+- jekyll-redirect-from
+#- jekyll-feed
+- jekyll/tagging
+- jekyll-wikilinks
+- jekyll-graph
+- ruby-graphviz
+

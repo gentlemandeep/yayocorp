@@ -1,329 +1,89 @@
-<img src="packages/foam-vscode/assets/icon/FOAM_ICON_256.png" width="100" align="right"/>
+# The Exocore Package
 
-# Foam
+![](/attachments/exocore.png)
 
-👀*This is an early stage project under rapid development. For updates join the [Foam community Discord](https://foambubble.github.io/join-discord/g)! 💬*
+## What is the Exocore?
+The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, forms in increasingly faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by [Remilia Corporation](https://remilia.org) as of a ready to use proof-of-concept for [the New Internet](https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA).
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-95-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+## How to Begin
+Follow the instructions [[installation-instructions|here]] to learn how to install your Exocore locally, set up publishing with Netlify, and view your site offline before publishing.
 
-[![Discord Chat](https://img.shields.io/discord/729975036148056075?color=748AD9&label=discord%20chat&style=flat-square)](https://foambubble.github.io/join-discord/g)
+## Introduction
 
-**Foam** is a personal knowledge management and sharing system inspired by [Roam Research](https://roamresearch.com/), built on [Visual Studio Code](https://code.visualstudio.com/) and [GitHub](https://github.com/).
+Do you take notes, or conduct personal research? Do you output or collect text or image content in any form, such as a blog, poetry, diary or visual art? Do you intake any form of media, and want to catalogue your findings or thoughts? Do you forget information? The Exocore is a means to store and organize and publish such a bank of information in an easily navigable form.
 
-You can use **Foam** for organising your research, keeping re-discoverable notes, writing long-form content and, optionally, publishing it to the web.
+The exocore comprises a set of a few programs and plugins, rolling them into a package which can be customized infinitely and modularly; without any technical knowledge it can still be made your own, and with even a touch of technical knowledge (particularly CSS or HTML facility) it can be made into anything at all.
 
-**Foam** is free, open source, and extremely extensible to suit your personal workflow. You own the information you create with Foam, and you're free to share it, and collaborate on it with anyone you want.
+Its online component is a scaffolding for a website, and its offline component (fully functional without the online) is a filing system for notes, written output, or other data. Out of the box, it's a local directory of folders and interacting files forming an empty template for a [zettelkasten](https://zettelkasten.de/introduction/)/personal wiki, a platform for longform articles, a library of documents, a gallery of images, and an automatically created daily note. Mix and match these features as you wish; they are fully modular and independent. A user would be free to use or not use any of these features, so if they want to create a self-hosted platform like Substack with no extra features, this is facilitated.
+
+In the future, these exocores can comprise a webring linked by automatically updated network pages, as well as a [hyper-realtime IRC](https://xcela.org/#realtime-communicaiton) for which the Exocore will operate as a personal homepage. They can also feature things like an automatically updated 'latest posts' feed from all other (or selected) Exocores, or just 'related posts' (by [metadata](https://jekyllrb.com/docs/front-matter/) tags) from your own site. 
 
 ## Features
 
-### Graph Visualization
+- **Daily Notes** are designed as a quick access scratch pad, and are perfect for low-specificity research dumps and fleeting notes that will inform your notes in future. These are automatically titled by date. One is created each day automatically, and opened when you open VSCode.
+- **Wiki Notes** are designed for single atomic data points, and are automatically titled with a hexadecimal color code. This code is turned into a correspondingly colored badge in the index of the published site.
+- **Journal Entries** are for your thoughts, and are not automatically titled.
+- **Articles** are for longer write-ups on a particular topic.
 
-See how your notes are connected via a [graph](https://foambubble.github.io/foam/features/graph-visualisation) with the `Foam: Show Graph` command.
+You may have noticed that these notes together create a pipeline for systematising knowledge over time from the general to the particular, and for capturing a bank of scattered reference material and developing it into a polished final product. You might choose to cite a research dump in the subsequent post that it turned into as a bibliography/further reading section, such as appears at the bottom of [[predictive-processing|this wiki note]] 
 
-![Graph Visualization](./assets/screenshots/feature-show-graph.gif)
+### User experience:
 
-### Link Autocompletion
+A user downloadd the package in the form of a Github repository template, which will live on their local machine as a directory that can be manually or automatically pushed (synced) via [git](https://git-scm.com) to a web domain, which represents the documents in the directory after they are processed into an eaily-navigable and feature-rich website. Their exocore can be published to the web at no-cost using Netlify's free hosting and subdomain service.
 
-Foam helps you create the connections between your notes, and your placeholders as well.
+A user can get by just fine only interacting with simple plaintext [markdown](https://www.markdownguide.org) files, and can write posts and create hyperlinks between them, add pictures or PDFs and more, without going beyond in-text markdown syntax (read more about the Exocore's syntax [[syntax|here]]). They are also able to control how their generated website handles their documents in a human-readable [[start-here#Using Metadata|metadata section]] at the top of each post: tags, title, subtitle, categories, layouts, date, and any others that the user cares to add.
 
-![Link Autocompletion](./assets/screenshots/feature-link-autocompletion.gif)
+![](/attachments/girl-online.png)
 
-### Sync links on file rename
+Locally, the directory of notes (which will also be a git repository if you wish to publish as a website online) is managed and maintained through a [VS Code](https://code.visualstudio.com) workspace. 
 
-Foam updates the links to renamed files, so your notes stay consistent.
+The recommended extensions for your workspace arrives as a package of two things:
 
-![Sync links on file rename](./assets/screenshots/feature-link-sync.gif)
+1. A template directory including templates for simple creation of new markdown documents of different kinds (article, journal entry, wiki note, daily note), each treated differently in the rendering of your website.
 
-### Unique identifiers across directories
+2. A set of VSCode plugins which offer a suite of features for the user to add to their directory of posts by facilitating easy linking between notes, URL management, and many other features. The directory can be easily hosted for free with [Netlify](https://www.netlify.com), for which a setup guide is available [[installation-instructions#Publishing Your Exocore|here]].
 
-Foam supports files with the same name in multiple directories.
-It will use the minimum identifier required, and even report and help you fix existing ambiguous wikilinks.
+### Jekyll
+To view your site before it is pushed online, a user can set up their Exocore directory to build a local instance of the site with [Jekyll](https://jekyllrb.com). When publishing, Netlify runs Jekyll server-side, so running it locally produces the same site as will be published.
 
-![Unique identifier autocompletion](./assets/screenshots/feature-unique-wikilink-completion.gif)
+### Customizability
 
-![Wikilink diagnostic](./assets/screenshots/feature-wikilink-diagnostics.gif)
+The stack is an open-source repo and a suite of open-source programs and plugins, and is therefore ultimately customizable. The level of customizability depends only on your technical know-how, but minimal learnings yield compounding rewards. Here is an idea of the level of control over your final website yielded by advancing levels of technical knowledge:
 
-### Link Preview and Navigation
+- **No technical knowledge:**
+  - You can implement all of the above, and choose from a set of .CSS templates for your website to adjust its aesthetics. You can create posts, use the daily note functionality, store documents in the Library, create ZK notes and links between them, use backlinking, embed notes, and all other features mentioned above. In other words, all features are fully available with no technical knowledge. You should become acquainted with the Exocore's [[syntax]], but this is easy enough to guess at, or to learn in under half an hour. 
 
-![Link Preview and Navigation](./assets/screenshots/feature-navigation.gif)
+    For publishing, a very cursory knowledge of git will come in handy, but git has a helpful GUI, and Exocore [[installation-instructions#Publishing Your Exocore|documentation]] includes a guide on how to publish your site.
+  
+- **HTML and CSS**
+  - You will be able to edit included stylesheets and HTML templates to create a site which looks any way that you wish. Both these languages are simple to learn, and even without learning them comprehensively a user can edit the provided templates and stylesheets to make major changes.  
 
-### Go to definition, Peek References
+- **Jekyll/Liquid**
+  - You will be able to create logic functions to manipulate metadata stored in the markdown front matter, create custom menus or boxes with automatically generated content based on the front matter, assign your own custom front matter variables, and more. 
 
-See where a note is being referenced in your knowledge base.
+- **Ruby**
+  - Learning Ruby is not at all necessary, but familiarity with it will facilitate you in packaging themes you have created for your exocore as Ruby Gems in case you would like to publish them for use by others. If you want to proliferate your particular model of the exocore, this is an easy way to package it.
 
-![Go to Definition, Peek References](./assets/screenshots/feature-definition-references.gif)
 
-### Navigation in Preview
+## Full Tech Stack
 
-Navigate your rendered notes in the VS Code preview panel.
+- [VS Code](https://code.visualstudio.com) (and plugin package)
+- [Git](https://git-scm.com) (for publishing)
+- [Jekyll](https://jekyllrb.com) (optional)
 
-![Navigation in Preview](./assets/screenshots/feature-preview-navigation.gif)
-
-### Note embed
-
-Embed the content from other notes.
-
-![Note Embed](./assets/screenshots/feature-note-embed.gif)
-
-### Support for sections
-
-Foam supports autocompletion, navigation, embedding and diagnostics for note sections.
-Just use the standard wiki syntax of `[[resource#Section Title]]`.
-
-### Link Alias
-
-Foam supports link aliasing, so you can have a `[[wikilink]]`, or a `[[wikilink|alias]]`.
-
-### Templates
-
-Use [custom templates](https://foambubble.github.io/foam/features/note-templates) to have avoid repetitve work on your notes.
-
-![Templates](./assets/screenshots/feature-templates.gif)
-
-### Backlinks Panel
-
-Quickly check which notes are referencing the currently active note.
-See for each occurrence the context in which it lives, as well as a preview of the note.
-
-![Backlinks Panel](./assets/screenshots/feature-backlinks-panel.gif)
-
-### Tag Explorer Panel
-
-Tag your notes and navigate them with the [Tag Explorer](https://foambubble.github.io/foam/features/tags).
-Foam also supports hierarchical tags.
-
-![Tag Explorer Panel](./assets/screenshots/feature-tags-panel.gif)
-
-### Orphans and Placeholder Panels
-
-Orphans are notes that have no inbound nor outbound links. 
-Placeholders are dangling links, or notes without content.
-Keep them under control, and your knowledge base in a better state, by using this panel.
-
-![Orphans and Placeholder Panels](./assets/screenshots/feature-placeholder-orphan-panel.gif)
-
-### Syntax highlight
-
-Foam highlights wikilinks and placeholder differently, to help you visualize your knowledge base.
-
-![Syntax Highlight](./assets/screenshots/feature-syntax-highlight.png)
-
-### Daily note
-
-Create a journal with [daily notes](https://foambubble.github.io/foam/features/daily-notes).
-
-![Daily Note](./assets/screenshots/feature-daily-note.gif)
-
-### Generate references for your wikilinks
-
-Create markdown [references](https://foambubble.github.io/foam/features/link-reference-definitions) for `[[wikilinks]]`, to use your notes in a non-Foam workspace.
-With references you can also make your notes navigable both in GitHub UI as well as GitHub Pages.
-
-![Generate references](./assets/screenshots/feature-definitions-generation.gif)
-
-### Commands
-
-- Explore your knowledge base with the `Foam: Open Random Note` command
-- Access your daily note with the `Foam: Open Daily Note` command
-- Create a new note with the `Foam: Create New Note` command
-  - This becomes very powerful when combined with [note templates](https://foambubble.github.io/foam/features/note-templates) and the `Foam: Create New Note from Template` command
-- See your workspace as a connected graph with the `Foam: Show Graph` command
-
-## Recipes
-
-People use Foam in different ways for different use cases, check out the [recipes](https://foambubble.github.io/foam/recipes/recipes) page for inspiration!
-
-## Getting started
-
-Whether you want to build a [Second Brain](https://www.buildingasecondbrain.com/) or a [Zettelkasten](https://zettelkasten.de/posts/overview/), write a book, or just get better at long-term learning, **Foam** can help you organise your thoughts if you follow these simple rules:
-
-1. Create a single **Foam** workspace for all your knowledge and research following the [[Getting started]] guide.
-2. Write your thoughts in markdown documents (I like to call them **Bubbles**, but that might be more than a little twee). These documents should be atomic: Put things that belong together into a single document, and limit its content to that single topic. ([source](https://zettelkasten.de/posts/overview/#principles))
-3. Use Foam's shortcuts and autocompletions to link your thoughts together with `[[wikilinks]]`, and navigate between them to explore your knowledge graph.
-4. Get an overview of your **Foam** workspace using the [[Graph Visualisation]], and discover relationships between your thoughts with the use of [[Backlinking]].
-
-You can also use our Foam template:
-
-1. [Create a GitHub repository from foam-template](https://github.com/foambubble/foam-template/generate). If you want to keep your thoughts to yourself, remember to set the repository private.
-2. Clone the repository and open it in VS Code.
-3. When prompted to install recommended extensions, click **Install all** (or **Show Recommendations** if you want to review and install them one by one).
-
-This will also install `Foam`, but if you already have it installed, that's ok, just make sure you're up to date on the latest version.
-
-## Requirements
-
-High tolerance for alpha-grade software.
-Foam is still a Work in Progress.
-Rest assured it will never lock you in, nor compromise your files, but sometimes some features might break ;)
-
-## Known Issues
-
-See the [issues](https://github.com/foambubble/foam/issues/) on our GitHub repo ;)
-
-## Release Notes
-
-See the [CHANGELOG](./packages/foam-vscode/CHANGELOG.md).
-
-## Learn more
-
-**Head over to the 👉[Published version of this Foam workspace](https://foambubble.github.io/foam#whats-in-a-foam)** to see Foam in action and read the rest of the documentation!
-
-Quick links to next documentation sections
-
-- [What's in a Foam?](https://foambubble.github.io/foam#whats-in-a-foam)
-- [Getting started](https://foambubble.github.io/foam#getting-started)
-- [Features](https://foambubble.github.io/foam#features)
-- [Call To Adventure](https://foambubble.github.io/foam#call-to-adventure)
-- [Thanks and attribution](https://foambubble.github.io/foam#thanks-and-attribution)
-
-You can also browse the [docs folder](https://github.com/foambubble/foam/tree/master/docs).
-
-## License
-
-Foam is licensed under the [MIT license](LICENSE).
+**VSCode Plugins:**
+- [Foam](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode)
+- [Netlify](https://marketplace.visualstudio.com/items?itemName=shailen.netlify)
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [Paste Image](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)
+- [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
 
 [//begin]: # "Autogenerated link references for markdown compatibility"
-[Backlinking]: docs/features/backlinking.md "Backlinking"
+[installation-instructions|here]: _articles/installation-instructions "Exocore Installation Instructions"
+[predictive-processing|this wiki note]: _journal/predictive-processing "Predictive Processing and the Free Energy Principle"
+[syntax|here]: _articles/syntax "Exocore Syntax Examples"
+[start-here#Using Metadata|metadata section]: _articles/start-here "Start Here"
+[installation-instructions#Publishing Your Exocore|here]: _articles/installation-instructions "Exocore Installation Instructions"
+[syntax]: _articles/syntax "Exocore Syntax Examples"
+[installation-instructions#Publishing Your Exocore|documentation]: _articles/installation-instructions "Exocore Installation Instructions"
 [//end]: # "Autogenerated link references"
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://jevakallio.dev/"><img src="https://avatars1.githubusercontent.com/u/1203949?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jani Eväkallio</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=jevakallio" title="Code">💻</a> <a href="https://github.com/foambubble/foam/commits?author=jevakallio" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://joeprevite.com/"><img src="https://avatars3.githubusercontent.com/u/3806031?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Joe Previte</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=jsjoeio" title="Code">💻</a> <a href="https://github.com/foambubble/foam/commits?author=jsjoeio" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/riccardoferretti"><img src="https://avatars3.githubusercontent.com/u/457005?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Riccardo</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=riccardoferretti" title="Code">💻</a> <a href="https://github.com/foambubble/foam/commits?author=riccardoferretti" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://ojanaho.com/"><img src="https://avatars0.githubusercontent.com/u/2180090?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Janne Ojanaho</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=jojanaho" title="Code">💻</a> <a href="https://github.com/foambubble/foam/commits?author=jojanaho" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://bypaulshen.com/"><img src="https://avatars3.githubusercontent.com/u/2266187?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Paul Shen</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=paulshen" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/coffenbacher"><img src="https://avatars0.githubusercontent.com/u/245867?v=4?s=60" width="60px;" alt=""/><br /><sub><b>coffenbacher</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=coffenbacher" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://mathieu.dutour.me/"><img src="https://avatars2.githubusercontent.com/u/3254314?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Mathieu Dutour</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=mathieudutour" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/presidentelect"><img src="https://avatars2.githubusercontent.com/u/1242300?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michael Hansen</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=presidentelect" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://klickverbot.at/"><img src="https://avatars1.githubusercontent.com/u/19335?v=4?s=60" width="60px;" alt=""/><br /><sub><b>David Nadlinger</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=dnadlinger" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://pluckd.co/"><img src="https://avatars2.githubusercontent.com/u/20598571?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Fernando</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=MrCordeiro" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/jfgonzalez7"><img src="https://avatars3.githubusercontent.com/u/58857736?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Juan Gonzalez</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=jfgonzalez7" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://www.louiechristie.com/"><img src="https://avatars1.githubusercontent.com/u/6807448?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Louie Christie</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=louiechristie" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://supersandro.de/"><img src="https://avatars2.githubusercontent.com/u/7258858?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Sandro</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=SuperSandro2000" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Skn0tt"><img src="https://avatars1.githubusercontent.com/u/14912729?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Simon Knott</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Skn0tt" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://styfle.dev/"><img src="https://avatars1.githubusercontent.com/u/229881?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Steven</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=styfle" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Georift"><img src="https://avatars2.githubusercontent.com/u/859430?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Tim</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Georift" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/sauravkhdoolia"><img src="https://avatars1.githubusercontent.com/u/34188267?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Saurav Khdoolia</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=sauravkhdoolia" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://anku.netlify.com/"><img src="https://avatars1.githubusercontent.com/u/22813027?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Ankit Tiwari</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=anku255" title="Documentation">📖</a> <a href="https://github.com/foambubble/foam/commits?author=anku255" title="Tests">⚠️</a> <a href="https://github.com/foambubble/foam/commits?author=anku255" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/ayushbaweja"><img src="https://avatars1.githubusercontent.com/u/44344063?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Ayush Baweja</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=ayushbaweja" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/TaiChi-IO"><img src="https://avatars3.githubusercontent.com/u/65092992?v=4?s=60" width="60px;" alt=""/><br /><sub><b>TaiChi-IO</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=TaiChi-IO" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/juanfrank77"><img src="https://avatars1.githubusercontent.com/u/12146882?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Juan F Gonzalez </b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=juanfrank77" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://sanketdg.github.io"><img src="https://avatars3.githubusercontent.com/u/8980971?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Sanket Dasgupta</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=SanketDG" title="Documentation">📖</a> <a href="https://github.com/foambubble/foam/commits?author=SanketDG" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/nstafie"><img src="https://avatars1.githubusercontent.com/u/10801854?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Nicholas Stafie</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=nstafie" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/francishamel"><img src="https://avatars3.githubusercontent.com/u/36383308?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Francis Hamel</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=francishamel" title="Code">💻</a></td>
-    <td align="center"><a href="http://digiguru.co.uk"><img src="https://avatars1.githubusercontent.com/u/619436?v=4?s=60" width="60px;" alt=""/><br /><sub><b>digiguru</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=digiguru" title="Code">💻</a> <a href="https://github.com/foambubble/foam/commits?author=digiguru" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/chirag-singhal"><img src="https://avatars3.githubusercontent.com/u/42653703?v=4?s=60" width="60px;" alt=""/><br /><sub><b>CHIRAG SINGHAL</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=chirag-singhal" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/lostintangent"><img src="https://avatars3.githubusercontent.com/u/116461?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jonathan Carter</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=lostintangent" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.synesthesia.co.uk"><img src="https://avatars3.githubusercontent.com/u/181399?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Julian Elve</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=synesthesia" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/thomaskoppelaar"><img src="https://avatars3.githubusercontent.com/u/36331365?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Thomas Koppelaar</b></sub></a><br /><a href="#question-thomaskoppelaar" title="Answering Questions">💬</a> <a href="https://github.com/foambubble/foam/commits?author=thomaskoppelaar" title="Code">💻</a> <a href="#userTesting-thomaskoppelaar" title="User Testing">📓</a></td>
-    <td align="center"><a href="http://www.akshaymehra.com"><img src="https://avatars1.githubusercontent.com/u/8671497?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Akshay</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=MehraAkshay" title="Code">💻</a></td>
-    <td align="center"><a href="http://johnlindquist.com"><img src="https://avatars0.githubusercontent.com/u/36073?v=4?s=60" width="60px;" alt=""/><br /><sub><b>John Lindquist</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=johnlindquist" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://ashwin.run/"><img src="https://avatars2.githubusercontent.com/u/1689183?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Ashwin Ramaswami</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=epicfaace" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Klaudioz"><img src="https://avatars1.githubusercontent.com/u/632625?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Claudio Canales</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Klaudioz" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/vitaly-pevgonen"><img src="https://avatars0.githubusercontent.com/u/6272738?v=4?s=60" width="60px;" alt=""/><br /><sub><b>vitaly-pevgonen</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=vitaly-pevgonen" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://dshemetov.github.io"><img src="https://avatars0.githubusercontent.com/u/1810426?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Dmitry Shemetov</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=dshemetov" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/hooncp"><img src="https://avatars1.githubusercontent.com/u/48883554?v=4?s=60" width="60px;" alt=""/><br /><sub><b>hooncp</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=hooncp" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://rt-canada.ca"><img src="https://avatars1.githubusercontent.com/u/13721239?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Martin Laws</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=martinlaws" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://seanksmith.me"><img src="https://avatars3.githubusercontent.com/u/2085441?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Sean K Smith</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=sksmith" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/kevin-neely/"><img src="https://avatars1.githubusercontent.com/u/37545028?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Kevin Neely</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=kneely" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://ariefrahmansyah.dev"><img src="https://avatars3.githubusercontent.com/u/8122852?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Arief Rahmansyah</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=ariefrahmansyah" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://vhanda.in"><img src="https://avatars2.githubusercontent.com/u/426467?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Vishesh Handa</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=vHanda" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://www.linkedin.com/in/heroichitesh"><img src="https://avatars3.githubusercontent.com/u/37622734?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Hitesh Kumar</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=HeroicHitesh" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://spencerwoo.com"><img src="https://avatars2.githubusercontent.com/u/32114380?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Spencer Woo</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=spencerwooo" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://ingalless.com"><img src="https://avatars3.githubusercontent.com/u/22981941?v=4?s=60" width="60px;" alt=""/><br /><sub><b>ingalless</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=ingalless" title="Code">💻</a> <a href="https://github.com/foambubble/foam/commits?author=ingalless" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://jmg-duarte.github.io"><img src="https://avatars2.githubusercontent.com/u/15343819?v=4?s=60" width="60px;" alt=""/><br /><sub><b>José Duarte</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=jmg-duarte" title="Code">💻</a> <a href="https://github.com/foambubble/foam/commits?author=jmg-duarte" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.yenly.wtf"><img src="https://avatars1.githubusercontent.com/u/6759658?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Yenly</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=yenly" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.hikerpig.cn"><img src="https://avatars1.githubusercontent.com/u/2259688?v=4?s=60" width="60px;" alt=""/><br /><sub><b>hikerpig</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=hikerpig" title="Code">💻</a></td>
-    <td align="center"><a href="http://sigfried.org"><img src="https://avatars1.githubusercontent.com/u/1586931?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Sigfried Gold</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Sigfried" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://www.tristansokol.com"><img src="https://avatars3.githubusercontent.com/u/867661?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Tristan Sokol</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=tristansokol" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://umbrellait.com"><img src="https://avatars0.githubusercontent.com/u/49779373?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Danil Rodin</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=umbrellait-danil-rodin" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/scottjoewilliams/"><img src="https://avatars1.githubusercontent.com/u/2026866?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Scott Williams</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=scott-joe" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://jackiexiao.github.io/blog"><img src="https://avatars2.githubusercontent.com/u/18050469?v=4?s=60" width="60px;" alt=""/><br /><sub><b>jackiexiao</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Jackiexiao" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://generativist.substack.com/"><img src="https://avatars3.githubusercontent.com/u/78835?v=4?s=60" width="60px;" alt=""/><br /><sub><b>John B Nelson</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=jbn" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/asifm"><img src="https://avatars2.githubusercontent.com/u/3958387?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Asif Mehedi</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=asifm" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/litanlitudan"><img src="https://avatars2.githubusercontent.com/u/4970420?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Tan Li</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=litanlitudan" title="Code">💻</a></td>
-    <td align="center"><a href="http://shaunagordon.com"><img src="https://avatars1.githubusercontent.com/u/579361?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Shauna Gordon</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=ShaunaGordon" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://mcluck.tech"><img src="https://avatars1.githubusercontent.com/u/1753801?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Mike Cluck</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=MCluck90" title="Code">💻</a></td>
-    <td align="center"><a href="http://brandonpugh.com"><img src="https://avatars1.githubusercontent.com/u/684781?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Brandon Pugh</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=bpugh" title="Code">💻</a></td>
-    <td align="center"><a href="https://max.davitt.me"><img src="https://avatars1.githubusercontent.com/u/27709025?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Max Davitt</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=themaxdavitt" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://briananglin.me"><img src="https://avatars3.githubusercontent.com/u/2637602?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Brian Anglin</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=anglinb" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://deft.work"><img src="https://avatars1.githubusercontent.com/u/1455507?v=4?s=60" width="60px;" alt=""/><br /><sub><b>elswork</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=elswork" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://leonh.fr/"><img src="https://avatars.githubusercontent.com/u/19996318?v=4?s=60" width="60px;" alt=""/><br /><sub><b>léon h</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=leonhfr" title="Code">💻</a></td>
-    <td align="center"><a href="https://nygaard.site"><img src="https://avatars.githubusercontent.com/u/4606342?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Nikhil Nygaard</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=njnygaard" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="http://www.nitwit.se"><img src="https://avatars.githubusercontent.com/u/1382124?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Mark Dixon</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=nitwit-se" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/joeltjames"><img src="https://avatars.githubusercontent.com/u/3732400?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Joel James</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=joeltjames" title="Code">💻</a></td>
-    <td align="center"><a href="https://www.ryo33.com"><img src="https://avatars.githubusercontent.com/u/8780513?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Hashiguchi Ryo</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=ryo33" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://movermeyer.com"><img src="https://avatars.githubusercontent.com/u/1459385?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Michael Overmeyer</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=movermeyer" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/derrickqin"><img src="https://avatars.githubusercontent.com/u/3038111?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Derrick Qin</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=derrickqin" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/zomars/"><img src="https://avatars.githubusercontent.com/u/3504472?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Omar López</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=zomars" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://robincn.com"><img src="https://avatars.githubusercontent.com/u/1583193?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Robin King</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=RobinKing" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="http://twitter.com/deegovee"><img src="https://avatars.githubusercontent.com/u/4730170?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Dheepak </b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=dheepakg" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/daniel-vera-g"><img src="https://avatars.githubusercontent.com/u/28257108?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Daniel VG</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=daniel-vera-g" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/Barabazs"><img src="https://avatars.githubusercontent.com/u/31799121?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Barabas</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Barabazs" title="Code">💻</a></td>
-    <td align="center"><a href="http://enginveske@gmail.com"><img src="https://avatars.githubusercontent.com/u/43685404?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Engincan VESKE</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=EngincanV" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://www.paulderaaij.nl"><img src="https://avatars.githubusercontent.com/u/495374?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Paul de Raaij</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=pderaaij" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/bronson"><img src="https://avatars.githubusercontent.com/u/1776?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Scott Bronson</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=bronson" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://rafaelriedel.de"><img src="https://avatars.githubusercontent.com/u/41793?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Rafael Riedel</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=rafo" title="Documentation">📖</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/Pearcekieser"><img src="https://avatars.githubusercontent.com/u/5055971?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Pearcekieser</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Pearcekieser" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/theowenyoung"><img src="https://avatars.githubusercontent.com/u/62473795?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Owen Young</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=theowenyoung" title="Documentation">📖</a> <a href="#content-theowenyoung" title="Content">🖋</a></td>
-    <td align="center"><a href="http://www.prashu.com"><img src="https://avatars.githubusercontent.com/u/476729?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Prashanth Subrahmanyam</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=ksprashu" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/JonasSprenger"><img src="https://avatars.githubusercontent.com/u/25108895?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jonas SPRENGER</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=JonasSprenger" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Laptop765"><img src="https://avatars.githubusercontent.com/u/1468359?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Paul</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=Laptop765" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://bandism.net/"><img src="https://avatars.githubusercontent.com/u/22633385?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Ikko Ashimine</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=eltociear" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/memeplex"><img src="https://avatars.githubusercontent.com/u/2845433?v=4?s=60" width="60px;" alt=""/><br /><sub><b>memeplex</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=memeplex" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/AndreiD049"><img src="https://avatars.githubusercontent.com/u/52671223?v=4?s=60" width="60px;" alt=""/><br /><sub><b>AndreiD049</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=AndreiD049" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/iam-yan"><img src="https://avatars.githubusercontent.com/u/48427014?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Yan</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=iam-yan" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://WikiEducator.org/User:JimTittsler"><img src="https://avatars.githubusercontent.com/u/180326?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Jim Tittsler</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=jimt" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://malcolmmielle.wordpress.com/"><img src="https://avatars.githubusercontent.com/u/4457840?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Malcolm Mielle</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=MalcolmMielle" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://snippets.page/"><img src="https://avatars.githubusercontent.com/u/74916913?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Veesar</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=veesar" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/bentongxyz"><img src="https://avatars.githubusercontent.com/u/60358804?v=4?s=60" width="60px;" alt=""/><br /><sub><b>bentongxyz</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=bentongxyz" title="Code">💻</a></td>
-    <td align="center"><a href="https://brianjdevries.com"><img src="https://avatars.githubusercontent.com/u/42778030?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Brian DeVries</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=techCarpenter" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="http://Cliffordfajardo.com"><img src="https://avatars.githubusercontent.com/u/6743796?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Clifford Fajardo </b></sub></a><br /><a href="#tool-cliffordfajardo" title="Tools">🔧</a></td>
-    <td align="center"><a href="http://cu-dev.ca"><img src="https://avatars.githubusercontent.com/u/6589365?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Chris Usick</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=chrisUsick" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/josephdecock"><img src="https://avatars.githubusercontent.com/u/1145533?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Joe DeCock</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=josephdecock" title="Code">💻</a></td>
-    <td align="center"><a href="http://www.drewtyler.com"><img src="https://avatars.githubusercontent.com/u/5640816?v=4?s=60" width="60px;" alt=""/><br /><sub><b>Drew Tyler</b></sub></a><br /><a href="https://github.com/foambubble/foam/commits?author=drewtyler" title="Documentation">📖</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

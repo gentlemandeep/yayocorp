@@ -1,0 +1,79 @@
+---
+layout: page
+category: archive
+title: Archive
+subtitle:
+date: 
+tags: 
+---
+<main>
+  <section class="container-lg">
+    <div class="leftcolumn">    
+      {% include profile-card.html %}
+    </div>
+    
+    <div class="archive-grid">
+      
+      <div class="index-card">
+        <h2 class="post-title">Journal Entries</h2>
+        {% assign topic_sort = site.journal | sort: 'date' | reverse %}
+        {% for journal in topic_sort %}	
+        <a class="index-anchor" href="{{ journal.url }}">
+          <div class="archive-item">
+            <span class="index-item-title">{{ journal.title }}</span>
+            <br>
+            <span class="archive-item-date">{{ journal.date | date: "%m/%d/%Y" }}</span>   
+          </div>
+                </a>
+            {% endfor %}
+      </div>
+
+    <div class="index-card">
+      <h2 class="post-title">Wiki</h2>
+      {% assign topic_sort = site.notes | sort: 'topic'%}
+      {% for note in topic_sort %}	
+        <a class="index-anchor" href="{{ note.url }}">
+          <div class="archive-item">
+           <span class="index-item-title">{{ note.title }}</span>
+           <br>
+           <span class="archive-item-date">{{ note.date | date: "%m/%d/%Y" }}</span>  
+           <span style="background-color: #{{ note.title | remove: '-'}};" class="hex-badge"></span> 
+          </div>
+              </a>
+           {% endfor %}
+    </div>
+
+
+    <div class="index-card">
+      <h2 class="post-title">Articles</h2>
+      {% assign topic_sort = site.articles | sort: 'topic'%}
+      {% for article in topic_sort %}	
+        <a class="index-anchor" href="{{ article.url }}">
+          <div class="archive-item">
+           <span class="index-item-title">{{ article.title }}</span>
+           <br>
+           <span class="archive-item-date">{{ article.date | date: "%m/%d/%Y" }}</span>   
+          </div>
+              </a>
+           {% endfor %}
+    </div>
+
+</div>
+  </section>
+</main>
+
+
+
+          
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

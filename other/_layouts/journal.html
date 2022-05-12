@@ -1,0 +1,67 @@
+---
+layout: default
+---
+<div class="container-lg markdown-body wrapper">
+  <div class="leftcolumn">
+{% include profile-card.html %}
+{% include related.html %}
+{% include tags-sidebar.html %}
+</div>
+
+<div class="midcolumn">
+  <main>
+    {% include prev-next.html %}
+
+    <article>
+      <div class="post-info">
+      <div class="post-date">{{ page.date | date: '%B %d, %Y' }}</div>
+      <div class="title">
+      <h1 class="title-text">{{page.title}}</h1>
+      </div>
+        {% for subtitle in page.subtitle %}
+        {% unless page.subtitle == "" %}  
+      <div class = "subtitle">
+        <h2 class="subtitle-text">{{page.subtitle}}</h2>
+      </div>
+        {% endunless %}
+        {% endfor %}
+
+        <div class="content toc-container">
+          <h1 class="toc-header">Table of Contents</h1>
+         {% include toc.html html=content sanitize=true ordered=true class="inline_toc" id="my_toc" h_min=1 h_max=4 %}
+        </div>
+        </div>
+        <hr>
+
+      <div class="notes-entry-container note">
+        <div class="content post-content">
+
+          {{ content }}
+
+        </div>
+        </div>
+        <hr>
+
+  {% include backlinks.html %}
+</article>  
+
+</main>
+  {% include notes_graph.html %}
+</div>
+    </div>   
+
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>
+
+

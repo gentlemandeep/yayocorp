@@ -1,0 +1,294 @@
+/* ### Theme: Gemini ### */
+
+/* === Base Settings === */
+
+/* --- Body Colors --- */
+
+$background: #14171a;
+$color-border: 1px solid white;
+$border-radius: 0px;
+$color-box-background: black;
+
+/* --- Text Colors --- */
+$color-text: #cad1d8;
+$color-subtext: white;
+$color-code: lightyellow;
+$internal-links: $color-text;
+$external-links: $color-subtext;
+$invalid-links: $internal-links;
+$color-primary: white;
+$color-secondary: blue;
+
+/* --- Font Family --- */
+$font-family-sans-serif: Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI,  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$font-family-serif: serif;
+$font-family-monospace: ”IBM Plex Mono”,”Fira Code”,”Fira Mono”,”Roboto Mono”,”Droid Sans Mono”,Monaco,Consolas,Courier,monospace;;
+
+/* === Body === */
+
+body {
+  box-sizing: content-box;
+  font-family: $font-family-monospace;
+  margin-left: 2em;
+  margin: 0 auto;
+  line-height: 1.5;
+  letter-spacing:-1px;
+  padding: 4vh 6vw;
+  overflow-x: hidden;
+  color: $color-text;
+  font-size: 1.1em;
+  max-width: 43em;
+  background-color:$background;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-height: 75vh;
+  border-radius: $border-radius;
+}
+
+blockquote {
+  padding: 1em;
+  margin: 0;
+  font-size: 1em;
+  font-family: $font-family-serif;
+    font-style: italic;
+  background: $color-box-background;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+
+.title-text, h1,h2,h3,h4,h5,h6 {
+font:inherit;
+font-weight:bold;
+color:$color-subtext;
+}
+.title-text{text-transform:uppercase;margin-top:1em;margin-bottom:1em;}
+
+h1::before {  content:"# "; }
+h2::before {  content:"##";}
+h3::before {  content:"###";}
+h4::before {  content:"####";}
+h5::before {  content:"#####";}
+h6::before {  content:"######";}
+
+.page {
+h2::before {  content:"## ";}
+h3::before {  content:"### ";}
+h4::before {  content:"#### ";}
+h5::before {  content:"##### ";}
+h6::before {  content:"###### ";}
+}
+
+code {
+  color: #color-code;
+  font-family: $font-family-monospace;
+  font-size: 1em;
+}
+
+*:focus {
+  background: white !important;
+  color: black !important;
+}
+
+/* -- Links -- */
+
+a {
+  color: white;
+  font-weight: strong;
+  text-decoration:underline;
+  }
+  .footer-nav a, .license a{
+  background-color: inherit;
+  color: white;
+}
+nav a {
+  color:white !important; 
+  background-color:inherit !important;
+  }
+.internal-link {
+    color: black;
+    background-color: #eec589;
+    font-weight:strong;
+    cursor: pointer !important;
+  }
+a:hover {
+    background-color: red !important;
+    color:white;
+    cursor:alias;
+}
+.invalid-link, .invalid-link-brackets {
+  color: $invalid-links;
+  cursor: help;
+}
+
+.sidenote a, nav a {
+    font-weight: normal !important;
+}
+
+.anchor a {
+  color: $color-text !important;
+  cursor: pointer;
+}
+.anchor a:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.toc-container a {
+  cursor: pointer;
+}
+
+/* --- Header Anchors --- */
+.anchor {visibility: hidden; color:gray; opacity:0.7; text-decoration:none; font-size: 0.8em; font-familiy:monospace}
+.anchor:hover {text-decoration:none; color:white !important; cursor:pointer;}
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor {
+    visibility: visible;
+} 
+
+
+/* === Page Formatting === */
+
+nav {
+ color: $color-text;
+ font-weight: normal;
+ max-width:30em;
+}
+
+.alignleft {
+  float: left;
+    text-align:left;
+}
+.alignright {
+  float: right;
+   text-align:right;
+}
+
+.border {
+  border: $color-border; 
+  padding: 2em;
+   @media (max-width: 700px) {
+    border:none;
+    padding:none;
+  }
+}
+
+hr {margin:0.5em; max-width: 30em;}
+
+/* -- Interlinks -- */
+
+.graph {
+  margin:2em; line-height: 1.1em;
+}
+
+.graph-container {
+  margin:1em;
+}
+
+.sidenote{
+  max-width:33em;
+}
+.sidenote h1{
+  margin-bottom: 1em
+}
+
+.sidenote {
+  background-color: $background;
+  margin-top:1em;
+    margin-bottom: 1em
+}
+
+.backlink-box {
+  background-color: $background;
+  border: 1px solid $color-text;
+  padding:1em;
+  line-height:1em;
+}
+
+.backnote-title {
+  display: grid; grid-gap: 0.2em; grid-template-columns: repeat(1fr);
+}
+.backlinks-excerpt{
+  font-size: 0.9em; color: $color-subtext;
+}
+.backlinks-none{
+  font-size: 0.9em; text-align:center;
+}
+
+.notes-entry-container {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-areas:
+    "content"
+    "side";
+  @media (min-width: 700px) {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content side";
+  }
+}
+
+
+/* Table of Contents */
+.toc-container{
+  display: block;
+  margin-left:0em;
+    @media (max-width: 700px) {
+  max-width:100%;
+  }
+}
+.toc-container h1 {
+  margin:0em;
+}
+
+.toc-container ol li  {
+  list-style-type: numeral;
+}
+
+.toc-container ol li li {
+  list-style-type: lower-latin;
+}
+
+
+
+/* -- Footer -- */ 
+
+time {
+  display: block;
+  font-family: $font-family-monospace;
+  color: $color-subtext;
+}
+
+.time {
+  margin-top:1em; 
+}
+
+.footer-nav {
+  margin-top:1em;
+  font-size: 0.8em;
+  color: $color-text;
+  margin-left:0em
+}
+
+license {
+  font-family: $font-family-monospace;
+}
+
+.license {
+  margin-top:1em; 
+  font-size: 0.8em;
+  margin-left:0em
+}
+.footer-nav a, .license a {
+  background-color: none !important;
+  color: white;
+}

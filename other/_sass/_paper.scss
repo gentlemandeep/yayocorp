@@ -1,0 +1,1020 @@
+/* ### Theme: Edith ### */
+
+/* === Base Settings === */
+
+/* --- Body Colors --- */
+
+$background: #fffcf7;
+$color-inner-divs: #fffdfb;
+$color-items: #fffdfb;
+
+
+/* --- Text Colors --- */
+$color-text: black;
+$color-subtext: black;
+$internal-links: brown;
+$external-links: brown;
+$invalid-links: $internal-links;
+$color-primary: brown;
+$color-box-shadow: none;
+
+
+/* --- Borders --- */
+$article-border: none;
+$sidebar-border: 2px solid brown;
+$prev-next-border: none;
+$color-item-border: none;
+$border-radius: 5px;
+
+/* --- Embeds, Sidenote and Footnote Colors --- */
+$embed-border: 2px solid brown;
+$color-embed-background: white;
+$color-embed-title: black;
+$color-embed-text: black;
+
+$footnote-border: 2px solid brown;
+$color-footnote-background: white;
+$color-footnote-text: black;
+
+$sidenote-border: thin solid $color-primary;
+$color-sidenote-background: none;
+$color-sidenote-text: brown;
+
+$color-code-text: white;
+$color-code-highlight: brown;
+$color-code-background: $color-code-highlight;
+
+
+
+/* --- Font Family --- */
+$font-family-sans-serif: Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI,  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+$font-family-serif: Times New Roman, Times, serif;
+
+$font-family-monospace: ”Iosevka Term SS03”,”IBM Plex Mono”,”Fira Code”,”Fira Mono”,”Roboto Mono”,”Droid Sans Mono”,Monaco,Consolas,Courier,monospace;
+
+
+
+body {
+  font-family: $font-family-serif;
+  padding: 4vh 6vw;
+  overflow-x: hidden;
+  color: $color-text;
+  font-size: 1.2rem;
+  background-color:$background;
+}
+
+/* TITLES
+================================================== */
+
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.4;
+  padding-bottom: 0;
+  font-size:1.15em;
+  margin:1em;
+  margin-left:0em;
+    font-variant: small-caps;
+}
+
+.title-text { text-decoration:underline; text-align:center; font-weight:bold; margin:0em; line-height:1em; font-size: 1.8em;}
+
+.post-content{
+    
+h1 { text-align:center;font-weight:bold; text-decoration: underline; font-size: 1.4em;}
+
+h2 { text-align:left;font-weight:bold; font-size: 1.4em}
+
+h3 {font-weight:normal; text-decoration:underline;text-align:left; font-size:1.3em;}
+
+h4 {text-transform:none;font-weight:normal; font-size:1.2em; text-align:left}
+}
+
+
+ul {
+  list-style-type: circle;
+}
+
+hr {
+  margin:1.5em;
+    display: none;
+}
+
+
+
+/* CODE HIGHLIGHTING
+================================================== */
+
+code {
+    color: white;
+    background-color: $color-code-highlight;
+    font-family: $font-family-monospace;
+    color: $color-code-text;
+}
+
+
+.highlight {
+    background-color: $color-code-highlight;
+}
+
+
+/* LINKS
+================================================== */
+
+a {
+  color: $external-links;
+  text-decoration:none;
+  &:hover {
+      cursor: alias;
+  }
+  &.internal-link {
+    color: $internal-links;
+    font-weight:bold;
+    cursor: pointer;
+  }
+}
+.invalid-link, .invalid-link-brackets {
+  color: $invalid-links;
+  cursor: help;
+}
+
+.anchor a {
+  color: $color-text;
+  cursor: pointer;
+    
+}
+
+.anchor a:hover{
+    color: $internal-links;
+    cursor: pointer;
+    background-color: $background;
+}
+
+.toc-container a {
+  cursor: pointer;
+}
+
+index-grid a:hover {
+
+      background-color: $background;
+      cursor: alias;
+}
+
+.sidebar-link-box a, .post-content a {
+    &:hover{
+      background-color: brown;
+      color: white;
+    }
+}
+
+
+/* HEADER ANCHORS
+================================================== */
+
+.anchor {visibility: hidden; color:gray; opacity:0.7; text-decoration:none; font-size: 0.8em; font-family:monospace}
+.anchor:hover {text-decoration:none; color:white !important; cursor:pointer;}
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor {
+    visibility: visible;
+} 
+
+
+/* PAGE FORMATTING
+================================================== */
+
+.title {
+    padding: 1em;
+    margin-bottom:1em;
+}
+
+/* BACKLINKS
+================================================== */
+
+
+.backlinks-excerpt{
+  font-size: 0.9em; color: $color-subtext;
+}
+.backlinks-none{
+  font-size: 0.9em; text-align:center;
+}
+
+#graph-wrapper svg {
+    border: thin solid white;
+}
+
+/* TABLE OF CONTENTS
+================================================== */
+
+.toc-container{
+  border: none; 
+  padding: 1em;
+  padding-bottom: 0em;
+  margin: 1em;
+  margin: 0 auto;
+  display: block;
+  max-width: 50%;
+    @media (max-width: 700px) {
+  max-width:100%;
+  }
+}
+.toc-container h1 {
+  margin:0em;
+}
+
+.toc-container ol li  {
+  list-style-type: numeral;
+}
+
+.toc-container ol li li {
+  list-style-type: lower-latin;
+}
+
+
+//--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--\\
+//--=--=--=--=--=--=--=--=*EXTRAS*=--=--=--=--=--=--=--=--\\
+//--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--=--\\
+
+
+/* STRUCTURE
+================================================== */
+
+.sidebar-card, .index-card, .archive-cardi {
+    margin-bottom: 0em;
+    float: left;
+    clear: both;
+    background-color: $background;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.container-lg {
+    max-width: 80em;
+    margin: auto;
+}
+
+.leftcolumn {
+    float: left;
+    width: 15%;
+    margin: 0.5em;
+     @media (max-width: 900px)
+     {width: 100%;
+         margin: auto
+         }}
+
+.midcolumn {
+    float: left;
+    width: 50%;
+    margin: 1em;
+    
+@media (max-width: 900px)
+     {width: 100%;
+    margin: auto
+}}
+
+.midcolumn-small {
+    width: 40%;
+    margin: auto;
+}
+
+main {
+margin: auto;
+}
+
+article {
+    background-color: $background;    
+    box-shadow: 1px 1px 0px $color-box-shadow;
+}
+
+
+.sidebar-card {
+    text-align: left;
+    background-color: white;
+}
+
+.sidebar-card h1 {
+    padding: 0.5em;
+    margin: auto;
+    text-align: center
+}
+
+.sidebar-card h2 {
+    margin: auto;
+    padding-bottom: 0.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebar-card ul {
+    margin: 0.1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    list-style-position: outside;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.related ul li {
+    margin: 0.1em;
+    padding-bottom: 0.5em;
+}
+
+
+/* PROFILE
+================================================== */
+
+.sidebar-card a, .related a {
+    margin-bottom: 0.5em;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 55px;
+    margin-bottom: 0.5em;
+    
+    @media (max-width: 900px)
+     {float: 100%;
+         margin: auto
+         }}
+
+.profile {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.user-name {
+    color: $internal-links;
+    text-decoration: underline;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar-link-box, .index-grid {
+    display: grid;
+    grid-template-columns: auto;
+//    border: 2px brown solid; 
+    box-shadow: 1px 1px 0px $color-box-shadow;
+    background-color: $color-inner-divs;
+    margin-bottom: 0.5em;
+    max-width: 100%;
+    padding: 0.5em;
+    font-size: 0.9em;
+    
+    @media (max-width: 900px)
+     {margin: auto;
+      display: block;
+}}
+
+.sidebar-link-box h2 {
+    font-size: 1.3em;
+    
+}
+
+.sidebar-link-box {
+    padding: 0em;
+}
+
+
+.sidebar-card h1 {
+    font-size: 1.4em;
+    padding: 0em;
+    text-decoration: underline;
+}
+
+.sidebar-link-box ul li {
+    list-style: none;
+    list-style-position: inside;
+
+}
+
+
+
+.silent-link {
+    color: $color-text;
+}
+
+/* HOME 
+=============*/
+
+.home-card {
+    width: 400px;
+    margin: auto;
+    padding: 25px; 
+    background-color: $background;
+    border: $article-border;
+}
+
+.container-sml {
+    width: 400px;
+    margin: auto;
+}
+
+.home-icon {
+    width: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding: 5px;
+}
+
+.flip {
+      transform: scaleX(-1);
+}
+
+
+/* POST CONTENT
+(use this to style the formatting of your posts)
+================================================== */
+.post-content {
+    line-height: 1.5em;
+      margin-left:2em; 
+  margin-right:1em; 
+  padding-top:0.5em;
+}
+
+.post-content img {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2em;
+  max-height: 75vh;
+  border-radius: $border-radius;
+}
+
+
+.post-content blockquote {
+  padding: 1em;
+  margin: 0;
+  font-size: 1em;
+  font-family: $font-family-serif;
+    font-style: italic;
+}
+
+.notes-entry-container {
+  border: $color-item-border;
+  padding:1em; padding-top:0em; 
+}
+
+// image captions
+img+em {
+    display: block;
+    color: $internal-links;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    margin-top: -1.5em;
+}
+
+/* BACKLINKS
+================================================== */
+
+.backlinks-container {
+    max-width:28em; margin: 0 auto;
+    background-color: $color-inner-divs;
+    padding: 1em;
+    margin: 1em auto;
+    border: 2px solid brown;
+    border-radius: 5px;
+    
+}
+
+.backlinks-container h1{
+    margin-bottom: 1em
+}
+
+.backlink-box {
+    padding:1em;
+    margin-bottom: 0.5em;
+    line-height:1em;
+    background-color: $color-items;
+    border: 2px solid $color-primary;
+    border-radius: $border-radius;
+    line-height:1em;
+}
+
+
+/* EMBEDDED NOTES
+================================================== */
+
+.embed-wrapper {
+    border: $embed-border;
+    padding: 1em;
+    background-color: $color-embed-background;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: white;
+    border-radius: 5px;
+}
+
+.embed-title {
+    display: none;
+}
+
+.embed-content {
+    color: $color-embed-text;
+}
+.embed-content p {
+    color: $color-embed-text;
+}
+
+
+
+/* SIDENOTES
+================================================== */
+
+.sidenote {
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 0.8em;
+    line-height: 1.1em;
+    box-sizing: border-box;
+    color: $color-sidenote-text;
+
+}
+
+.sidenote-hover {
+    color: $color-subtext;
+    z-index: 1;
+    box-sizing: border-box;
+    color: $internal-links;
+    background: white;
+    border: 1px solid brown;
+}
+
+.sidenote:hover {
+    z-index: 1;
+    color: $internal-links;
+}
+
+.footnote web-link {
+    position: relative
+}
+.bigger:after{
+    content:"";
+    padding: 50px;  
+    position: absolute;
+    left: -25px;
+    top: -25px;
+} 
+
+
+
+/* FOOTNOTES
+================================================== */
+
+.footnotes {
+    border: $footnote-border;
+    padding: 1em 0;
+    background-color: $color-footnote-background;
+    color: $color-footnote-text;
+    border-radius: 5px;
+}
+
+
+/* INDEX
+================================================== */
+
+.index-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: left;
+    grid-gap: flex;
+    padding: 1em;
+        border: 2px solid brown;
+    border-radius: 5px;
+
+    
+     @media (max-width: 1000px)
+     {grid-template-columns: auto;}
+}
+
+.index-anchor {
+        text-decoration: none !important;
+
+}
+.index-item, .archive-item, .library-item {
+    width: 95%;
+    margin: auto;
+    background-color: $color-items;
+    text-align: left;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 2px solid $color-primary;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    &:hover {
+        box-shadow: 0px 0px 0px 1px $color-primary;
+    }
+}
+
+.index-item {
+    height: 8em;
+    overflow: hidden;
+}
+
+.index-item-title, .library-item-title {
+font-weight: bold;
+    text-decoration: underline;
+    color: $color-text;
+    overflow: hidden;
+}
+
+.index-item-date, .library-item-filetype {
+    font-weight: normal;
+    float: right;
+}
+
+.index-item-topic {
+font-weight: normal;
+    font-weight: bold;
+
+}
+
+.index-item-excerpt {
+font-weight: normal;
+    height: 5em;
+    width: 85%;
+    overflow: hidden;
+    float: left;
+
+}
+
+
+
+/* ARCHIVE
+================================================== */
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-gap: 0.5em;
+    background-color: $background;
+    padding: 1em;
+    margin: auto;
+}
+
+.archive-card {
+    background-color: $color-inner-divs;
+    width: 100%;
+    margin: auto;
+}
+
+
+
+/* LIBRARY
+================================================== */
+
+.library-item {
+    display: grid;
+    grid-auto-columns: 100% 10%;
+}
+
+.post-date {
+    padding-top: 0.5em;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+
+}
+
+.library-grid-container {
+    width: 90%;
+    margin: auto;
+}
+    
+.library-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+}
+
+.library-image {
+    background: white;
+}
+
+.library-image-container {
+    height: 7em;
+    margin: 4%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* TAG PAGE
+================================================== */
+
+.home-link-button a {
+    &:hover {
+    background-color: $background;
+    color: black;
+    }
+}
+
+.tile h1, .home-link-button h1 {
+  margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.tile:hover, home-link-button:hover {
+    background-color: $color-items;
+}
+
+.tile:target {
+    border: medium solid $color-primary;
+}
+
+.tile, .home-link-button {
+   background-color: $color-inner-divs;    
+    border: 2px solid $color-primary;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &:hover {
+    background-color: $color-items;}
+}
+
+.tag-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+
+/* PREVIOUS / NEXT BUTTONS
+================================================== */
+
+.prev-next {
+    background-color: $background;
+    width: 100%;
+    height: 3.5em;
+}
+
+.prev-next a {
+    font-weight: bold;
+    text-decoration: none;
+    overflow: hidden;
+}
+.prev {
+    float: left;
+    border: 2px solid brown;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 45%;
+    max-height: 2.5em;
+    text-align: center;
+    background: white;
+    line-height: 1.5em;
+
+    &:hover {
+    background: brown;
+        color: white; }
+}
+
+
+.next {
+    float: right;
+    border: 2px solid brown;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 45%;
+    max-height: 2.5em;
+    text-align: center;
+    background: white;
+    line-height: 1.5em;
+    
+    &:hover {
+    background: brown;
+        color: white; }
+}
+
+
+.subtitle-text {
+    width: 100%;
+    text-align: center !important;
+    margin: 0.5em auto;
+}
+
+
+
+/* COLOR BADGES (ZETTELKASTEN HEX)
+================================================== */
+
+.hex-badge {
+    width: 2em;
+    height: 2em;
+    float: right;
+    border: 2px solid white;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 1px black;
+    margin-top: -1em;
+}
+
+/* NETWORK GRAPH (BACKLINK VISUAL REPRESENTATION)
+================================================== */
+
+.network-graph-container {
+    clear: both;
+    margin-top: 1em;
+    display: block;
+    background: $background;
+    border: $article-border;
+    padding: 2em;
+    height: 45em;
+    
+    & h1 {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+}
+
+
+  .links line {
+    stroke: $color-primary;
+    opacity: 0.5;
+  }
+
+.nodes circle {
+    cursor: pointer;
+    fill: $color-primary;
+    transition: all 0.15s ease-out;
+  }
+
+  .text text {
+    cursor: pointer;
+    fill: $color-subtext;
+  }
+
+  .nodes [active],
+  .text [active] {
+      cursor: pointer;
+      fill: $color-primary;
+      font-weight: bold;
+      text-decoration: underline;
+      
+  }
+
+  .inactive {
+    opacity: 0.4;
+    transition: all 0.15s ease-out;
+  }
+
+
+  #graph-wrapper svg {
+      background: $color-inner-divs;
+      height: 40em;
+      border: 2px solid brown;
+      border-radius: 10px;
+
+  }
+
+
+
+/* LISTS AND TABLES
+================================================== */ 
+
+ol li {
+    list-style-type: decimal;
+}
+
+ol li li {
+    list-style-type: lower-alpha;
+}
+
+ul li {
+    list-style-type: disc;
+}
+
+ul li li {
+    list-style-type: square;
+}
+
+table, tr, td {
+    border: thin solid;
+    border-collapse: collapse;
+    padding: 0.5em;
+    margin: auto;
+    background-color: $color-inner-divs;
+}
+
+
+/* BORDERS
+================================================== */
+
+// Border around your posts
+ article, .index-card {
+    border: $article-border;
+    box-sizing: border-box;
+}
+
+// Border around the items in the sidebar
+.sidebar-card, .border {
+    border: $sidebar-border;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+        border-radius: 5px;
+
+}
+
+
+
+
+/* GRAPHVIZ PARSER -- GRAPH VISUALISATION TOOL
+================================================== */
+
+.graphviz-wrapper {
+    padding: 0px;
+}
+
+.graphviz-wrapper svg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+
+/* GENERAL PURPOSE CLASSES
+================================================== */
+
+// use syntax: {:.classname} within markdown to apply a class— these general classes might come in handy.
+
+
+/* -=Text=- */
+
+.right-aside {
+    float: right;
+    border: $embed-border;
+    padding: 1.2em;
+    width: 40%;
+    margin-left: 2em;
+    font-size: 0.9em;
+    background: white;
+    border-radius: 5px;
+}
+
+.left-aside {
+    float: left;
+    border: $embed-border;
+    padding: 1.2em;
+    width: 40%;
+    margin-left: 2em;
+    font-size: 0.9em;
+    background: white;
+    border-radius: 5px;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* -=Images=- */
+
+.right {
+    float: right;
+    width: 50%;
+    padding: 1em;
+}
+
+.border {
+    border: medium solid brown;
+}
+
+.shadow {
+    box-shadow: 0px 0px 15px black;
+}
+
+.glow {
+    box-shadow: 0px 0px 15px white;
+}
+
+
+
+
+

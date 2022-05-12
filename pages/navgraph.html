@@ -1,0 +1,52 @@
+---
+layout: page
+title: Article Index
+date:
+type:
+
+---
+<div style="border: thin solid black">
+    {% graphviz %}
+    graph {
+      size=100
+      ratio=1;
+      node [fixedsized=true, style=filled fillcolor=white, color=brown, fontcolor=brown, labelfontcolor=brown];
+      edge [color=brown, fontcolor=brown, labelfontcolor=brown];
+
+    {% for document in site.documents %}
+     {% for backlink in document.backlinks %} {% assign linked_doc = site.documents | where: "url", backlink.url | first %}
+     {% if document.title != linked_doc.title %}
+     "{{ document.title | truncate: 15 }}" -- "{{ linked_doc.title | truncate: 15 }}"
+     {% endif %}
+     {% endfor %}
+     {% endfor %}
+    
+     {% for document in site.documents %}
+     {% for backlink in document.backlinks %} {% assign linked_doc = site.documents | where: "url", backlink.url | first %}
+     "{{ document.title | truncate: 15 }}" [URL="{{ document.url }}", shape=circle]
+     "{{ linked_doc.title | truncate: 15 }}" [URL="{{ linked_doc.url }}", shape=circle] 
+     {% endfor %}
+     {% endfor %}
+      
+    }
+    
+    {% endgraphviz %}
+
+</div style="width: 100%; height: 100%">
+
+
+<div>
+
+</div>
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

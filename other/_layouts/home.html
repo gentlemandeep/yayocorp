@@ -1,0 +1,80 @@
+---
+layout: default
+title: Home
+---
+<main>
+<section class="container-sml">
+<div class="home-card">
+  <div class="profile">
+    <img class="profile-pic" style="border-color: {{site.data.user.border-color}}" src="{{ site.baseurl }}/{{ site.data.user.profile_pic }}" alt="">
+    <a href="{{ site.profile_link }}" | absolute_url }}">
+        <h1 class="user-name">{{ site.data.user.user_name }}</h1>
+    </a>
+  </div>
+<div class="home-link-button">
+  <div class="icon-grid">
+    <img class="home-icon flip" src="assets/images/icons/articles.png">
+    <a href="/pages/all-articles"><h1>Articles</h1></a>
+    <img class="home-icon" src="assets/images/icons/articles.png">
+  </div>
+</div>
+
+<div class="home-link-button">
+  <div class="icon-grid">
+    <img class="home-icon flip" src="assets/images/icons/journal.png">
+    <a href="/pages/all-journal"><h1>Journal</h1></a>
+    <img class="home-icon" src="assets/images/icons/journal.png">
+  </div>
+</div>
+
+<div class="home-link-button">
+  <div class="icon-grid">
+    <img class="home-icon flip" src="assets/images/icons/wiki.png">
+    <a href="/pages/all-notes"><h1>Wiki</h1></a>
+    <img class="home-icon" src="assets/images/icons/wiki.png">
+  </div>
+</div>
+
+<div class="home-link-button">
+<div class="icon-grid">
+  <img class="home-icon flip" src="assets/images/icons/daily.png">
+  <a href="/pages/all-daily"><h1>Daily Notes</h1></a>
+  <img class="home-icon" src="assets/images/icons/daily.png">
+</div>
+</div>
+<br>
+<div class="home-link-button">
+  <div class="card">
+    <a href="/pages/latest"><h1>Latest Posts</h1></a>
+  </div>
+  </div>
+
+  <div class="home-link-button">
+    <div class="card">
+      <a href="/pages/archive"><h1>Archive</h1></a>
+    </div>
+    </div>
+
+    <div class="home-link-button">
+      <div class="card">
+        <a href="/pages/library"><h1>Document Library</h1></a>
+      </div>
+      </div>
+
+</div>
+</section>
+  </main>
+
+          
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

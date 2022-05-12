@@ -1,0 +1,90 @@
+---
+layout: page
+title: Latest
+date:
+type:
+
+---
+
+
+
+<div class="container-lg">
+
+    <div class="leftcolumn">
+      {% include profile-card.html %}
+    </div>
+
+    <div class="midcolumn">
+      <article>
+        <h1 class="title-text">Latest Posts</h1>
+        <p style=" width: 100%; text-align: center">Showing latest 10 of {{ site.documents.size }} posts</p>
+      </article>
+<br>
+      {% assign items = site.documents | sort: 'date' | reverse %}
+      {% for item in items %}	
+
+    <main>
+      <article class="latest-post-border">
+        <a href="{{ item.url }}">
+        <div class="title">
+        <h1 class="title-text">{{item.title}}</h1> 
+        </div>
+      </a>
+          {% for subtitle in item.subtitle %}
+          {% unless item.subtitle == "" %}  
+        <div class = "subtitle">
+          <h2 class="subtitle-text">{{item.subtitle}}</h2>
+        </div>
+          {% endunless %}
+          {% endfor %}
+          <div style="margin: 1em; "><a href="{{ item.url }}">See this post in context</a> </div>
+          <div style="margin: 1em; "> <b>Date:</b> {{ item.date | date: "%-d %B %Y" }}</div>
+
+        <div class="notes-entry-container note">
+          <div class="content post-content">
+  
+            {{ item.content }}
+  
+          </div>
+          </div>
+          <hr>
+          <div class="backlinks-container">
+            <side>
+              <h1>Interlinked Pages</h1>
+                <div class="backlinks-title">
+                  {% for backlink in item.backlinks %}
+                  {% assign linked_doc = site.documents | where: "url", backlink.url | first %}
+                  <a href="{{backlink.url}}""><div class="backlink-box"><b>{{ linked_doc.title }}</b> — {{ linked_doc.collection | capitalize }}  <br>
+                    <div class ="backlinks-excerpt">
+                      {{ linked_doc.excerpt | strip_html | truncatewords: 20 }}
+                    </div>
+                  </a>
+                </div>
+                {% else %}
+                <p>There are no pages linking back to this one. </p>
+                {% endfor %}
+            </side>
+          </div>
+  </article>  
+  
+  </main>
+
+  
+<br>
+
+{% endfor %}
+</div>
+</div>
+
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>

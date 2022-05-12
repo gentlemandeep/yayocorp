@@ -1,0 +1,62 @@
+---
+layout: page
+title: Daily daily Index
+date:
+type:
+
+---
+<main>
+<section class="container-lg">
+
+  <div class="leftcolumn">
+
+    
+    {% include profile-card.html %}
+  </div>
+
+  <div class="midcolumn">
+  <div class="index-card">
+    <p style="float: right">Showing {{ site.daily.size }} items</p>
+    <h1 class="index-title">Index of Daily Notes (By most recent)</h1>
+  <div class="index-grid">
+
+
+    {% for topic in site.topic %}
+  {{ topic }}
+  {% endfor %}
+
+  {% assign topic_sort = site.daily | sort: 'date' | reverse %}
+  {% for daily in topic_sort %}	
+    <a class="index-anchor" href="{{ daily.url }}">
+      <div class="index-item">
+       <span class="index-item-title">{{ daily.title }}</span>
+       <span class="index-item-date">{{ daily.date | date: "%m/%d/%Y" }}</span>
+
+       {% if daily.topic %}
+       <p class="index-item-topic">Topic: {{ daily.topic }}</p>	
+{% endif %}
+
+      <p class="index-item-excerpt">{{- daily.excerpt | strip_newlines | strip_html | remove: "Table of Contents:"| truncate: 170 | remove: daily.title -}} </p>
+
+      </div>
+          </a>
+       {% endfor %}
+       
+    </div>
+  </div>
+</div>
+
+</section>
+</main>       
+<script type="text/javascript">
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll(".markdown-body a[title]").forEach((a) => {
+    a.innerText = a.title;
+  });
+  // Hack: Remove .md extension from wikilinks to get the html in jekyll
+  document.querySelectorAll("a").forEach(l => {
+    if (l.href.endsWith('.md')) {
+      l.href = l.href.substring(0, l.href.length-3)
+    }
+  })
+</script>
