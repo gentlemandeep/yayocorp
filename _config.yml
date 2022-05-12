@@ -1,7 +1,7 @@
 title: Exocore
 
 source: .
-url: https://compassionate-neumann-f910fd.netlify.app/
+url: https://exocore.remilia.org
 baseurl: ''
 destination: ./_site
 exclude: ['other/_includes/notes_graph.json']
