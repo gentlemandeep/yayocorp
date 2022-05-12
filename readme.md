@@ -1,12 +1,18 @@
+---
+layout: article
+category: article
+subtitle:
+topic: Computers
+date: 27 jan 2021
+tags: exocore remilia computers web
+---
+
 # The Exocore Package
 
 ![](/attachments/exocore.png)
 
-## What is the Exocore?
-The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, forms in increasingly faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by [Remilia Corporation](https://remilia.org) as of a ready to use proof-of-concept for [the New Internet](https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA).
-
-## How to Begin
-Follow the instructions [[installation-instructions|here]] to learn how to install your Exocore locally, set up publishing with Netlify, and view your site offline before publishing.
+## Executive Summary
+The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by [Remilia Corporation](https://remilia.org) as an extension of [Foam](https://github.com/foambubble/foam) to complete the system of a knowledgebase network.
 
 ## Introduction
 
@@ -18,22 +24,47 @@ Its online component is a scaffolding for a website, and its offline component (
 
 In the future, these exocores can comprise a webring linked by automatically updated network pages, as well as a [hyper-realtime IRC](https://xcela.org/#realtime-communicaiton) for which the Exocore will operate as a personal homepage. They can also feature things like an automatically updated 'latest posts' feed from all other (or selected) Exocores, or just 'related posts' (by [metadata](https://jekyllrb.com/docs/front-matter/) tags) from your own site. 
 
-## Features
 
-- **Daily Notes** are designed as a quick access scratch pad, and are perfect for low-specificity research dumps and fleeting notes that will inform your notes in future. These are automatically titled by date. One is created each day automatically, and opened when you open VSCode.
-- **Wiki Notes** are designed for single atomic data points, and are automatically titled with a hexadecimal color code. This code is turned into a correspondingly colored badge in the index of the published site.
-- **Journal Entries** are for your thoughts, and are not automatically titled.
-- **Articles** are for longer write-ups on a particular topic.
+## How to Begin
+Follow the no-code instructions [[installation-instructions|here]] to learn how to install your exocore locally and set up automatic publishing with Netlify.
 
-You may have noticed that these notes together create a pipeline for systematising knowledge over time from the general to the particular, and for capturing a bank of scattered reference material and developing it into a polished final product. You might choose to cite a research dump in the subsequent post that it turned into as a bibliography/further reading section, such as appears at the bottom of [[predictive-processing|this wiki note]] 
+# Breaking down the Exocore
+
+## Information Pipeline
+
+Notes are segregated into 4 categories:
+- **Daily Notes**, designed as a quick access scratch pad, and are perfect for low-specificity research dumps and fleeting notes that will inform your notes in future. These are automatically titled by date. One is created each day automatically, and opened when you open VSCode.
+- **Wiki Notes**, designed for single atomic data points, and are automatically titled with a hexadecimal color code. This code is turned into a correspondingly colored badge in the index of the published site.
+- **Journal Entries**, for your thoughts, and are not automatically titled.
+- **Articles**, for longer write-ups on a particular topic.
+
+These note categories together create a pipeline for systematising knowledge over time from the general to the particular, and for capturing a bank of scattered reference material and developing it into a polished final product. For example, you might choose to cite a research dump in the subsequent post that it turned into as a bibliography/further reading section, such as appears at the bottom of [[predictive-processing|this wiki note]]. This workflow is designed to encourage active, daily use of the exocore for all thoughts.
+
+## Editing Environment
+
+The exocore is built as an extension on top of the Foam Visual Studio Code package, which is itself an open-source recreation of the Roam learning garden editor. Foam  introduces the standard features required for a proper personal wiki system such as:
+- Backlinks panel
+- Wikilinks aliasing syntax
+- Tiling windows
+- Note embedding
+- Graph visualization
+- Sync files on rename
+
+This system provides a powerful and highly customizable dashboard for comprehensive note-taking. On top of Foam, we've introduced: 
+- Segregated note categories with default templates
+- Daily note generation
+- Automatic randomly generated titling for zettelkasten functionality
+- Automatic table of contents generation
+- Footnotes and sidenotes
+- Suite of Jekyll templates for automatically publishing websites off the collection of notes
 
 ### User experience:
 
-A user downloadd the package in the form of a Github repository template, which will live on their local machine as a directory that can be manually or automatically pushed (synced) via [git](https://git-scm.com) to a web domain, which represents the documents in the directory after they are processed into an eaily-navigable and feature-rich website. Their exocore can be published to the web at no-cost using Netlify's free hosting and subdomain service.
+A user downloadd the package in the form of a Github repository template, which lives on their local machine as a directory that can be manually or automatically synced via [git](https://git-scm.com) to a web domain, which represents the documents in the directory after they are processed into an eaily-navigable and feature-rich website. Their exocore can be published to the web at no-cost using Netlify's free hosting and subdomain service.
 
 A user can get by just fine only interacting with simple plaintext [markdown](https://www.markdownguide.org) files, and can write posts and create hyperlinks between them, add pictures or PDFs and more, without going beyond in-text markdown syntax (read more about the Exocore's syntax [[syntax|here]]). They are also able to control how their generated website handles their documents in a human-readable [[start-here#Using Metadata|metadata section]] at the top of each post: tags, title, subtitle, categories, layouts, date, and any others that the user cares to add.
 
-![](/attachments/girl-online.png)
+![](/attachments/girl-online.png){:.right}
 
 Locally, the directory of notes (which will also be a git repository if you wish to publish as a website online) is managed and maintained through a [VS Code](https://code.visualstudio.com) workspace. 
 
@@ -44,7 +75,8 @@ The recommended extensions for your workspace arrives as a package of two things
 2. A set of VSCode plugins which offer a suite of features for the user to add to their directory of posts by facilitating easy linking between notes, URL management, and many other features. The directory can be easily hosted for free with [Netlify](https://www.netlify.com), for which a setup guide is available [[installation-instructions#Publishing Your Exocore|here]].
 
 ### Jekyll
-To view your site before it is pushed online, a user can set up their Exocore directory to build a local instance of the site with [Jekyll](https://jekyllrb.com). When publishing, Netlify runs Jekyll server-side, so running it locally produces the same site as will be published.
+
+To view your site before it is pushed online, a user can also set up their Exocore directory to build a local instance of the site with [Jekyll](https://jekyllrb.com). When publishing, Netlify runs Jekyll server-side, so running it locally produces the same site as will be published.
 
 ### Customizability
 
@@ -79,11 +111,11 @@ The stack is an open-source repo and a suite of open-source programs and plugins
 - [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright)
 
 [//begin]: # "Autogenerated link references for markdown compatibility"
-[installation-instructions|here]: _articles/installation-instructions "Exocore Installation Instructions"
-[predictive-processing|this wiki note]: _journal/predictive-processing "Predictive Processing and the Free Energy Principle"
-[syntax|here]: _articles/syntax "Exocore Syntax Examples"
-[start-here#Using Metadata|metadata section]: _articles/start-here "Start Here"
-[installation-instructions#Publishing Your Exocore|here]: _articles/installation-instructions "Exocore Installation Instructions"
-[syntax]: _articles/syntax "Exocore Syntax Examples"
-[installation-instructions#Publishing Your Exocore|documentation]: _articles/installation-instructions "Exocore Installation Instructions"
+[installation-instructions|here]: _articles/installation-instructions.md "Exocore Installation Instructions"
+[predictive-processing|this wiki note]: _journal/predictive-processing.md "Predictive Processing and the Free Energy Principle"
+[syntax|here]: _articles/syntax.md "Exocore Syntax Examples"
+[start-here#Using Metadata|metadata section]: _articles/start-here.md "Start Here"
+[installation-instructions#Publishing Your Exocore|here]: _articles/installation-instructions.md "Exocore Installation Instructions"
+[syntax]: _articles/syntax.md "Exocore Syntax Examples"
+[installation-instructions#Publishing Your Exocore|documentation]: _articles/installation-instructions.md "Exocore Installation Instructions"
 [//end]: # "Autogenerated link references"
