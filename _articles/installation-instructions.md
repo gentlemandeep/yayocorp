@@ -16,7 +16,7 @@ The exocore exists as both a Visual Studio Code template package and a workflow 
 3. Download forked repo to your computer by navigating to Code > Download Zip
 4. Download [Visual Studio Code](https://code.visualstudio.com/Download)
 5. Open your newly forked repository in VS Code with File > Open, and navigating to the downloaded folder
-6. Accept the prompts to trust the folder, and install the recommended extensions. Your Exocore is now ready to be edited locally.
+6. Accept the prompts to trust the folder, and install the recommended extensions. Your Exocore is now ready to be edited locally on VS Code.
 
 ## 2. Publishing Your Exocore to the Web with Netlify
 Netlify is a platform that provides free hosting and subdomain services directly from Github repos, so it can be used to automatically publish your exocore as a website for no-cost.
@@ -47,3 +47,9 @@ You can also [customize Visual Studio Code heavily to your preference](), includ
 2. Install Ruby — Need command line tools?
 3. Install Bundler?
 4. Jekyll serve 
+
+---
+
+## Using your exocore
+
+Continue on to [[using-exocore|Using your Exocore]] to familiarize yourself with the editor interface and begin writing new notes.
