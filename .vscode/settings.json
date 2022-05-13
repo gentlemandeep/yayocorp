@@ -1,36 +1,37 @@
-// Place your settings in this file to overwrite default and user settings.
 {
+  "editor.minimap.enabled": false,
+  "editor.wrappingIndent": "indent",
+  "editor.overviewRulerBorder": false,
+  "editor.lineHeight": 24,
+  "[markdown]": {
+    "editor.quickSuggestions": true
+  },
+  "files.defaultLanguage": "markdown",
   "files.exclude": {
-    // set these to true to hide folders with the compiled JS files,
-    "packages/**/out": false,
-    "packages/**/dist": false
+    "**/node_modules": true
   },
-  "search.exclude": {
-    // set this to false to include compiled JS folders in search results
-    "packages/**/out": true,
-    "packages/**/dist": true
+  "files.watcherExclude": {
+    "**/node_modules": true
   },
-  // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
-  "typescript.tsc.autoDetect": "off",
-  "foam.edit.linkReferenceDefinitions": "withExtensions",
-  "foam.files.ignore": [
-    "**/.vscode/**/*",
-    "**/_layouts/**/*",
-    "**/_site/**/*",
-    "**/node_modules/**/*",
-    "packages/**/*"
-  ],
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "jest.autoRun": "off",
-  "jest.rootPath": "packages/foam-vscode",
-  "jest.jestCommandLine": "yarn jest",
-  "gitdoc.enabled": false,
-  "search.mode": "reuseEditor",
+  "foam.edit.linkReferenceDefinitions": "withoutExtensions",
+  "foam.openDailyNote.directory": "_daily",
+  "foam.openDailyNote.titleFormat": "mm-dd-yy",
+  "foam.openDailyNote.onStartup": true,
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
+  "markdown.preview.breaks": true,
+  "pasteImage.path": "${projectRoot}/attachments",
+  "pasteImage.showFilePathConfirmInputBox": true,
+  "prettier.singleQuote": false,
+  "spellright.notificationClass": "warning",
+  "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
+  "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
+  "insertDateString.format": "MMM D YYYY",
   "pasteImage.basePath": "${projectRoot}",
+  "netlify.api_token": "2USD9xBolRvHmrqP11P4inxeImJjcUgahrEEz7ASzIU",
+  "netlify.site_id": "9029cc11-eeeb-48cb-a9e5-80736c519670",
   "pasteImage.filePathConfirmInputBoxMode": "onlyName",
-  "pasteImage.path": "${projectRoot}/images",
-  "pasteImage.prefix": "/"
+  "pasteImage.forceUnixStyleSeparator": false,
+  "pasteImage.prefix": "/",
+  "jekyll-run.stopServerOnExit": false,
 }
