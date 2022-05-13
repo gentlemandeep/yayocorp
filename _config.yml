@@ -7,6 +7,8 @@ destination: ./.exocore/_site
 
 highlighter: rouge
 
+background: "red"
+
 gist:
   noscript: false
 
@@ -54,9 +56,6 @@ titles_from_headings:
   strip_title: true
   collections: true
     
-tag_page_layout: tag_page
-tag_page_dir: tag
-
 graphviz:
   options: "-Tsvg" # 'dot' command option
   command: "dot"   # execute this string. specify full path to 'dot' if you need
@@ -76,7 +75,6 @@ plugins:
 - jekyll-last-modified-at
 - jekyll-redirect-from
 #- jekyll-feed
-- jekyll/tagging
 - jekyll-wikilinks
 - ruby-graphviz
 

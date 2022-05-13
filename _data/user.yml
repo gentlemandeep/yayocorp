@@ -9,10 +9,7 @@ user_name: User Name
 profile_link: /
 
 # The user image displayed on your profile card
-profile_pic: assets/images/pfp3.png
+profile_pic: assets/images/pfp.png
 
-# The border color of the above image (color names and hex codes
-#preceded by '#' are accepted, as well as 'none') 
-border_color: none
   
 # Add your own variables if you wish, and then summon them with liquid tags

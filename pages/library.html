@@ -17,6 +17,7 @@ title: Library
 <div>
     <h1>Document Library <a href="/pages/gallery" >(See Image Gallery)</a></h1>
   </div>
+
     {% for library_item in site.static_files %} 
     {% if library_item.path contains '/library' %}
     <a class="index-anchor" href="{{ library_item.path }}">
