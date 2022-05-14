@@ -53,11 +53,11 @@ Your site is now officially live, available for anyone to view at `[site-name].n
 
 Change the default generated site name to whatever you'd like by navigating to `Site settings > Site details > Change site name`. It will be available at `[sitename].netlify.app`
 
-## Optional: Custom Domain
+### Optional: Custom Domain
 
 Custom domains can be added for a better look and more memorable url, but you will need to purchase one. If you already have a domain, follow the steps in [Configuring a Domain Purchased Elsewhere](#configuring-a-domain-purchased-elsewhere) 
 
-### Purchase Domain on Netlify
+#### Purchase Domain on Netlify
 
 If you do not already have a domain, you can purchase it directly within Netlify by adding in a new Custom domain. Prices aren't the best on the market (e.g. `.com` is $15/yr, market rate is $12/yr), but it will automate all setup.
 
@@ -68,7 +68,7 @@ If you do not already have a domain, you can purchase it directly within Netlify
 
 Once you have a domain purchased, Netlify will automate handling DNS configuration and SSL encryption, so your site will be fully ready to go on your domain.
 
-### Purchasing a Custom Domain
+#### Purchasing a Custom Domain
  
 Domains can be purchased from a variety of suppliers for affordable rates - a `.com` domain goes for about $12/year, though uncommon domains like `.xyz` can be found for as low as $2/year.
 
@@ -76,7 +76,7 @@ I can recommend [Google Domains](https://google.com/domains), I use it because i
 
 For uncommon domains and more competitive prices, [Namecheap](https://namecheap.com) is reliable - it also has a solid "Beast mode" search for finding rare domains.
 
-#### Configuring a Domain Purchased Elsewhere
+##### Configuring a Domain Purchased Elsewhere
 
 If you purchase your domain elsewhere, you will need to configure your domain provider to point the domain to your Netlify site. Follow this guide: [Configure external DNS for a custom domain](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/). 
 
