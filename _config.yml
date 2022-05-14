@@ -20,6 +20,8 @@ kramdown:
 readme_index:
   enabled: true
 
+repository: remiliacorp/exocore
+
 sass:
     sass_dir: ./.exocore/_sass
 
