@@ -59,7 +59,7 @@ Your notes can be previewed in rendered markdown by clicking the magnifying glas
 
 ![](/attachments/2022-05-13-17-48-12.png)
 
-### Markdown Syntax
+## Markdown Syntax
 
 Continue on to [[syntax|Writing with Exocore Syntax]] to learn the Markdown syntax standards it follows, as well as its extensions for hyperlinks, embedded code, footnotes and more.
 

@@ -1,4 +1,6 @@
 ---
+layout: article
+category: article
 subtitle:
 topic:
 date: 2022-05-08
@@ -7,23 +9,59 @@ tags:
 
 # Exocore Installation Instructions
 
-## 1. Setting up Exocore on your Machine
-The exocore exists as both a Visual Studio Code template package and a workflow between Github and Netlify. Follow these steps to get setup:
-1. [Create a Github account](https://github.com/join)
-2. Select use this template on the [the Exocore repo](https://github.com/hot-domme/exocore) to fork it your account
-3. Download forked repo to your computer by navigating to Code > Download Zip
-4. Download [Visual Studio Code](https://code.visualstudio.com/Download)
-5. Open your newly forked repository in VS Code with File > Open, and navigating to the downloaded folder
-6. Accept the prompts to trust the folder, and install the recommended extensions. Your Exocore is now ready to be edited locally on VS Code.
+You can set up a personal website as a public [[exocore|exocortex]] with no code in this 15 minute guide, using entirely free services to host your site on the web. 
 
-## 2. Publishing Your Exocore to the Web with Netlify
-Netlify is a platform that provides free hosting and subdomain services directly from Github repos, so it can be used to automatically publish your exocore as a website for no-cost.
+All pages are converted from simple, non-code [[syntax|Markdown syntax]], so you can focus purely on writing. The end result will look identical to this page.
 
-1. Login to [Netlify.app](https://app.netlify.com/) with your Github account
-2. Select ```Add new site > Import an existing project```
-3. Connect again with your GitHub account, then select the GitHub repo from the list
-4. The site will take about 10 minutes to build for the first time. After that, new changes will go live within one minute.
-5. To change your subdomain, visit Domain settings and then Options > Edit Site Name. You can also add your own custom domain if you own one.
+## Background
+
+Github will be used as a cloud content management system - it's convenient to upload updates to, accessible and editable from anywhere, and keeps full version history of changes as well as provides easy options for back-up.
+
+Netlify will be used to deploy the files stored on Github as a web-server - it's fast and automatically updates whenever an update is made on your Github repository. Github does offer its own static webhost, but Netlify is necessary due to certain plugin support limitations. 
+
+Netlify will also provide your site a custom subdomain, e.g. `[site-name].netlify.app`. You can also use your own purchased domain.
+
+All services are entirely free besides the custom domain.
+
+## 1. Deploy your own Exocore to the Web
+
+### Create Github Account
+
+First, create an account on [github.com](https://github.com/join) if you do not already have one. Remember to [make your email private](https://saraford.net/2017/02/19/how-to-hide-your-email-address-in-your-git-commits-but-still-get-contributions-to-show-up-on-your-github-profile-050/) in settings.
+
+Continue below when you have an account ready.
+
+### Install the Exocore template to GitHub and Netlify
+
+Open our [One-click installation](https://app.netlify.com/start/deploy?repository=https://github.com/remiliacorp/exocore).
+
+Steps:
+1. Select `Connect to Github`
+2. Login to Github and select `Authorize Application`
+3. Name your repository - this is your own reference
+4. Select `Deploy site`
+
+Netlify will now take about 5 minutes for the initial build of the site. If you want, you can watch the status of the build by clicking ``Production: master@HEAD`` under **Production Deploys**.
+
+Once it's complete, the Production status will change to **Published**, and you will be able to click the `[site-name].netlify.app` link to see your site.
+
+The site's master files will also appear in your Github account, under the repository name you selected, e.g. `github.com/account-name/repository-name`. Changes here will go live on the site automatically.
+
+Your site is now officially live, available for anyone to view at `[site-name].netlify.app.`, but there are some settings we should adjust before moving forward.
+
+### Change your site name
+
+Change the default generated site name to whatever you'd like by navigating to `Site settings > Site details > Change site name`. It will be available at `[sitename].netlify.app`
+
+Optionally, you can find instructions for setting up a custom domain [[here|custom domain]].
+
+## 2. Setting up Exocore as a VS Code Workspace on your Machine
+The exocore exists as both a Visual Studio Code template package and a workflow between Github and Netlify. While any editor capable of markdown is possible, using our modified VS Code Workspace is recommended for a suite of [[exocore-minded automation tools|using your exocore]].
+
+1. Download [Visual Studio Code](https://code.visualstudio.com/Download)
+2. Download the forked repo to your computer by navigating to your github account's exocore repo, then selectiong `Code > Download Zip`
+3. Open your newly forked repository in VS Code with File > Open, and navigating to the downloaded folder
+4. Accept the prompts to trust the folder, and install the recommended extensions. Your Exocore is now ready to be edited locally on VS Code.
 
 ## 3. Saving Changes to the Cloud with Github
 While you're working in VS Code, your work will be automatically saved. However, to publish the data to Github so that it propagates onto the web, you'll need to setup a git commit workflow.
@@ -36,22 +74,14 @@ If you're already familiar with git, it's the standard commit process that can b
 2. Navigate to ```/_data/user.yml``` to change your username and profile picture.
 3. Navigate to ```/styles.scss``` to select between different themes.
 
-You can also [customize Visual Studio Code heavily to your preference](), including easily changing color themes.
+You can also [customize Visual Studio Code heavily to your preference](https://www.jamesqquick.com/blog/5-ways-to-customize-vs-code), including easily changing color themes.
 
----
+## 5. Using your Exocore
 
-## Optional: Using Jekyll to serve your website locally
-1. Install rbenv
-2. Install Ruby — Need command line tools?
-3. Install Bundler?
-4. Jekyll serve 
-
----
-
-## Using your exocore
-
-Continue on to [[using-exocore|Using your Exocore]] to familiarize yourself with the editor interface and begin writing new notes.
+Continue on to [[Using your Exocore|using-exocore|]] to familiarize yourself with the editor interface and begin writing new notes.
 
 [//begin]: # "Autogenerated link references for markdown compatibility"
+[exocore|exocortex]: exocore "Exocore Executive Summary"
+[syntax|Markdown syntax]: syntax "Writing with Exocore Syntax"
 [using-exocore|Using your Exocore]: using-exocore "Using your Exocore"
 [//end]: # "Autogenerated link references"
