@@ -25,7 +25,7 @@ Follow the no-code instructions [[installation-instructions|here]] to learn how 
 
 # Breaking down the Exocore
 
-![study-monk](/assets/study-monk.jpg)
+![study-monk](/attachments/study-monk.jpg)
 
 ## Information Pipeline
 
