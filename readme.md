@@ -21,7 +21,7 @@ In the future, these exocores can comprise a webring linked by automatically upd
 
 
 ## How to Begin
-Follow the no-code instructions [[installation-instructions|here]] to learn how to install your exocore locally and set up automatic publishing with Netlify.
+Follow the no-code instructions [installation-instructions](https://remiliaexocore.netlify.app/articles/installation-instructions/) to learn how to install your exocore locally and set up automatic publishing with Netlify.
 
 # Breaking down the Exocore
 
