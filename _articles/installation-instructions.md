@@ -9,9 +9,9 @@ tags:
 
 # Exocore Installation Instructions
 
-You can set up a personal website as a [[public exocortex]] with no code or installations with this 5 minute guide, using entirely free services to host your site on the web. 
+You can set up a personal website as a public [[exocortex|exocore]] with no code in this 15 minute guide, using entirely free services to host your site on the web. 
 
-All pages are converted from simple, non-code [[Markdown]] syntax, so you can focus purely on writing. The end result will look identical to this page.
+All pages are converted from simple, non-code [[Markdown syntax|syntax]], so you can focus purely on writing. The end result will look identical to this page.
 
 ## Background
 
@@ -53,50 +53,15 @@ Your site is now officially live, available for anyone to view at `[site-name].n
 
 Change the default generated site name to whatever you'd like by navigating to `Site settings > Site details > Change site name`. It will be available at `[sitename].netlify.app`
 
-### Optional: Custom Domain
+Optionally, you can find instructions for setting up a custom domain [[here|custom domain]].
 
-Custom domains can be added for a better look and more memorable url, but you will need to purchase one. If you already have a domain, follow the steps in [Configuring a Domain Purchased Elsewhere](#configuring-a-domain-purchased-elsewhere) 
-
-#### Purchase Domain on Netlify
-
-If you do not already have a domain, you can purchase it directly within Netlify by adding in a new Custom domain. Prices aren't the best on the market (e.g. `.com` is $15/yr, market rate is $12/yr), but it will automate all setup.
-
-1. Navigate to Settings > Domain Management > Add custom domain.
-2. Enter the domain you would like
-3. If it is unavailable, you will see `[domain] already has an owner. Is it you?`. Select `No, try another`.
-4. If you find one that is available, you will be provided prices and option to register. You can use a [Domain search tool](https://domains.google.com/registrar/search) to help find available domains.
-
-Once you have a domain purchased, Netlify will automate handling DNS configuration and SSL encryption, so your site will be fully ready to go on your domain.
-
-#### Purchasing a Custom Domain
- 
-Domains can be purchased from a variety of suppliers for affordable rates - a `.com` domain goes for about $12/year, though uncommon domains like `.xyz` can be found for as low as $2/year.
-
-I can recommend [Google Domains](https://google.com/domains), I use it because it includes privacy protection and custom email aliases for free, and has an easy to navigate dashboard, as well as Google's very fast DNS. 
-
-For uncommon domains and more competitive prices, [Namecheap](https://namecheap.com) is reliable - it also has a solid "Beast mode" search for finding rare domains.
-
-##### Configuring a Domain Purchased Elsewhere
-
-If you purchase your domain elsewhere, you will need to configure your domain provider to point the domain to your Netlify site. Follow this guide: [Configure external DNS for a custom domain](https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/). 
-
-The steps on your domain provider's end will be different depending on your provider, look for something along the lines of "Create A or CNAME Record", "Point DNS to Domain" or "Manage DNS Records".
-
-Then add the custom domain in Netlify:
-1. Navigate to Settings > Domain Management > Add custom domain.
-2. Enter the domain you would like `[domain] already has an owner. Is it you?`. Select `No, try another`.
-3. If you find one that is available, you will see 
-3. Select Yes, add domain
-
-SSL (https) will be configured automatically.
-
-## 2. Setting up Exocore on your Machine
-The exocore exists as both a Visual Studio Code template package and a workflow between Github and Netlify. 
+## 2. Setting up Exocore as a VS Code Workspace on your Machine
+The exocore exists as both a Visual Studio Code template package and a workflow between Github and Netlify. While any editor capable of markdown is possible, using our modified VS Code Workspace is recommended for a suite of [[exocore-minded automation tools|using your exocore]].
 
 1. Download [Visual Studio Code](https://code.visualstudio.com/Download)
 2. Download the forked repo to your computer by navigating to your github account's exocore repo, then selectiong `Code > Download Zip`
-4. Open your newly forked repository in VS Code with File > Open, and navigating to the downloaded folder
-5. Accept the prompts to trust the folder, and install the recommended extensions. Your Exocore is now ready to be edited locally on VS Code.
+3. Open your newly forked repository in VS Code with File > Open, and navigating to the downloaded folder
+4. Accept the prompts to trust the folder, and install the recommended extensions. Your Exocore is now ready to be edited locally on VS Code.
 
 ## 3. Saving Changes to the Cloud with Github
 While you're working in VS Code, your work will be automatically saved. However, to publish the data to Github so that it propagates onto the web, you'll need to setup a git commit workflow.
@@ -114,3 +79,7 @@ You can also [customize Visual Studio Code heavily to your preference](), includ
 ## 5. Using your Exocore
 
 Continue on to [[using-exocore|Using your Exocore]] to familiarize yourself with the editor interface and begin writing new notes.
+
+[//begin]: # "Autogenerated link references for markdown compatibility"
+[using-exocore|Using your Exocore]: using-exocore "Using your Exocore"
+[//end]: # "Autogenerated link references"
