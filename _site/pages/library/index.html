@@ -23,8 +23,6 @@
 <meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="Library" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain." />
-<meta property="og:description" content="The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain." />
 <link rel="canonical" href="http://localhost:4000/pages/library/" />
 <meta property="og:url" content="http://localhost:4000/pages/library/" />
 <meta property="og:site_name" content="Exocore" />
@@ -33,7 +31,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Library" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-12T22:38:35+10:00","datePublished":"2000-01-01T00:00:00+11:00","description":"The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain.","headline":"Library","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pages/library/"},"url":"http://localhost:4000/pages/library/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-13T23:29:09+10:00","datePublished":"2000-01-01T00:00:00+11:00","headline":"Library","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pages/library/"},"url":"http://localhost:4000/pages/library/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>  
@@ -57,12 +55,14 @@
 </div>
   <div class="sidebar-link-box profile">
     <a href="/"><strong>Home</strong></a>
-      <a href="/pages/library">Library</a>
-      <a href="/pages/archive">Archive</a>
       <a href="/pages/all-articles">Articles</a>
       <a href="/pages/all-journal">Journal</a>
       <a href="/pages/all-notes">Wiki</a>
+    </div>
+      <div class="sidebar-link-box profile">
       <a href="/pages/latest">Latest Posts</a>
+      <a href="/pages/archive">Archive</a>
+      <a href="/pages/library">Library</a>
 
     </div>
   </div>
@@ -74,6 +74,10 @@
     <h1>Document Library <a href="/pages/gallery" >(See Image Gallery)</a></h1>
   </div>
 
+     
+    
+     
+    
      
     
      
@@ -393,5 +397,22 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$']],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    messageStyle: "none",
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  
   </body>
 </html>

@@ -38,6 +38,21 @@ defaults:
     values:
       layout: "default"
       date: "Jan 1 2000"
+  - scope:
+      path: ""
+      type: "articles"
+    values: 
+      layout: "article"
+  - scope:
+      path: ""
+      type: "journal"
+    values: 
+      layout: "journal"
+  - scope:
+      path: ""
+      type: "note"
+    values: 
+      layout: "note"
 
 collections:
 

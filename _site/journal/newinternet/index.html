@@ -53,12 +53,14 @@
 </div>
   <div class="sidebar-link-box profile">
     <a href="/"><strong>Home</strong></a>
-      <a href="/pages/library">Library</a>
-      <a href="/pages/archive">Archive</a>
       <a href="/pages/all-articles">Articles</a>
       <a href="/pages/all-journal">Journal</a>
       <a href="/pages/all-notes">Wiki</a>
+    </div>
+      <div class="sidebar-link-box profile">
       <a href="/pages/latest">Latest Posts</a>
+      <a href="/pages/archive">Archive</a>
+      <a href="/pages/library">Library</a>
 
     </div>
   </div>
@@ -92,7 +94,7 @@
 		
     
         
-			<li><a href="/articles/syntax/">Exocore Syntax Examples</a></li>
+			<li><a href="/articles/syntax/">Writing with Exocore Syntax</a></li>
             
             
             
@@ -105,7 +107,7 @@
 		
     
         
-			<li><a href="/articles/start-here/">Start Here</a></li>
+			<li><a href="/articles/using-exocore/">Using your Exocore</a></li>
             
             
             
@@ -231,11 +233,6 @@
 		
     
         
-    		<li><a href="/notes/L-Dopa/">9538b7</a></li>
-            
-            
-            
-		
 	
     
     	
@@ -244,11 +241,6 @@
 		
     
         
-    		<li><a href="/notes/usufruct/">88d821</a></li>
-            
-            
-            
-		
 	
 </ul>
     </div>  
@@ -417,5 +409,22 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$']],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    messageStyle: "none",
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+  });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+  
   </body>
 </html>

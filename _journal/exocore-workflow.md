@@ -1,6 +1,4 @@
 ---
-layout: journal
-category: journal
 subtitle:
 date: 2022-04-22
 tags: meta exocore computers learning

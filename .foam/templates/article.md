@@ -1,6 +1,5 @@
 ---
-layout: article
-category: article
+published: true
 subtitle:
 topic:
 date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}

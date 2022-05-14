@@ -1,8 +1,6 @@
 ---
-layout: note
-category: note
 date: 2022-02-28
-tags: law
+tags:
 ---
 # 88d821
 

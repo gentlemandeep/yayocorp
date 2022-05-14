@@ -1,6 +1,5 @@
 ---
-layout: note
-category: note
+published: true
 date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}
 tags:
 foam_template:

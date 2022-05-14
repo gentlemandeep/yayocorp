@@ -1,6 +1,4 @@
 ---
-layout: journal
-category: journal
 date: 26 jan 2022
 tags: computers remilia
 ---

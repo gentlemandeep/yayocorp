@@ -154,7 +154,7 @@ a {
     a:hover {
     color:red !important;
     text-decoration: underline;
-    cursor: alias;
+    cursor: pointer;
   }
       a.internal-link {
     color: $external-links;
@@ -168,6 +168,10 @@ a {
   color: $invalid-links;
   cursor: help;
 }
+   .web-link:hover {
+       cursor: alias;
+        
+    }
 
 
 nav a.intern-link::before{

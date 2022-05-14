@@ -1,6 +1,5 @@
 ---
-layout: journal
-category: journal
+published: true
 subtitle:
 date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}
 tags:

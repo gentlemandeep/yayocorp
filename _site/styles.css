@@ -329,13 +329,15 @@ PRE { margin-left: 1em; }
 /* -- Links -- */
 a { color: #34345c; text-decoration: underline; }
 
-a:hover { color: red !important; text-decoration: underline; cursor: alias; }
+a:hover { color: red !important; text-decoration: underline; cursor: pointer; }
 
 a.internal-link { color: #34345c; text-decoration: underline; cursor: pointer; }
 
 .notes-entry-container a.internal-link::before { content: "»"; }
 
 .invalid-link, .invalid-link-brackets { color: blue; cursor: help; }
+
+.web-link:hover { cursor: alias; }
 
 nav a.intern-link::before { content: ""; color: blue; }
 

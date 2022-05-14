@@ -117,22 +117,28 @@ PRE {
 
 a {
   color: $external-links;
-  text-decoration:none;
-  &:hover {
-    text-decoration: underline;
-    cursor: alias;
+  text-decoration:underline;
   }
-  &.internal-link {
-    color: $internal-links;
-    font-weight:bold;
+    a:hover {
+    text-decoration: underline;
     cursor: pointer;
   }
-}
+      a.internal-link {
+    color: $external-links;
+       text-decoration:underline; 
+    cursor: pointer;
+      }
+      .notes-entry-container a.internal-link::before{
+      content:"»";
+      }
 .invalid-link, .invalid-link-brackets {
   color: $invalid-links;
   cursor: help;
 }
-
+   .web-link:hover {
+       cursor: alias;
+        
+    }
 .sidenote a, nav a {
     font-weight: normal !important;
 }
