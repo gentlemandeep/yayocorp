@@ -12,7 +12,7 @@ The exocore is developed by [Remilia Corporation](https://remilia.org) as a [Jam
 ## How to Begin
 Follow the 15 minutes no code instructions [installation-instructions](https://remiliaexocore.netlify.app/articles/installation-instructions/) to install your exocore and set up automatic publishing with Netlify.
 
-## Introduction
+## Detailed Introduction
 
 Do you take notes, or conduct personal research? Do you output or collect text or image content in any form, such as a blog, poetry, diary or visual art? Do you intake any form of media, and want to catalogue your findings or thoughts? Do you forget information? The Exocore is a means to store and organize and publish such a bank of information in an easily navigable form.
 
