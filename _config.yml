@@ -3,7 +3,7 @@ title: Exocore
 source: .
 url: https://exocore.remilia.org
 baseurl: ''
-destination: ./.exocore/_site
+destination: ./exocore/_site
 repository: remiliacorp/exocore
 
 highlighter: rouge
@@ -23,11 +23,11 @@ readme_index:
 repository: remiliacorp/exocore
 
 sass:
-    sass_dir: ./.exocore/_sass
+    sass_dir: ./exocore/_sass
 
-layouts_dir: ./.exocore/_layouts
-includes_dir: ./.exocore/_includes
-plugins_dir: ./.exocore/_plugins
+layouts_dir: ./exocore/_layouts
+includes_dir: ./exocore/_includes
+plugins_dir: ./exocore/_plugins
 
 permalink: pretty
 
