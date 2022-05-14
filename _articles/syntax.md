@@ -32,17 +32,16 @@ Here's some advice: Only use top-level headings (preceded by `#`) for the docume
 
 ## Examples of Wikilinks:
 
-Here are some basic wikilinks, pointing to other posts on this Exocore:
-
- - [[exocore]]
- - [[2022-02-04]]
-
-They are written as the title of their corresponding markdown file, surrounded by double square brackets. However, in the final render they are presented by default as the page's title. This saves you typing out the whole page title in your markdown document, and allows the Foam VSCode extension to suggest files as you type. Below you can read about how to change their presentation.
-
-[[chinese-ginseng-chicken-tonic-soup|You can alias a link like this]] if you don't want to keep the title. Heads up— this link points to a recipe for Chinese ginseng chicken Soup.
+Here is a basic wikilink, pointing to other posts on this Exocore: [[exocore]] (`[[exocore]]`).
 
 
-[[syntax#Wikilink Embeds|This wikilink]] points to a header further down on this page, by using a `#`. Under that header you will find a different sort of wikilink— an embed. The content of another note is embedded within the current note. You can also point to a particular header within another note.  
+
+It is written as the title of their corresponding markdown file, surrounded by double square brackets. However, in the final render they are presented by default as the page's title. This saves you typing out the whole page title in your markdown document, and allows the Foam VSCode extension to suggest files as you type. Below you can read about how to change their presentation.
+
+[[chinese-ginseng-chicken-tonic-soup|You can alias a link like this]] (`[[chinese-ginseng-chicken-tonic-soup|You can alias a link like this]]`) if you don't want to keep the title. Heads up— this link points to a recipe for Chinese ginseng chicken Soup.
+
+
+[[syntax#Wikilink Embeds|This wikilink]](`[[syntax#Wikilink Embeds|This wikilink]]`) points to a header further down on this page, by using a `#`. Under that header you will find a different sort of wikilink— an embed. The content of another note is embedded within the current note. You can also point to a particular header within another note.  
 
 Check out the backlinks section at the bottom of any post, and you'll find a list of every post that links back to it. Backlinks are automatically generated, and display all posts with links pointing to them.
 
@@ -50,6 +49,7 @@ Check out the backlinks section at the bottom of any post, and you'll find a lis
 
 The below text is embedded, using the same wikilink syntax as normal, but with an `!` prepended. The full text of the linked note will be included. For example, here is an embedded note about the domestic address system in Abu Dhabi:
 
+`![[jade-post]]`:
 ![[jade-post]]
 
 ## External Hyperlinks
@@ -59,10 +59,11 @@ Hyperlinks to external sites are not the same as wikilinks. A wikilink is a simp
 To create a hyperlink, use single normal parentheses around the URL you want to point to, and square brackets around the text you want displayed:
 
 [https://en.wikipedia.org/wiki/Parenthesis](https://en.wikipedia.org/wiki/Parenthesis)
-
+`[https://en.wikipedia.org/wiki/Parenthesis](https://en.wikipedia.org/wiki/Parenthesis)`
 You can alias a hyperlink by changing the text in the square brackets, like this:
 
 [Here's some information about Hyperlinks.](https://en.wikipedia.org/wiki/Hyperlink)
+`[Here's some information about Hyperlinks.](https://en.wikipedia.org/wiki/Hyperlink)`
 
 ## Applying classes to a paragraph or image
 
@@ -132,6 +133,8 @@ You can insert alt text and a caption like this:
 The above snippet produces the below outcome:
 
 ![This is alt text](/images/mouse.jpg)
+
+`![This is alt text](/images/mouse.jpg)`
 *Insert a caption by placing italicised textimmediately underneath the image, with no empty line in between.*
 
 ## Embedded Code 
