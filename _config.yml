@@ -3,7 +3,7 @@ title: Exocore
 source: .
 url: https://exocore.remilia.org
 baseurl: ''
-destination: ./exocore/_site
+destination: _site
 repository: remiliacorp/exocore
 
 highlighter: rouge
