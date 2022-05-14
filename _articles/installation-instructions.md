@@ -113,4 +113,4 @@ You can also [customize Visual Studio Code heavily to your preference](), includ
 
 ## 5. Using your Exocore
 
-Continue on to [[using-exocore|Using your Exocore]] to familiarize yourself with the editor interface and begin writing new notes.
+Continue on to [using your exocore](https://github.com/remiliacorp/exocore/blob/master/_articles/using-exocore.md) to familiarize yourself with the editor interface and begin writing new notes.
