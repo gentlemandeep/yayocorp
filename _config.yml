@@ -4,6 +4,7 @@ source: .
 url: https://exocore.remilia.org
 baseurl: ''
 destination: ./.exocore/_site
+repository: remiliacorp/exocore
 
 highlighter: rouge
 

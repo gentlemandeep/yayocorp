@@ -2,31 +2,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-{% seo %}
-    <!-- <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}"> -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
-
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Blog</title>
-  <meta name="description" content="OFFICIAL BLOG of JamesLiao333.">
-  <meta name="author" content="SitePoint">
-
-  <meta property="og:title" content="JAMES LIAO OFFICIAL BLOG">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Blog">
-  <meta property="og:image" content="image.png">
+  {% assign keywords = page.tags %}
 
-  <!-- <link rel="icon" href="/favicon.ico"> -->
-  <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
-  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+  <meta name="keyword" content="{% for keyword in keywords %}{{ keyword }}, {% endfor %}">
+  <meta name="title" content="{{ page.title }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
    <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="{{ site.baseurl }}/assets/js/sidenotes.js"></script>
-
+ {% seo %}
 </head>  
- 
- 
-
