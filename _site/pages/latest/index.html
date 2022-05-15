@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
    <script src="/assets/js/jquery.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="/assets/js/sidenotes.js"></script>
@@ -23,6 +23,8 @@
 <meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="Latest" />
 <meta property="og:locale" content="en_US" />
+<meta name="description" content="The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain." />
+<meta property="og:description" content="The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain." />
 <link rel="canonical" href="http://localhost:4000/pages/latest/" />
 <meta property="og:url" content="http://localhost:4000/pages/latest/" />
 <meta property="og:site_name" content="Exocore" />
@@ -31,7 +33,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Latest" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-12T22:38:35+10:00","datePublished":"2000-01-01T00:00:00+11:00","headline":"Latest","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pages/latest/"},"url":"http://localhost:4000/pages/latest/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-12T22:38:35+10:00","datePublished":"2000-01-01T00:00:00+11:00","description":"The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain.","headline":"Latest","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pages/latest/"},"url":"http://localhost:4000/pages/latest/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>  
@@ -133,28 +135,67 @@
         <div class="notes-entry-container note">
           <div class="content post-content">
   
-            <h2 id="1-setting-up-exocore-on-your-machine">1. Setting up Exocore on your Machine</h2>
-<p>The exocore exists as both a Visual Studio Code template package and a workflow between Github and Netlify. Follow these steps to get setup:</p>
+            <p>You can set up a personal website as a public <a class="wiki-link" href="/articles/exocore/">exocortex</a> with no code in this 15 minute guide, using entirely free services to host your site on the web.</p>
+
+<p>All pages are converted from simple, non-code <a class="wiki-link" href="/articles/syntax/">Markdown syntax</a>, so you can focus purely on writing. The end result will look identical to this page.</p>
+
+<h2 id="background">Background</h2>
+
+<p>Github will be used as a cloud content management system - it’s convenient to upload updates to, accessible and editable from anywhere, and keeps full version history of changes as well as provides easy options for back-up.</p>
+
+<p>Netlify will be used to deploy the files stored on Github as a web-server - it’s fast and automatically updates whenever an update is made on your Github repository. Github does offer its own static webhost, but Netlify is necessary due to certain plugin support limitations.</p>
+
+<p>Netlify will also provide your site a custom subdomain, e.g. <code class="language-plaintext highlighter-rouge">[site-name].netlify.app</code>. You can also use your own purchased domain.</p>
+
+<p>All services are entirely free besides the custom domain.</p>
+
+<h2 id="1-deploy-your-own-exocore-to-the-web">1. Deploy your own Exocore to the Web</h2>
+
+<h3 id="create-github-account">Create Github Account</h3>
+
+<p>First, create an account on <a href="https://github.com/join" class="web-link">github.com</a> if you do not already have one. Remember to <a href="https://saraford.net/2017/02/19/how-to-hide-your-email-address-in-your-git-commits-but-still-get-contributions-to-show-up-on-your-github-profile-050/" class="web-link">make your email private</a> in settings.</p>
+
+<p>Continue below when you have an account ready.</p>
+
+<h3 id="install-the-exocore-template-to-github-and-netlify">Install the Exocore template to GitHub and Netlify</h3>
+
+<p>Open our <a href="https://app.netlify.com/start/deploy?repository=https://github.com/remiliacorp/exocore" class="web-link">One-click installation</a>.</p>
+
+<p>Steps:</p>
 <ol>
-  <li><a href="https://github.com/join" class="web-link">Create a Github account</a></li>
-  <li>Select use this template on the <a href="https://github.com/hot-domme/exocore" class="web-link">the Exocore repo</a> to fork it your account</li>
-  <li>Download forked repo to your computer by navigating to Code &gt; Download Zip</li>
+  <li>Select <code class="language-plaintext highlighter-rouge">Connect to Github</code>
+</li>
+  <li>Login to Github and select <code class="language-plaintext highlighter-rouge">Authorize Application</code>
+</li>
+  <li>Name your repository - this is your own reference</li>
+  <li>Select <code class="language-plaintext highlighter-rouge">Deploy site</code>
+</li>
+</ol>
+
+<p>Netlify will now take about 5 minutes for the initial build of the site. If you want, you can watch the status of the build by clicking <code class="language-plaintext highlighter-rouge">Production: master@HEAD</code> under <strong>Production Deploys</strong>.</p>
+
+<p>Once it’s complete, the Production status will change to <strong>Published</strong>, and you will be able to click the <code class="language-plaintext highlighter-rouge">[site-name].netlify.app</code> link to see your site.</p>
+
+<p>The site’s master files will also appear in your Github account, under the repository name you selected, e.g. <code class="language-plaintext highlighter-rouge">github.com/account-name/repository-name</code>. Changes here will go live on the site automatically.</p>
+
+<p>Your site is now officially live, available for anyone to view at <code class="language-plaintext highlighter-rouge">[site-name].netlify.app.</code>, but there are some settings we should adjust before moving forward.</p>
+
+<h3 id="change-your-site-name">Change your site name</h3>
+
+<p>Change the default generated site name to whatever you’d like by navigating to <code class="language-plaintext highlighter-rouge">Site settings &gt; Site details &gt; Change site name</code>. It will be available at <code class="language-plaintext highlighter-rouge">[sitename].netlify.app</code></p>
+
+<p>Optionally, you can find instructions for setting up a custom domain <span class="invalid-wiki-link">[[here|custom domain]]</span>.</p>
+
+<h2 id="2-setting-up-exocore-as-a-vs-code-workspace-on-your-machine">2. Setting up Exocore as a VS Code Workspace on your Machine</h2>
+<p>The exocore exists as both a Visual Studio Code template package and a workflow between Github and Netlify. While any editor capable of markdown is possible, using our modified VS Code Workspace is recommended for a suite of <span class="invalid-wiki-link">[[exocore-minded automation tools|using your exocore]]</span>.</p>
+
+<ol>
   <li>Download <a href="https://code.visualstudio.com/Download" class="web-link">Visual Studio Code</a>
+</li>
+  <li>Download the forked repo to your computer by navigating to your github account’s exocore repo, then selectiong <code class="language-plaintext highlighter-rouge">Code &gt; Download Zip</code>
 </li>
   <li>Open your newly forked repository in VS Code with File &gt; Open, and navigating to the downloaded folder</li>
   <li>Accept the prompts to trust the folder, and install the recommended extensions. Your Exocore is now ready to be edited locally on VS Code.</li>
-</ol>
-
-<h2 id="2-publishing-your-exocore-to-the-web-with-netlify">2. Publishing Your Exocore to the Web with Netlify</h2>
-<p>Netlify is a platform that provides free hosting and subdomain services directly from Github repos, so it can be used to automatically publish your exocore as a website for no-cost.</p>
-
-<ol>
-  <li>Login to <a href="https://app.netlify.com/" class="web-link">Netlify.app</a> with your Github account</li>
-  <li>Select <code class="language-plaintext highlighter-rouge">Add new site &gt; Import an existing project</code>
-</li>
-  <li>Connect again with your GitHub account, then select the GitHub repo from the list</li>
-  <li>The site will take about 10 minutes to build for the first time. After that, new changes will go live within one minute.</li>
-  <li>To change your subdomain, visit Domain settings and then Options &gt; Edit Site Name. You can also add your own custom domain if you own one.</li>
 </ol>
 
 <h2 id="3-saving-changes-to-the-cloud-with-github">3. Saving Changes to the Cloud with Github</h2>
@@ -170,23 +211,19 @@
   <li>Navigate to <code class="language-plaintext highlighter-rouge">/styles.scss</code> to select between different themes.</li>
 </ol>
 
-<p>You can also <a href="" class="web-link">customize Visual Studio Code heavily to your preference</a>, including easily changing color themes.</p>
+<p>You can also <a href="https://www.jamesqquick.com/blog/5-ways-to-customize-vs-code" class="web-link">customize Visual Studio Code heavily to your preference</a>, including easily changing color themes.</p>
 
-<hr>
+<h2 id="5-using-your-exocore">5. Using your Exocore</h2>
 
-<h2 id="optional-using-jekyll-to-serve-your-website-locally">Optional: Using Jekyll to serve your website locally</h2>
-<ol>
-  <li>Install rbenv</li>
-  <li>Install Ruby — Need command line tools?</li>
-  <li>Install Bundler?</li>
-  <li>Jekyll serve</li>
-</ol>
-
-<hr>
-
-<h2 id="using-your-exocore">Using your exocore</h2>
-
-<p>Continue on to <a class="wiki-link" href="/articles/using-exocore/">Using your Exocore</a> to familiarize yourself with the editor interface and begin writing new notes.</p>
+<table>
+  <tbody>
+    <tr>
+      <td>Continue on to [[Using your Exocore</td>
+      <td>using-exocore</td>
+      <td>]] to familiarize yourself with the editor interface and begin writing new notes.</td>
+    </tr>
+  </tbody>
+</table>
 
 
   
@@ -705,53 +742,56 @@ digraph G {
 
     <main>
       <article class="latest-post-border">
-        <a href="/articles/remichat-principles/">
+        <a href="/articles/custom-domain/">
         <div class="title">
-        <h1 class="title-text">Remilia Chat — Guiding Principles</h1> 
+        <h1 class="title-text">Set up a Custom Domain</h1> 
         </div>
       </a>
           
-          <div style="margin: 1em; "><a href="/articles/remichat-principles/">See this post in context</a> </div>
-          <div style="margin: 1em; "> <b>Date:</b> 20 April 2022</div>
+          <div style="margin: 1em; "><a href="/articles/custom-domain/">See this post in context</a> </div>
+          <div style="margin: 1em; "> <b>Date:</b> 16 April 2022</div>
 
         <div class="notes-entry-container note">
           <div class="content post-content">
   
-            <h2 id="network-ascension">Network Ascension</h2>
-<ul>
-  <li>Immersion in online communication</li>
-  <li>Mental vitality boost</li>
-</ul>
+            <p>Custom domains can be added for a better look and more memorable url, but you will need to purchase one. If you already have a domain, follow the steps in <a href="#configuring-a-domain-purchased-elsewhere" class="web-link">Configuring a Domain Purchased Elsewhere</a></p>
 
-<h2 id="fast-and-lightweight">Fast and Lightweight</h2>
-<ul>
-  <li>Fast loading time</li>
-  <li>Fast open time</li>
-  <li>Fast connection time</li>
-  <li>Low latency</li>
-</ul>
+<h2 id="purchase-domain-on-netlify">Purchase Domain on Netlify</h2>
 
-<p>Achieved with simple, uncomplex UI and opinionated, focused functionality.</p>
+<p>If you do not already have a domain, you can purchase it directly within Netlify by adding in a new Custom domain. Prices aren’t the best on the market (e.g. <code class="language-plaintext highlighter-rouge">.com</code> is $15/yr, market rate is $12/yr), but it will automate all setup.</p>
 
-<h2 id="always-open">Always Open</h2>
-<p>Lightweight enough to remain open on your desktop at all times without hogging processing power.</p>
+<ol>
+  <li>Navigate to Settings &gt; Domain Management &gt; Add custom domain.</li>
+  <li>Enter the domain you would like</li>
+  <li>If it is unavailable, you will see <code class="language-plaintext highlighter-rouge">[domain] already has an owner. Is it you?</code>. Select <code class="language-plaintext highlighter-rouge">No, try another</code>.</li>
+  <li>If you find one that is available, you will be provided prices and option to register. You can use a <a href="https://domains.google.com/registrar/search" class="web-link">Domain search tool</a> to help find available domains.</li>
+</ol>
 
-<h2 id="space-efficient-unobtrusive-and-responsive-ui">Space-efficient unobtrusive, and responsive UI</h2>
-<p>Tiled chats that fluidly grow, shrink and redistribute in grid format in response to the space allowed by window size. Accommodates for a strip across the top of your screen, or along the side, or a full screen on an extra monitor. Rearrange tiles for priority, control sound and alerts independently, and pop chats out into a separate window.</p>
+<p>Once you have a domain purchased, Netlify will automate handling DNS configuration and SSL encryption, so your site will be fully ready to go on your domain.</p>
 
-<h2 id="native-web3-integration">Native Web3 Integration</h2>
-<ul>
-  <li>ETH wallet sign-in</li>
-  <li>Web3-integrated minigames</li>
-  <li>Direct wallet transactions</li>
-</ul>
+<h2 id="purchasing-a-custom-domain">Purchasing a Custom Domain</h2>
 
-<h2 id="components">Components</h2>
-<ul>
-  <li>Chat box</li>
-  <li>Scratch box</li>
-  <li>Densely Tiled Window Manager</li>
-</ul>
+<p>Domains can be purchased from a variety of suppliers for affordable rates - a <code class="language-plaintext highlighter-rouge">.com</code> domain goes for about $12/year, though uncommon domains like <code class="language-plaintext highlighter-rouge">.xyz</code> can be found for as low as $2/year.</p>
+
+<p>I can recommend <a href="https://google.com/domains" class="web-link">Google Domains</a>, I use it because it includes privacy protection and custom email aliases for free, and has an easy to navigate dashboard, as well as Google’s very fast DNS.</p>
+
+<p>For uncommon domains and more competitive prices, <a href="https://namecheap.com" class="web-link">Namecheap</a> is reliable - it also has a solid “Beast mode” search for finding rare domains.</p>
+
+<h3 id="configuring-a-domain-purchased-elsewhere">Configuring a Domain Purchased Elsewhere</h3>
+
+<p>If you purchase your domain elsewhere, you will need to configure your domain provider to point the domain to your Netlify site. Follow this guide: <a href="https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/" class="web-link">Configure external DNS for a custom domain</a>.</p>
+
+<p>The steps on your domain provider’s end will be different depending on your provider, look for something along the lines of “Create A or CNAME Record”, “Point DNS to Domain” or “Manage DNS Records”.</p>
+
+<p>Then add the custom domain in Netlify:</p>
+<ol>
+  <li>Navigate to Settings &gt; Domain Management &gt; Add custom domain.</li>
+  <li>Enter the domain you would like <code class="language-plaintext highlighter-rouge">[domain] already has an owner. Is it you?</code>. Select <code class="language-plaintext highlighter-rouge">No, try another</code>.</li>
+  <li>If you find one that is available, you will see</li>
+  <li>Select Yes, add domain</li>
+</ol>
+
+<p>SSL (https) will be configured automatically.</p>
 
   
           </div>
@@ -1061,11 +1101,9 @@ tags: meta computers exocore
 
 <p><img src="/attachments/2022-05-13-17-48-12.png" alt=""></p>
 
-<h3 id="markdown-syntax">Markdown Syntax</h3>
+<h2 id="markdown-syntax">Markdown Syntax</h2>
 
 <p>Continue on to <a class="wiki-link" href="/articles/syntax/">Writing with Exocore Syntax</a> to learn the Markdown syntax standards it follows, as well as its extensions for hyperlinks, embedded code, footnotes and more.</p>
-
-<h3 id="changing-your-favicon">Changing your Favicon</h3>
 
 
   
@@ -1081,15 +1119,6 @@ tags: meta computers exocore
                   <a href="/articles/exocore/""><div class="backlink-box"><b>Exocore</b> — Articles  <br>
                     <div class ="backlinks-excerpt">
                       
-
-                    </div>
-                  </a>
-                </div>
-                
-                  
-                  <a href="/articles/installation-instructions/""><div class="backlink-box"><b>Exocore Installation Instructions</b> — Articles  <br>
-                    <div class ="backlinks-excerpt">
-                      Exocore Installation Instructions
 
                     </div>
                   </a>
@@ -1325,18 +1354,13 @@ tags: meta computers exocore
 
 <h2 id="examples-of-wikilinks">Examples of Wikilinks:</h2>
 
-<p>Here are some basic wikilinks, pointing to other posts on this Exocore:</p>
+<p>Here is a basic wikilink, pointing to other posts on this Exocore: <a class="wiki-link" href="/articles/exocore/">exocore</a> (<code class="language-plaintext highlighter-rouge">&lt;a class="wiki-link" href="/articles/exocore/"&gt;exocore&lt;/a&gt;</code>).</p>
 
-<ul>
-  <li><a class="wiki-link" href="/articles/exocore/">exocore</a></li>
-  <li><span class="invalid-wiki-link">[[2022-02-04]]</span></li>
-</ul>
+<p>It is written as the title of their corresponding markdown file, surrounded by double square brackets. However, in the final render they are presented by default as the page’s title. This saves you typing out the whole page title in your markdown document, and allows the Foam VSCode extension to suggest files as you type. Below you can read about how to change their presentation.</p>
 
-<p>They are written as the title of their corresponding markdown file, surrounded by double square brackets. However, in the final render they are presented by default as the page’s title. This saves you typing out the whole page title in your markdown document, and allows the Foam VSCode extension to suggest files as you type. Below you can read about how to change their presentation.</p>
+<p><a class="wiki-link" href="/journal/chinese-ginseng-chicken-tonic-soup/">You can alias a link like this</a> (<code class="language-plaintext highlighter-rouge">&lt;a class="wiki-link" href="/journal/chinese-ginseng-chicken-tonic-soup/"&gt;You can alias a link like this&lt;/a&gt;</code>) if you don’t want to keep the title. Heads up— this link points to a recipe for Chinese ginseng chicken Soup.</p>
 
-<p><a class="wiki-link" href="/journal/chinese-ginseng-chicken-tonic-soup/">You can alias a link like this</a> if you don’t want to keep the title. Heads up— this link points to a recipe for Chinese ginseng chicken Soup.</p>
-
-<p><a class="wiki-link" href="/articles/syntax/#wikilink-embeds">This wikilink</a> points to a header further down on this page, by using a <code class="language-plaintext highlighter-rouge">#</code>. Under that header you will find a different sort of wikilink— an embed. The content of another note is embedded within the current note. You can also point to a particular header within another note.</p>
+<p><a class="wiki-link" href="/articles/syntax/#wikilink-embeds">This wikilink</a>(<code class="language-plaintext highlighter-rouge">&lt;a class="wiki-link" href="/articles/syntax/#wikilink-embeds"&gt;This wikilink&lt;/a&gt;</code>) points to a header further down on this page, by using a <code class="language-plaintext highlighter-rouge">#</code>. Under that header you will find a different sort of wikilink— an embed. The content of another note is embedded within the current note. You can also point to a particular header within another note.</p>
 
 <p>Check out the backlinks section at the bottom of any post, and you’ll find a list of every post that links back to it. Backlinks are automatically generated, and display all posts with links pointing to them.</p>
 
@@ -1344,6 +1368,7 @@ tags: meta computers exocore
 
 <p>The below text is embedded, using the same wikilink syntax as normal, but with an <code class="language-plaintext highlighter-rouge">!</code> prepended. The full text of the linked note will be included. For example, here is an embedded note about the domestic address system in Abu Dhabi:</p>
 
+<p><code class="language-plaintext highlighter-rouge">&lt;div class="embed-wrapper"&gt;&lt;div class="embed-title"&gt;Jade Post&lt;/div&gt;&lt;div class="embed-content"&gt;&lt;h1 id="jade-post"&gt;Jade post&lt;/h1&gt;&lt;p&gt;Cyber Asiatic Mystic Synthesis Return Eastern Technomarket Hegemon… Jade McDonalds Sun Poem… Pacific Ocean Disappear… (30 billion Eagles XxX 991hz) Platinum Prison Duplication Facility… Astral Screen-Cheating Marble Moon Wire Theft. Jade Dragon Million Sex Control Dollars Professional Power. Luxury Million Yen Diamond Power (Exit Enclave) POLICE STATE BATH HOUSE™ Holding Corporation. Yin Massage Hot Egg…&lt;/p&gt;&lt;/div&gt;&lt;a class="embed-wiki-link" href="/journal/jade-post/"&gt;&lt;/a&gt;&lt;/div&gt;</code>:</p>
 <div class="embed-wrapper">
 <div class="embed-title">Jade Post</div>
 <div class="embed-content">
@@ -1359,11 +1384,12 @@ tags: meta computers exocore
 
 <p>To create a hyperlink, use single normal parentheses around the URL you want to point to, and square brackets around the text you want displayed:</p>
 
-<p><a href="https://en.wikipedia.org/wiki/Parenthesis" class="web-link">https://en.wikipedia.org/wiki/Parenthesis</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Parenthesis" class="web-link">https://en.wikipedia.org/wiki/Parenthesis</a>
+<code class="language-plaintext highlighter-rouge">[https://en.wikipedia.org/wiki/Parenthesis](https://en.wikipedia.org/wiki/Parenthesis)</code>
+You can alias a hyperlink by changing the text in the square brackets, like this:</p>
 
-<p>You can alias a hyperlink by changing the text in the square brackets, like this:</p>
-
-<p><a href="https://en.wikipedia.org/wiki/Hyperlink" class="web-link">Here’s some information about Hyperlinks.</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Hyperlink" class="web-link">Here’s some information about Hyperlinks.</a>
+<code class="language-plaintext highlighter-rouge">[Here's some information about Hyperlinks.](https://en.wikipedia.org/wiki/Hyperlink)</code></p>
 
 <h2 id="applying-classes-to-a-paragraph-or-image">Applying classes to a paragraph or image</h2>
 
@@ -1452,7 +1478,9 @@ tags: meta computers exocore
 </code></pre></div></div>
 <p>The above snippet produces the below outcome:</p>
 
-<p><img src="/images/mouse.jpg" alt="This is alt text">
+<p><img src="/images/mouse.jpg" alt="This is alt text"></p>
+
+<p><code class="language-plaintext highlighter-rouge">![This is alt text](/images/mouse.jpg)</code>
 <em>Insert a caption by placing italicised textimmediately underneath the image, with no empty line in between.</em></p>
 
 <h2 id="embedded-code">Embedded Code</h2>
@@ -1465,6 +1493,10 @@ cd ~/desktop/james-liao &amp;&amp; bundle exec jekyll serve --baseurl ''
 <h2 id="naming-files">Naming files</h2>
 
 <p>Don’t use whitespace in your filenames— instead, name-them-like-this. This way, titles are easily converted to URLs and the back end of the Exocore remains happy. This of course applies only to filenames, and you may title your posts how you wish.</p>
+
+<hr>
+
+<p>That should be everything to get you started!</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
@@ -1516,6 +1548,15 @@ cd ~/desktop/james-liao &amp;&amp; bundle exec jekyll serve --baseurl ''
                   <a href="/articles/using-exocore/""><div class="backlink-box"><b>Using your Exocore</b> — Articles  <br>
                     <div class ="backlinks-excerpt">
                       Using your Exocore
+
+                    </div>
+                  </a>
+                </div>
+                
+                  
+                  <a href="/articles/installation-instructions/""><div class="backlink-box"><b>Exocore Installation Instructions</b> — Articles  <br>
+                    <div class ="backlinks-excerpt">
+                      Exocore Installation Instructions
 
                     </div>
                   </a>
@@ -1758,8 +1799,11 @@ cd ~/desktop/james-liao &amp;&amp; bundle exec jekyll serve --baseurl ''
   
             <p><img src="/images/exocore.png" alt=""></p>
 
-<h2 id="executive-summary">Executive Summary</h2>
-<p>The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by <a href="https://remilia.org" class="web-link">Remilia Corporation</a> as an extension of <a href="https://github.com/foambubble/foam" class="web-link">Foam</a> to complete the system of an autopublishing knowledgebase network, as a proof-of-concept for <a href="https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA" class="web-link">Remilia’s New Internet</a>.</p>
+<h1 id="exocore-executive-summary">Exocore Executive Summary</h1>
+
+<p>The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge.</p>
+
+<p>The exocore is developed by <a href="https://remilia.org" class="web-link">Remilia Corporation</a> as a <a href="https://jamstack.org/" class="web-link">Jamstack</a> worfklow and extension of <a href="https://github.com/foambubble/foam" class="web-link">Foam</a> to complete the system of an accessible and standardized autopublishing knowledgebase network, as a proof-of-concept for <a href="https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA" class="web-link">Remilia’s New Internet</a>.</p>
 
 <h2 id="introduction">Introduction</h2>
 
@@ -1917,6 +1961,15 @@ cd ~/desktop/james-liao &amp;&amp; bundle exec jekyll serve --baseurl ''
                   <a href="/articles/using-exocore/""><div class="backlink-box"><b>Using your Exocore</b> — Articles  <br>
                     <div class ="backlinks-excerpt">
                       Using your Exocore
+
+                    </div>
+                  </a>
+                </div>
+                
+                  
+                  <a href="/articles/installation-instructions/""><div class="backlink-box"><b>Exocore Installation Instructions</b> — Articles  <br>
+                    <div class ="backlinks-excerpt">
+                      Exocore Installation Instructions
 
                     </div>
                   </a>

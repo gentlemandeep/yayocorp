@@ -14,15 +14,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
    <script src="/assets/js/jquery.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="/assets/js/sidenotes.js"></script>
  <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Exocore</title>
+<title>Exocore | The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain.</title>
 <meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="Exocore" />
 <meta property="og:locale" content="en_US" />
+<meta name="description" content="The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain." />
+<meta property="og:description" content="The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain." />
 <link rel="canonical" href="http://localhost:4000/articles/exocore/" />
 <meta property="og:url" content="http://localhost:4000/articles/exocore/" />
 <meta property="og:site_name" content="Exocore" />
@@ -31,7 +33,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Exocore" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-14T02:52:10+10:00","datePublished":"2021-01-27T00:00:00+11:00","headline":"Exocore","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/articles/exocore/"},"url":"http://localhost:4000/articles/exocore/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-15T03:52:42+10:00","datePublished":"2021-01-27T00:00:00+11:00","description":"The Exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain.","headline":"Exocore","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/articles/exocore/"},"url":"http://localhost:4000/articles/exocore/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>  
@@ -113,7 +115,7 @@
 		
     
         
-			<li><a href="/articles/exocore-underpinnings/">Underpinnings of the Exocore</a></li>
+			<li><a href="/articles/custom-domain/">Set up a Custom Domain</a></li>
             
             
             
@@ -126,7 +128,7 @@
 		
     
         
-			<li><a href="/articles/remichat-principles/">Remilia Chat — Guiding Principles</a></li>
+			<li><a href="/articles/exocore-underpinnings/">Underpinnings of the Exocore</a></li>
             
             
             
@@ -278,7 +280,7 @@
 
         <div class="content toc-container">
           <h1 class="toc-header">Table of Contents</h1>
-         <ol class="inline_toc" id="my_toc"><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#introduction">Introduction</a></li><li><a href="#how-to-begin">How to Begin</a></li><li><a href="#information-pipeline">Information Pipeline</a></li><li><a href="#editing-environment">Editing Environment</a><ol><li><a href="#user-experience">User experience:</a></li><li><a href="#jekyll">Jekyll</a></li><li><a href="#customizability">Customizability</a></li></ol></li><li><a href="#full-tech-stack">Full Tech Stack</a></li></ol>
+         <ol class="inline_toc" id="my_toc"><li><a href="#exocore-executive-summary">Exocore Executive Summary</a><ol><li><a href="#introduction">Introduction</a></li><li><a href="#how-to-begin">How to Begin</a></li></ol></li><li><a href="#breaking-down-the-exocore">Breaking down the Exocore</a><ol><li><a href="#information-pipeline">Information Pipeline</a></li><li><a href="#editing-environment">Editing Environment</a><ol><li><a href="#user-experience">User experience:</a></li><li><a href="#jekyll">Jekyll</a></li><li><a href="#customizability">Customizability</a></li></ol></li><li><a href="#full-tech-stack">Full Tech Stack</a></li></ol></li></ol>
 
         </div>
         </div>
@@ -289,8 +291,11 @@
 
           <p><img src="/images/exocore.png" alt=""></p>
 
-<h2 id="executive-summary">Executive Summary</h2>
-<p>The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by <a href="https://remilia.org" class="web-link">Remilia Corporation</a> as an extension of <a href="https://github.com/foambubble/foam" class="web-link">Foam</a> to complete the system of an autopublishing knowledgebase network, as a proof-of-concept for <a href="https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA" class="web-link">Remilia’s New Internet</a>.</p>
+<h1 id="exocore-executive-summary">Exocore Executive Summary</h1>
+
+<p>The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge.</p>
+
+<p>The exocore is developed by <a href="https://remilia.org" class="web-link">Remilia Corporation</a> as a <a href="https://jamstack.org/" class="web-link">Jamstack</a> worfklow and extension of <a href="https://github.com/foambubble/foam" class="web-link">Foam</a> to complete the system of an accessible and standardized autopublishing knowledgebase network, as a proof-of-concept for <a href="https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA" class="web-link">Remilia’s New Internet</a>.</p>
 
 <h2 id="introduction">Introduction</h2>
 
@@ -460,6 +465,18 @@
         </a>
       </div>
       
+        
+        
+        <a href="/articles/installation-instructions/""><div class="backlink-box"><b>Exocore Installation Instructions</b> — Articles  <br>
+          <div class ="backlinks-excerpt">
+            Exocore Installation Instructions
+
+          </div>
+          
+
+        </a>
+      </div>
+      
   </side>
 </div>
 
@@ -475,6 +492,11 @@
       
         <div class="backlink-box">
         <a class="internal-link" href="/articles/using-exocore/"></a><br>
+        <div style="font-size: 0.9em"></div>
+        </div>
+      
+        <div class="backlink-box">
+        <a class="internal-link" href="/articles/installation-instructions/"></a><br>
         <div style="font-size: 0.9em"></div>
         </div>
       

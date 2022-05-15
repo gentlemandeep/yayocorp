@@ -291,9 +291,7 @@ license {
     float: left;
     width: 15%;
     margin: 0em;
-    border-left: $sidebar-border;
-    border-top: $sidebar-border;
-    border-bottom: $sidebar-border;
+    border: $sidebar-border;
 
      @media (max-width: 900px)
      {width: 100%;
@@ -304,6 +302,7 @@ license {
     float: left;
     width: 60%;
     margin: 0em;
+    margin-left: -2px;
     border: $sidebar-border;
 
     

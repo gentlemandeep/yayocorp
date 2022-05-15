@@ -4,9 +4,15 @@
 ![](/attachments/exocore.png)
 
 ## Executive Summary
-The exocore is an easily navigable personal hypertext database for text and images— a personal wiki which, over time, serves as a faithful digital representation of your brain. It is designed to be easily onboarded onto an automated no-cost publishing workflow with zero technical knowledge. The exocore has been developed by [Remilia Corporation](https://remilia.org) as an extension of [Foam](https://github.com/foambubble/foam) to complete the system of an autopublishing knowledgebase network, as a proof-of-concept for [Remilia's New Internet](https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA).
 
-## Introduction
+The exocore is a preconfigured package to roll out your own no-code, no-cost personal website as a public exocortex from documents written in simple Markdown syntax, including interlinking, generated backlinks and a nodal graph-rendering. Site's are rendered in fast, responsive, standards-compliant static HTML. 
+
+The exocore is developed by [Remilia Corporation](https://remilia.org) as a [Jamstack](https://jamstack.org/) worfklow and extension of [Foam](https://github.com/foambubble/foam) to complete the system of an accessible and standardized autopublishing knowledgebase network, as a proof-of-concept for [Remilia's New Internet](https://mirror.xyz/charlemagnefang.eth/831rVsd2Z7cjxnBAw118gW8MylKibfC2AeJ6YUHiAvA).
+
+## How to Begin
+Follow the 15 minutes no code instructions [installation-instructions](https://remiliaexocore.netlify.app/articles/installation-instructions/) to install your exocore and set up automatic publishing with Netlify.
+
+## Detailed Introduction
 
 Do you take notes, or conduct personal research? Do you output or collect text or image content in any form, such as a blog, poetry, diary or visual art? Do you intake any form of media, and want to catalogue your findings or thoughts? Do you forget information? The Exocore is a means to store and organize and publish such a bank of information in an easily navigable form.
 
@@ -17,10 +23,11 @@ Its online component is a scaffolding for a website, and its offline component (
 In the future, these exocores can comprise a webring linked by automatically updated network pages, as well as a IRC network for which the Exocore will operate as user's personal homepages. They can also feature things like an automatically updated 'latest posts' feed from all other (or selected) Exocores, or just 'related posts' (by [metadata](https://jekyllrb.com/docs/front-matter/) tags) from your own site.
 
 
-## How to Begin
-Follow the no-code instructions [[installation-instructions|here]] to learn how to install your exocore locally and set up automatic publishing with Netlify.
+
 
 # Breaking down the Exocore
+
+![study-monk](/attachments/study-monk.jpg)
 
 ## Information Pipeline
 
