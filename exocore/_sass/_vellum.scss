@@ -44,6 +44,12 @@ $sidenote-border: thin solid $color-secondary;
 $color-sidenote-background: #fffffa;
 $color-sidenote-text: black;
 
+/* --- Background/foreground image --- */
+
+$background-img: url("/assets/imgs/BGs/BGtile-4.png");
+$foreground-img: url("/assets/imgs/BGs/BGtile-4a.png");
+
+
 
 
 /* --- Font Family --- */
@@ -65,7 +71,7 @@ article {
 }
 
 body {
-  background-image: url("/assets/imgs/bg-vellum.jpg");
+  background-image: $background-img;
   background-repeat: repeat;
   box-sizing: content-box;
   margin: 0 auto;
@@ -300,7 +306,7 @@ nav {
     padding:1em;
   border: medium outset; 
     box-shadow: 1px 1px 0px $color-box-shadow;
-    background-image: url("/assets/imgs/bg-vellum.jpg");
+    background-image: $background-img;
   margin: 1em;
   margin-top:2em;
   margin: 0 auto;
@@ -355,7 +361,7 @@ nav {
 
 }
 .sidebar-card {
-    background-image: url("/assets/imgs/bg-article-vellum.jpg");
+    background-image: $foreground-img;
     margin-bottom: 1em;
     float: left;
     clear: both;
@@ -384,7 +390,7 @@ nav {
     width: 60%;
     margin: 0.5em;
         border: medium outset;
-    background-image: url("/assets/imgs/bg-article-vellum.jpg");
+    background-image: $foreground-img;
     border-radius: $border-radius;
     
 @media (max-width: 900px)
@@ -503,7 +509,7 @@ article hr {
     width: 400px;
     margin: auto;
     padding: 25px; 
-    background-image: url(/assets/imgs/bg-article-vellum.jpg);
+    background-image: $foreground-img;
     border: medium outset;
 }
 
@@ -591,7 +597,7 @@ img+em {
 
 .backlinks-container {
     max-width:28em; margin: 0 auto;
-    background-image: url(/assets/imgs/bg-vellum.jpg);
+    background-image: $background-img;
     border: medium outset;
     padding: 1em;
     margin: 1em auto;
@@ -620,7 +626,7 @@ img+em {
 .embed-wrapper {
     border: medium outset;
     padding: 1em;
-    background-image: url(/assets/imgs/bg-vellum.jpg);
+    background-image: $background-img;
     margin: 2em 1.5em;
     border-radius: $border-radius;
 }
@@ -689,7 +695,7 @@ img+em {
     padding: 1em 0;
     color: $color-footnote-text;
     margin: 2em 1em;
-    background-image: url(/assets/imgs/bg-vellum.jpg);
+    background-image: $background-img;
     border-radius: $border-radius;
 
 }
@@ -850,7 +856,7 @@ font-weight: normal;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-image: url(/assets/imgs/bg-vellum.jpg);
+    background-image: $background-img;
     border-radius: $border-radius;
     &:hover {
     background-color: $color-items;}
@@ -877,7 +883,7 @@ font-weight: normal;
     font-weight: bold;
     text-decoration: underline;
     color: $color-primary;
-    background-image: url("/assets/imgs/bg-vellum.jpg");
+    background-image: $background-img;
     border-radius: $border-radius;
     border: medium outset lightgrey;
     padding: 0.8em;
@@ -1052,7 +1058,7 @@ table, tr, td {
     width: 45%;
     margin-left: 1em;
     font-size: 0.9em;
-    background-image: url(/assets/imgs/bg-vellum.jpg);
+    background-image: $background-img;
     border-radius: $border-radius;
 }
 
@@ -1063,7 +1069,7 @@ table, tr, td {
     width: 45%;
     margin-left: 2em;
     font-size: 0.9em;
-    background-image: url(/assets/imgs/bg-article-vellum.jpg);
+    background-image: $background-img;
     border-radius: $border-radius;
 }
 
