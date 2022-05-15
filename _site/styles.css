@@ -642,4 +642,6 @@ article, .index-card { border: medium outset; box-sizing: border-box; }
 
 .glow { box-shadow: 0px 0px 15px white; }
 
+body { background-color: theme; background-image: theme; }
+
 /*# sourceMappingURL=styles.css.map */

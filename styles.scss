@@ -15,11 +15,33 @@
 //@import "../_sass/gemini"; // Doesn't work yet
 
 
-//=========================================//
 
-//Uncomment one of the below lines to override the background color/image of your chosen theme. Add your own background image or try one of the samples in assets/imgs/BGs
+  // -=-=-=- CUSTOM BACKGROUND -=-=-=- \\
 
-//body {
-//    background: red
-//    background-image: url(assets/imgs/BGs/bgtile-1.png)
-//}
+//Uncomment one of the below lines to override the background color/image of your chosen theme. 'theme' will leave the default theme background.
+
+
+$bg-color: theme;
+
+$bg-image: theme;
+
+
+//$bg-image: url(assets/imgs/BGs/bgtile-1.png);
+
+//$bg-image: url(assets/imgs/BGs/bgtile-2.png);
+
+//$bg-image: url(assets/imgs/BGs/bgtile-3.png);
+
+//$bg-image: url(assets/imgs/BGs/bgtile-4.png);
+
+//$bg-image: url(assets/imgs/BGs/bgtile-5.png);
+
+
+body {
+    
+    background-color: $bg-color;
+    
+    background-image: $bg-image;
+}
+
+
