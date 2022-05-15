@@ -51,13 +51,13 @@ Ctrl+\ (OSX: Cmd+\) can be used to create a new window split. Ctrl+W (OSX: CMD+W
 ### Graph Visualization
 See how your notes are connected via a graph with the Foam: Show Graph command. Notes can be clicked through to navigate your exocore this way.
 
-![](/attachments/2022-05-13-17-46-10.png)
+![](/images/2022-05-13-17-46-10.png)
 
 ### Preview Notes
 
 Your notes can be previewed in rendered markdown by clicking the magnifying glass icon on the top right of the window. You can navigate between linked notes from within this previewed window.
 
-![](/attachments/2022-05-13-17-48-12.png)
+![](/images/2022-05-13-17-48-12.png)
 
 ## Markdown Syntax
 

@@ -9,7 +9,7 @@ user_name: User Name
 profile_link: /
 
 # The user image displayed on your profile card
-profile_pic: assets/images/pfp.png
+profile_pic: assets/imgs/pfp.png
 
   
 # Add your own variables if you wish, and then summon them with liquid tags
