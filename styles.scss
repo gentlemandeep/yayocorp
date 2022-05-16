@@ -18,14 +18,16 @@
 @import "../_sass/responsive";
 
 
-  // -=-=-=- CUSTOM BACKGROUND -=-=-=- \\
 
-//Uncomment one of the below lines to override the background color/image of your chosen theme. 'theme' will leave the default theme background.
+/*-----------------------------
+
+ CUSTOM BACKGROUND 
+Uncomment one of the below lines to override the background color/image of your chosen theme. 'theme' will leave the default theme background. */
 
 
-$bg-color: theme;
+$bg-color: theme; /* <-- leave default theme BG color */
 
-$bg-image: theme;
+$bg-image: theme; /* <-- leave default theme BG image */
 
 
 //$bg-image: url(assets/imgs/BGs/bgtile-1.png);
@@ -38,6 +40,10 @@ $bg-image: theme;
 
 //$bg-image: url(assets/imgs/BGs/bgtile-5.png);
 
+/*There are 30 sample background tiles to choose from in assets > imgs > BGs*/
+
+
+/*-----------------------------*/
 
 body {
     

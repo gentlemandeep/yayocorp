@@ -61,4 +61,13 @@
     padding: 1em;
     margin: auto;
 }
+    .left-aside, .right-aside, .right, .left {
+        
+        width: 80%;
+        float: none;
+    }
+    
+    code {
+        overflow-x: scroll;
+    }
 }
