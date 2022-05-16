@@ -16,7 +16,7 @@
   "foam.edit.linkReferenceDefinitions": "withoutExtensions",
   "foam.openDailyNote.directory": "_daily",
   "foam.openDailyNote.titleFormat": "mm-dd-yy",
-  "foam.openDailyNote.onStartup": true,
+  "foam.openDailyNote.onStartup": false,
   "git.enableSmartCommit": true,
   "git.postCommitCommand": "sync",
   "markdown.preview.breaks": true,

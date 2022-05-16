@@ -75,7 +75,6 @@ body {
   color: $color-text;
   font-size: 1rem;
 }
-
 body {
   font-family: $font-family-sans-serif;
   padding: 4vh 6vw;
@@ -303,9 +302,6 @@ nav {
   margin: 0 auto;
   display: block;
   max-width: 50%;
-    @media (max-width: 700px) {
-  max-width:100%;
-  }
 }
 .toc-container h1 {
   margin:0em;
@@ -351,20 +347,13 @@ nav {
     float: left;
     width: 15%;
     margin: 0.5em;
-     @media (max-width: 900px)
-     {width: 100%;
-         margin: auto
-         }}
+}
 
 .midcolumn {
     float: left;
     width: 60%;
     margin: 0.5em;
-    
-@media (max-width: 900px)
-     {width: 100%;
-    margin: auto
-}}
+}
 
 .midcolumn-small {
     width: 40%;
