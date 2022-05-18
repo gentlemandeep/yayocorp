@@ -1,0 +1,12 @@
+name: Daily Exocore Upload
+
+on:
+  schedule:
+    - cron:  '0 12 * * *'
+
+jobs:
+  job1:
+  job2:
+    needs: job1
+  job3:
+    needs: [job1, job2]
