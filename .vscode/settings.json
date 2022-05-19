@@ -34,4 +34,7 @@
   "pasteImage.forceUnixStyleSeparator": false,
   "pasteImage.prefix": "/",
   "jekyll-run.stopServerOnExit": false,
+  "gitdoc.autoPullDelay": 30000,
+  "gitdoc.autoPushDelay": 43200000,
+  "gitdoc.autoPush": "afterDelay",
 }
