@@ -12,6 +12,3 @@ However, patterns are not pure representations of the world, or even of the data
 It is therefore unsurprising that dopamine also lowers skepticism. If logical sequences (patterns) appear more readily, an inflated subset of chaotic phenomena appears to 'make sense', and so the suspension of belief is more easily overcome. L-dopa, a drug which is metabolized as dopamine and used to treat Parkinson's, makes people more vulnerable to pattern-detection, and has a notable side-effect that causes some patients to develop sudden gambling additions— patients see clear patterns in random phenomena, leading them to believe they will be more successful than they will be in reality.
 
  **Summary:** Pattern detection is conducive to memorization, but not necessarily to clear thinking; in many instances apprehension of a pattern is a reduction of phenomena too complex to be faithfully reduced. Heightened dopamine can bolster addictive compulsions and increase credulousness, as patterns are more readily detected and chaotic sequences of action appear to make more sense. Pattern-detection is enhanced by dopamine production, and tendencies to compulsive action can result. 
-
-
-If this change appears, 12-hr auto-push WORKS

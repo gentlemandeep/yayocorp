@@ -1,5 +1,7 @@
+{% if include.html contains "<h3" %}
 <div class="content toc-container">
     <h1 class="toc-header">Table of Contents</h1>
+
 {% capture tocWorkspace %}
     {% comment %}
         Copyright (c) 2017 Vladimir "allejo" Jimenez
@@ -183,3 +185,4 @@
     {% endif %}
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}{{ jekyll_toc -}}
 </div>
+{% endif  %}

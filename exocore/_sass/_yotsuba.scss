@@ -54,11 +54,10 @@ $font-family-monospace: ”Iosevka Term SS03”,”IBM Plex Mono”,”Fira Code
 
 /* === Body === */
 
-
-
 article {
   background-color: $background;    
   box-shadow: 1px 1px 0px $color-box-shadow;
+    margin-bottom: 0.5em;
   
 }
 

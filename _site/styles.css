@@ -292,7 +292,7 @@ template { display: none; }
 /* --- Embeds, Sidenote and Footnote Colors --- */
 /* --- Font Family --- */
 /* === Body === */
-article { background-color: #f0e0d6; box-shadow: 1px 1px 0px #d9bfb7; }
+article { background-color: #f0e0d6; box-shadow: 1px 1px 0px #d9bfb7; margin-bottom: 0.5em; }
 
 body { background-color: black; background-image: url("/assets/imgs/bg-yotsuba.gif"); background-repeat: repeat; box-sizing: content-box; font-family: Helvetica, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; margin: 0 auto; line-height: 1.1em; padding: 2rem; overflow-x: hidden; color: #800000; font-size: 1rem; }
 
