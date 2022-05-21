@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6 { line-height: 1.4; padding-bottom: 0; font-size: 1.15em;
 
 .title-text { color: #cc1105; font-weight: bold; font-size: 1.2em; line-height: 1em; margin: 0em; text-align: center; padding: 1em; padding-bottom: 0.5em; text-decoration: none !important; }
 
-h1 { color: #117743; font-weight: bold; text-decoration: underline; }
+h1 { color: #117743; font-weight: bold; text-decoration: underline; font-size: 1.3em; }
 
 h2 { color: #117743; font-weight: bold; }
 
@@ -497,6 +497,8 @@ img + em { display: block; color: #cc1105; text-align: center; width: 50%; margi
 /* FOOTNOTES
 ================================================== */
 .footnotes { border: thin solid black; padding: 1em 0; background-color: #fffbf0; color: black; }
+
+.license { font-family: monospace; line-height: 1.1em; color: #800000; font-size: 1rem; border: medium outset; background-color: antiquewhite; display: block; padding: 1em; max-width: 28em; margin: 2em auto; text-align: center; }
 
 /* INDEX
 ================================================== */

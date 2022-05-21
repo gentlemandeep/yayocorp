@@ -5,11 +5,14 @@
         {% for backlink in page.backlinks %}
         {% assign linked_doc = site.documents | where: "url", backlink.url | first %}
         {% if page.title != linked_doc.title %}
+        {% if linked_doc.url != {{ baseurl }} %}
         <a href="{{backlink.url}}""><div class="backlink-box"><b>{{ linked_doc.title }}</b> — {{ linked_doc.collection | capitalize }}  <br>
           <div class ="backlinks-excerpt">
             {{ linked_doc.excerpt | strip_html | truncatewords: 20 }}
           </div>
           {% endif %}
+          {% endif %}
+
 
         </a>
       </div>
