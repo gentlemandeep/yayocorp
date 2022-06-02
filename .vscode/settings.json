@@ -37,4 +37,5 @@
   "gitdoc.autoPullDelay": 30000,
   "gitdoc.autoPushDelay": 43200000,
   "gitdoc.autoPush": "afterDelay",
+  "gitdoc.enabled": true,
 }

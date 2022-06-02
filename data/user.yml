@@ -22,9 +22,9 @@ welcome_header: Welcome to the Exocore
 welcome_subtitle: A navigable, organised hypertext personal knowledge base
 
 
-# Include the Viral Public License at the bottom of your posts. Accepts true/false:
+# Include the Viral Public License at the bottom of your posts (Accepts true/false). Read more about the VPL at https://viralpubliclicense.org.
+
 include_license: true 
-# Read more about the VLP at https://viralpubliclicense.org.
   
   
 # You can edit the content of your home/welcome page 
