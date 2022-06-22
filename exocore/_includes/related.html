@@ -6,6 +6,7 @@
 {% assign maxRelated = 5 %}
 {% assign minCommonTags =  1 %}
 {% assign maxRelatedCounter = 0 %}   
+	<ul>
 {% for article in site.articles %}
     
     	{% assign sameTagCount = 0 %}
@@ -13,15 +14,14 @@
     
 		{% for tag in article.tags %}
         	{% if article.url != page.url %}
-            	{% if page.tags contains tag %}
+            	{% if article.tags contains tag %}
             	{% assign sameTagCount = sameTagCount | plus: 1 %}
             	{% endif %}
             {% endif %}
 		{% endfor %}
     
         {% if sameTagCount >= minCommonTags %}
-			<a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a>
-			<br>
+			<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a></li>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             
             {% if maxRelatedCounter >= maxRelated %}
@@ -29,15 +29,8 @@
             {% endif %}
 		{% endif %}
 	{% endfor %}
-
-	{% if maxRelatedCounter == 0 %}
-	{% assign topic_sort = site.articles | sort: 'date' | reverse %}
-	{% for article in topic_sort | limit: 5 %}
-	<a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a>
-	<br>
-	{% endfor %}
-		{% endif %}
 	</ul>
+</div>
 <div class="sidebar-link-box">
 <h2><a class="silent-link" href="/pages/all-journal">Journal</a></h2>
 
