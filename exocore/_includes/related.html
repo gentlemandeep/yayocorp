@@ -32,8 +32,7 @@
 	{% if maxRelatedCounter == 0 %}
 	{% assign topic_sort = site.articles | sort: 'date' | reverse %}
 	{% for article in topic_sort | limit: 5 %}
-	<a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a>
-	<br>
+	<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a></li>
 	{% endfor %}
 		{% endif %}
 	</ul>
