@@ -99,7 +99,6 @@
         {% if sameTagCount >= minCommonTags %}
 		<li><a href="{{ site.baseurl }}{{ note.url }}">{{ note.title | truncate: 60 }}</a></li>
 		{% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-            
             {% if maxRelatedCounter >= maxRelated %}
                 {% break %}
 		{% endif %}
