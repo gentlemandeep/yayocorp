@@ -6,8 +6,8 @@
 {% assign maxRelated = 5 %}
 {% assign minCommonTags =  1 %}
 {% assign maxRelatedCounter = 0 %}   
+<ul>
 {% for article in site.articles %}
-    
     	{% assign sameTagCount = 0 %}
         {% assign commonTags = '' %}
     
@@ -20,8 +20,7 @@
 		{% endfor %}
     
         {% if sameTagCount >= minCommonTags %}
-		<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a></
-			<br>
+		<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a></li>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             
             {% if maxRelatedCounter >= maxRelated %}
@@ -37,6 +36,7 @@
 	<br>
 	{% endfor %}
 		{% endif %}
+	</ul>
 </div>
 <div class="sidebar-link-box">
 <h2><a class="silent-link" href="/pages/all-journal">Journal</a></h2>
