@@ -6,7 +6,7 @@
 {% assign maxRelated = 5 %}
 {% assign minCommonTags =  1 %}
 {% assign maxRelatedCounter = 0 %}   
-	<ul>
+	<div class="related-table">
 {% for article in site.articles %}
     
     	{% assign sameTagCount = 0 %}
@@ -14,14 +14,15 @@
     
 		{% for tag in article.tags %}
         	{% if article.url != page.url %}
-            	{% if article.tags contains tag %}
+            	{% if page.tags contains tag %}
             	{% assign sameTagCount = sameTagCount | plus: 1 %}
             	{% endif %}
             {% endif %}
 		{% endfor %}
     
         {% if sameTagCount >= minCommonTags %}
-			<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title }}</a></li>
+			<a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a>
+			<br>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             
             {% if maxRelatedCounter >= maxRelated %}
@@ -29,15 +30,23 @@
             {% endif %}
 		{% endif %}
 	{% endfor %}
-	</ul>
-</div>
-<div class="sidebar-link-box">
-<h2><a class="silent-link" href="/pages/all-journal">Journal</a></h2>
 
+	{% if maxRelatedCounter == 0 %}
+	{% assign topic_sort = site.articles | sort: 'date' | reverse %}
+	{% for article in topic_sort | limit: 5 %}
+	<a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a>
+	<br>
+	{% endfor %}
+		{% endif %}
+
+	</div>
+</div>
+<h2><a class="silent-link" href="/pages/all-journal">Journal</a></h2>
+<div class="sidebar-link-box">
 {% assign maxRelated = 5 %}
 {% assign minCommonTags =  1 %}
 {% assign maxRelatedCounter = 0 %}   
-<ul>
+<div class="related-table">
 	{% for journal in site.journal %}
     
     	{% assign sameTagCount = 0 %}
@@ -45,14 +54,16 @@
     
 		{% for tag in journal.tags %}
         	{% if journal.url != page.url %}
-            	{% if journal.tags contains tag %}
+            	{% if page.tags contains tag %}
             	{% assign sameTagCount = sameTagCount | plus: 1 %}
             	{% endif %}
             {% endif %}
 		{% endfor %}
     
         {% if sameTagCount >= minCommonTags %}
-    		<li><a href="{{ site.baseurl }}{{ journal.url }}">{{ journal.title }}</a></li>
+    		<a href="{{ site.baseurl }}{{ journal.url }}">{{ journal.title | truncate: 60 }}</a>
+			<br>
+
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             
             {% if maxRelatedCounter >= maxRelated %}
@@ -60,15 +71,22 @@
             {% endif %}
 		{% endif %}
 	{% endfor %}
-</ul>
+	{% if maxRelatedCounter == 0 %}
+	{% assign topic_sort = site.journal | sort: 'date' | reverse %}
+	{% for journal in topic_sort | limit: 5 %}
+	<a href="{{ site.baseurl }}{{ journal.url }}">{{ journal.title | truncate: 60 }}</a>
+	<br>
+	{% endfor %}
+		{% endif %}
+</div>
 </div>
 
-<div class="sidebar-link-box">
 <h2><a class="silent-link" href="/pages/all-notes">Wiki Notes</a></h2>
+<div class="sidebar-link-box">
 {% assign maxRelated = 5 %}
 {% assign minCommonTags =  1 %}
 {% assign maxRelatedCounter = 0 %}   
-<ul>
+<div class="related-table">
 	{% for note in site.notes %}
     
     	{% assign sameTagCount = 0 %}
@@ -76,21 +94,30 @@
     
 		{% for tag in note.tags %}
         	{% if note.url != page.url %}
-            	{% if note.tags contains tag %}
+            	{% if page.tags contains tag %}
             	{% assign sameTagCount = sameTagCount | plus: 1 %}
             	{% endif %}
             {% endif %}
 		{% endfor %}
     
         {% if sameTagCount >= minCommonTags %}
-    		<li><a href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></li>
+    		<a href="{{ site.baseurl }}{{ note.url }}">{{ note.title | truncate: 60 }}</a>
+			<br>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             
             {% if maxRelatedCounter >= maxRelated %}
                 {% break %}
-            {% endif %}
 		{% endif %}
+{% endif %}
 	{% endfor %}
+	{% if maxRelatedCounter == 0 %}
+	{% assign topic_sort = site.notes | sort: 'date' | reverse %}
+	{% for note in topic_sort | limit: 5 %}
+	<a href="{{ site.baseurl }}{{ note.url }}">{{ note.title | truncate: 60 }}</a>
+	<br>
+
+	{% endfor %}
+		{% endif %}
 </ul>
     </div>  
     </div>  
