@@ -47,26 +47,33 @@
 <ul>
 	{% for journal in site.journal %}
     
-    	{% assign sameTagCount = 0 %}
-        {% assign commonTags = '' %}
-    
-		{% for tag in journal.tags %}
-        	{% if journal.url != page.url %}
-            	{% if journal.tags contains tag %}
-            	{% assign sameTagCount = sameTagCount | plus: 1 %}
-            	{% endif %}
-            {% endif %}
-		{% endfor %}
-    
-        {% if sameTagCount >= minCommonTags %}
-    		<li><a href="{{ site.baseurl }}{{ journal.url }}">{{ journal.title }}</a></li>
-            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-            
-            {% if maxRelatedCounter >= maxRelated %}
-                {% break %}
-            {% endif %}
+	{% assign sameTagCount = 0 %}
+	{% assign commonTags = '' %}
+
+	{% for tag in journal.tags %}
+		{% if journal.url != page.url %}
+			{% if page.tags contains tag %}
+			{% assign sameTagCount = sameTagCount | plus: 1 %}
+			{% endif %}
 		{% endif %}
 	{% endfor %}
+
+	{% if sameTagCount >= minCommonTags %}
+		<li><a href="{{ site.baseurl }}{{ journal.url }}">{{ journal.title | truncate: 60 }}</a></li>
+
+		{% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+		
+		{% if maxRelatedCounter >= maxRelated %}
+			{% break %}
+		{% endif %}
+	{% endif %}
+{% endfor %}
+{% if maxRelatedCounter == 0 %}
+{% assign topic_sort = site.journal | sort: 'date' | reverse %}
+{% for journal in topic_sort | limit: 5 %}
+<li><a href="{{ site.baseurl }}{{ journal.url }}">{{ journal.title | truncate: 60 }}</a></li>
+{% endfor %}
+	{% endif %}
 </ul>
 </div>
 
