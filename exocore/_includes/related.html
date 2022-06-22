@@ -20,7 +20,8 @@
 		{% endfor %}
     
         {% if sameTagCount >= minCommonTags %}
-		<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a></li>
+		<li><a href="{{ site.baseurl }}{{ article.url }}">{{ article.title | truncate: 60 }}</a></
+			<br>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
             
             {% if maxRelatedCounter >= maxRelated %}
