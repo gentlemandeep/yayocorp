@@ -7,7 +7,7 @@ title: Home
 
 # The Exocore Package
 
-![](/attachments/exocore.png)
+![](/images/exocore.png)
 
 ## Executive Summary
 
