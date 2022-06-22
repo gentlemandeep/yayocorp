@@ -6,9 +6,10 @@ baseurl: ''
 destination: _site
 repository: remiliacorp/exocore
 
-highlighter: rouge
 
 background: "red"
+
+highlighter: rouge
 
 gist:
   noscript: false
@@ -19,8 +20,6 @@ kramdown:
 
 readme_index:
   enabled: true
-
-repository: remiliacorp/exocore
 
 sass:
     sass_dir: ./exocore/_sass
@@ -67,8 +66,8 @@ collections:
     output: true
     
 relative_links:
-  enabled:     false
-  collections: false
+  enabled:     true
+  collections: true
   
 titles_from_headings:
   enabled:     true
