@@ -27,7 +27,7 @@ sass:
 layouts_dir: ./exocore/_layouts
 includes_dir: ./exocore/_includes
 plugins_dir: ./exocore/_plugins
-data_dir: ./data
+data_dir: ./exocore/data
 
 permalink: pretty
 
