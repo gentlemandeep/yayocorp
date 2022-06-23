@@ -13,7 +13,8 @@
   "files.defaultLanguage": "markdown",
   "files.exclude": {
     "**/node_modules": true,
-    "Gemfile": true
+    "Gemfile": true,
+    "Gemfile.lock": true
   },
   "files.watcherExclude": {
     "**/node_modules": true
