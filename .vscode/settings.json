@@ -12,6 +12,7 @@
   },
   "files.defaultLanguage": "markdown",
   "files.exclude": {
+    ".gitignore": true,
     ".jekyll-cache": true,
     ".vscode": true,
     "**/node_modules": true,
