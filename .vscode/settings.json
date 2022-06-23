@@ -13,6 +13,7 @@
   "files.defaultLanguage": "markdown",
   "files.exclude": {
     ".jekyll-cache": true,
+    ".vscode": true,
     "**/node_modules": true,
     "Gemfile": true,
     "Gemfile.lock": true
