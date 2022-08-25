@@ -5,7 +5,7 @@ title: Home
 
 
 
-# The Exocore Package
+# MJAU
 
 ![](/images/exocore.png)
 
